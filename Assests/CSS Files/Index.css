@@ -1,0 +1,19 @@
+*{
+    background-color: black;
+}
+p{
+    /*width: 800px;*/
+    /*height: 800px;*/
+color: azure;
+}
+pre{
+    color: white;
+}
+h2{
+    color: white;
+}
+.section1{
+    /*background-image: url("/Assests/images/2768131.jpg");*/
+    /*background-repeat: no-repeat;*/
+    /*background-position: center;*/
+}

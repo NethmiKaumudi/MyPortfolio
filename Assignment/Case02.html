@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Css02</title>
+    <link rel="stylesheet" href="Assets/CssFile/normalize.css">
+    <link rel="stylesheet" href="Assets/fontawesome-free-6.4.0-web/css/all.min.css">
+
+    <!--    <link href="normalize.css" rel="stylesheet">-->
+    <style>
+        header {
+            width: 100%;
+            background-color: gray;
+            box-shadow: 6px 7px 11px 6px black;
+            position: fixed;
+            top: 0;
+            z-index: 3;
+        }
+
+        header > nav {
+            position: absolute;
+            top: 0;
+            right: 0;
+            margin-right: 20px;
+
+        }
+
+        header > nav > ul {
+            color: white;
+        }
+
+        header > nav > ul > li {
+            color: white;
+            display: inline-block;
+            margin-left: 20px;
+        }
+
+        header > nav > ul > li > a {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 30px;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: gray;
+            color: white;
+        }
+
+        footer > p {
+            text-align: center;
+            /*margin-top: 0px;*/
+            margin-bottom: 0px;
+
+        }
+
+
+        h1 {
+            color: red;
+            margin: 0;
+            font-size: 50px;
+        }
+
+        h2 {
+            margin-left: 10px;
+            color: black;
+        }
+
+        body > main {
+            position: relative;
+            margin-top: 50px;
+
+        }
+
+        body > main > nav {
+            background-color: purple;
+            width: 250px;
+            color: white;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+        }
+
+        main > nav > ul {
+            margin-top: 50px;
+            color: white;
+        }
+
+        main > nav > ul > li {
+            margin-top: 30px;
+
+        }
+
+        main > nav > ul > li > a {
+            color: white;
+            font-size: 20px;
+            margin-bottom: 30px;
+            margin-left: 10px;
+            text-decoration: none;
+        }
+        section > section {
+            position: relative;
+        }
+
+        section > section > div {
+            width: calc(100% / 3);
+            height: 100%;
+            display: inline;
+
+        }
+
+        main > section {
+            margin-left: 19vw;
+        }
+
+        #chatbox {
+            position: fixed;
+            bottom: 0;
+            right: 0;
+            text-align: center;
+            z-index: 3;
+
+        }
+
+        #chatbox > p {
+            color: white;
+            font-size: 30px;
+        }
+
+        #chatbox > p > i {
+            margin-right: 20px;
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <h1>IJSE</h1>
+    <nav>
+        <ul>
+            <li><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
+            <li><i class="fa-solid fa-globe"></i><a href="#">Services</a></li>
+            <li><i class="fa-solid fa-address-book"></i><a href="#">Contact</a></li>
+            <li><i class="fa-solid fa-circle-info"></i><a href="#">About Us</a></li>
+        </ul>
+
+    </nav>
+</header>
+<main>
+    <nav>
+        <ul>
+            <li><i class="fa-solid fa-house"></i><a href="#">Home</a></li>
+            <li><i class="fa-solid fa-globe"></i><a href="#">Services</a></li>
+            <li><i class="fa-solid fa-address-book"></i><a href="#">Contact</a></li>
+            <li><i class="fa-solid fa-circle-info"></i><a href="#">About Us</a></li>
+        </ul>
+
+    </nav>
+    <section>
+        <section>
+            <div><img src="Assets/image/Guest%20Details%20flower1.png" alt="" width="33%">
+            </div>
+            <div>
+                <img src="Assets/image/Guest%20Details%20flower1.png" alt="" width="33%">
+
+            </div>
+            <div>
+                <img src="Assets/image/Guest%20Details%20flower1.png" alt="" width="33%">
+            </div>
+        </section>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A cum enim ex numquam obcaecati possimus! Ad
+            commodi consequatur cumque dolor enim,
+            fugit ipsam iusto, natus nisi officiis, voluptate voluptatem voluptatibus.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid at atque beatae consequatur distinctio,
+            dolores eius, error et expedita fugiat in odio officiis, optio placeat qui quia rem tenetur.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid at atque beatae consequatur distinctio,
+            dolores eius, error et expedita fugiat in odio officiis, optio placeat qui quia rem tenetur.</p>
+        <section>
+            <div><img src="Assets/image/Guest%20Details%20flower1.png" alt="" width="33%">
+            </div>
+            <div>
+                <img src="Assets/image/Guest%20Details%20flower1.png" alt="" width="33%">
+
+            </div>
+            <div>
+                <img src="Assets/image/Guest%20Details%20flower1.png" alt="" width="33%">
+            </div>
+        </section>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid at atque beatae consequatur distinctio,
+            dolores eius, error et expedita fugiat in odio officiis, optio placeat qui quia rem tenetur.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid at atque beatae consequatur distinctio,
+            dolores eius, error et expedita fugiat in odio officiis, optio placeat qui quia rem tenetur.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad aliquid at atque beatae consequatur distinctio,
+            dolores eius, error et expedita fugiat in odio officiis, optio placeat qui quia rem tenetur.</p>
+    </section>
+    <section id="chatbox">
+        <!--        <p><i class="fa-solid fa-message"></i>chat</p>-->
+        <img src="Assets/image/chat.png" alt="">
+    </section>
+</main>
+<footer>
+    <p>Developed by IJSE</p>
+</footer>
+
+</body>
+</html>
