@@ -20,99 +20,65 @@
     <meta name="viewport" content="width=device-width initial-scale=1 minimum-scale=1 maximum-scale=2">
     <!--    <meta http-equiv="refresh" content="3">-->
     <link rel="icon" href="nk.png">
+    <link rel="stylesheet" href="Assests/CSS%20Files/Index.css">
+    <link href="normalize.css" rel="stylesheet">
+
     <!-- this is for skipping link from the bot -->
     <!-- <link rel="canonical" href="https://ijse.lk"> -->
     <link href="Assests/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet">
+    <!--    header {-->
+    <!--    width: 100%;-->
+    <!--    height: 8vh;-->
+    <!--    background-color: gold;-->
+    <!--    /*box-shadow: 6px 7px 11px 6px black;*/-->
+    <!--    position: fixed;-->
+    <!--    top: 0;-->
+    <!--    z-index: 3;-->
+    <!--    }-->
 
-    <style>
+    <!--    header > h3 {-->
+    <!--    margin-left: 10px;-->
+    <!--    color: white;-->
+    <!--    font-size: 20px;-->
+    <!--    margin-top: 20px;-->
+    <!--    }-->
 
-        header {
-            width: 100%;
-            background-color: black;
-            /*box-shadow: 6px 7px 11px 6px black;*/
-            position: fixed;
-            top: 0;
-            z-index: 3;
-        }
+    <!--    header > nav {-->
+    <!--    position: absolute;-->
+    <!--    top: 0;-->
+    <!--    right: 0;-->
+    <!--    margin-right: 20px;-->
+    <!--    margin-top: 20px;-->
+    <!--    }-->
+    <!--    header > nav > ul:nth-child(1) {-->
+    <!--    color: white;-->
+    <!--    }-->
 
-        header > h3 {
-            margin-left: 10px;
-            color: white;
-            font-size: 20px;
-        }
+    <!--    header > nav > ul:nth-child(1) > li {-->
+    <!--    color: white;-->
+    <!--    display: inline-block;-->
+    <!--    margin-left: 20px;-->
+    <!--    }-->
 
-        header > nav {
-            position: absolute;
-            top: 0;
-            right: 0;
-            margin-right: 20px;
-            /*margin-top: 20px;*/
+    <!--    header > nav > ul :nth-child(1)> li > a {-->
+    <!--    color: white;-->
+    <!--    font-size: 20px;-->
+    <!--    margin-bottom: 30px;-->
+    <!--    margin-left: 10px;-->
+    <!--    text-decoration: none;-->
+    <!--    }-->
 
+    <!--    .sub_menu_01{-->
+    <!--    display: none;-->
+    <!--    }-->
+    <!--    header>nav>ul>.sub_menu_01{-->
+    <!--    display: block;-->
+    <!--    position: absolute;-->
+    <!--    background-color: white;-->
+    <!--    margin-top: 5px;-->
+    <!--    margin-left: 5px;-->
+    <!--    }-->
 
-        }
-
-        header > nav > ul {
-            color: white;
-        }
-
-        header > nav > ul > li {
-            color: white;
-            display: inline-block;
-            margin-left: 20px;
-        }
-
-        header > nav > ul > li > a {
-            color: white;
-            font-size: 20px;
-            margin-bottom: 30px;
-            margin-left: 10px;
-            text-decoration: none;
-        }
-
-        main > section:nth-child(1) {
-            width: 100%;
-            position: relative;
-            margin-top: 61px;
-            background-image: url("Assests/images/1st sec.jpg");
-            color: white;
-        }
-        main > section:nth-child(2) {
-            width: 100%;
-            position: relative;
-            margin-top: 61px;
-            background-image: url("Assests/images/2768131.jpg");
-            color: white;
-            margin-top: 0px;
-        }
-        h2{
-            margin-top: 0px;
-        }
-        h3{
-            margin-bottom: 0px;
-        }
-
-        footer {
-            width: 100%;
-            background-color: black;
-            bottom: 0;
-        }
-
-
-        footer > address :nth-child(1) {
-            color: white;
-            font-size: 20px;
-        }
-
-        footer > address :nth-child(2) {
-            color: white;
-            font-size: 20px;
-        }
-
-        footer > address :nth-child(3) {
-            position: absolute;
-            right: 0;
-        }
-    </style>
 </head>
 
 
@@ -122,83 +88,88 @@
 
 <header>
     <h3>FOLIO</h3>
-    <nav>
+    <div class="menu_bar">
         <ul>
-            <li><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
-            <li><i class="fa-solid fa-globe"></i><a href="pages/Works.html">Works</a></li>
-            <li><i class="fa-solid fa-comment"></i><a href="pages/ContactMe.html">Contact Me</a></li>
+            <li class="active"><i class="fa-solid fa-house"></i><a href="index.html">Home</a></li>
+            <li class="active"><i class="fa-solid fa-globe"></i>Works</li>
+            <div class="sub_menu_01">
+                <ul>
+                    <li><a href="pages/Projects.html">Projects</a></li>
+                    <li><a href="pages/Assignments.html">assignments</a></li>
+                </ul>
+            </div>
+            <li class="active"><i class="fa-solid fa-comment"></i><a href="pages/ContactMe.html">Contact Me</a></li>
         </ul>
+    </div>
 
-
-    </nav>
 </header>
 <main>
-    <section>
-        <section class="section1">
-            <h2>Hi I am <strong> Nethmi Kaumudi</strong></h2>
-            <figure>
-                <img src="Assests/images/ProfilePic.jpg" alt=""
-                     height="200">
-            </figure>
+    <section class="section_01">
+        <div>
+            <section class="section1">
+                <h2>Hi I am <strong> Nethmi Kaumudi</strong></h2>
+                <div class="div_image">
+                    <img src="Assests/images/ProfilePic.jpg" alt="" height="200">
+                </div>
+                <h3>Full Stack Developer</h3>
+                <p><a href="others/TakeHomeAssignment01.pdf" download="cv.pdf">Download CV</a></p>
 
-            <h3>Full Stack Developer</h3>
-            <p><a href="others/TakeHomeAssignment01.pdf" download="cv.pdf">Download CV</a></p>
+            </section>
+            <section></section>
+            <section>
+                <h3>Project Manager</h3>
+            </section>
+        </div>
 
-        </section>
-        <section></section>
-        <section>
-            <h3>Project Manager</h3>
-        </section>
     </section>
 
-    <section>
-        <article>
-            <h2>About Me</h2>
-            <pre>
-                    I am student of <strong>Institute of Java and
-                    Software Engineering</strong>. I love learning new
-                    techniques and technologies.
-                    Also I can  speak and write in English. 
-                    Also I started learning Project Management
-                    from google project management course. 
 
-                    When I talking about my hobbies I like reading
-                    books and Find interesting new things that
-                    i never know. Also I like Researching about 
-                    new things and<strong>I love work with teams
-                    and learn from them also</strong>.
-                </pre>
-        </article>
+    <section class="section_02">
+        <div>
+            <article>
+                <h2>About Me</h2>
+                <pre>
+                        I am student of <strong>Institute of Java and
+                        Software Engineering</strong>. I love learning new
+                        techniques and technologies.
+                        Also I can  speak and write in English.
+                        Also I started learning Project Management
+                        from google project management course.
+
+                        When I talking about my hobbies I like reading
+                        books and Find interesting new things that
+                        i never know. Also I like Researching about
+                        new things and<strong>I love work with teams
+                        and learn from them also</strong>.
+                    </pre>
+            </article>
+        </div>
     </section>
 
-    <section>
-        <section>
-            <h2>
+    <section class="section_03">
+        <div>
+            <section>
+
                 <p>
                     Finished scholarShip
                     exam in
                     <time datetime="2012-08-21">2012</time>
                 </p>
-
-            </h2>
-            <h2>
                 <p>
                     Finished Ordinary Level
                     Exam in
                     <time datetime="2018-12-03">2018</time>
                 </p>
-            </h2>
-        </section>
+                </h2>
+            </section>
 
-        <section>
-            <h2>
+            <section>
                 <p>
                     Finished Advanced Level
                     Exam in
                     <time datetime="2022-01-21">2021(22)</time>
                 </p>
-            </h2>
-            <h2>
+
                 <p>
                     Started Graduate Diploma
                     in <b>Software Engineering</b>
@@ -206,82 +177,81 @@
                     <time datetime="2022-03-10">2022</time>
 
                 </p>
-            </h2>
-        </section>
+            </section>
+        </div>
 
     </section>
 
-    <section>
-        <article>
-            <figure>
+    <section class="section_04">
+        <div>
+            <article>
                 <img src="Assests/web%20develpment.png" alt="" height="50">
                 <!--                <figcaption>AI Robot</figcaption>-->
-            </figure>
-            <h2>Web Development</h2>
-            <p>
-                A web Developer
-                in charge of ensuring
-                websites look good
-                and function properly
+                <h2>Web Development</h2>
+                <p>
+                    A web Developer
+                    in charge of ensuring
+                    websites look good
+                    and function properly
 
 
-            </p>
+                </p>
 
-        </article>
-        <article>
-            <figure>
+            </article>
+            <article>
                 <img src="Assests/images/digital.png" alt="" height="50">
                 <!--                <figcaption>AI Robot</figcaption>-->
-            </figure>
-            <h2>Digital Marketing</h2>
-            <p>
-                plans and executes all
-                web ,SEO/SEM ,database
-                marketing,email,social
-                media and display
-                advertising campaigns
-            </p>
-            <!--  bdi isolate karanna ona text ekak widiyata wenama danna onanm language 2ka mix noakara          <li><bdi>مرحبا نعمي </bdi>:3rd place</li>-->
-        </article>
-
+                <h2>Digital Marketing</h2>
+                <p>
+                    plans and executes all
+                    web ,SEO/SEM ,database
+                    marketing,email,social
+                    media and display
+                    advertising campaigns
+                </p>
+                <!--  bdi isolate karanna ona text ekak widiyata wenama danna onanm language 2ka mix noakara          <li><bdi>مرحبا نعمي </bdi>:3rd place</li>-->
+            </article>
+        </div>
 
     </section>
 
-    <section>
+    <section class="section_05">
+        <div>
+            <nav></nav>
+            <section>
+                <figure>
+                    <img src="Assests/images/Certificates/java%20certificate.png" alt="" width="200">
+                    <!--                <figcaption>AI Robot</figcaption>-->
+                </figure>
+            </section>
+            <nav></nav>
+            <nav></nav>
+            <section>
+                <figure>
+                    <img src="Assests/images/Certificates/googlepm.jpeg" alt="" width="200">
+                    <!--                <figcaption>AI Robot</figcaption>-->
+                </figure>
+            </section>
+            <nav></nav>
+            <nav></nav>
+            <section>
+                <figure>
+                    <img src="Assests/images/Certificates/english%20certificate.jpg" alt="" width="200">
+                    <!--                <figcaption>AI Robot</figcaption>-->
+                </figure>
+            </section>
+            <nav></nav>
+            <nav></nav>
+            <section>
 
-        <nav></nav>
-        <section>
-            <figure>
-                <img src="Assests/images/Certificates/java%20certificate.png" alt="" width="200">
-                <!--                <figcaption>AI Robot</figcaption>-->
-            </figure>
-        </section>
-        <nav></nav>
-        <nav></nav>
-        <section>
-            <figure>
-                <img src="Assests/images/Certificates/googlepm.jpeg" alt="" width="200">
-                <!--                <figcaption>AI Robot</figcaption>-->
-            </figure>
-        </section>
-        <nav></nav>
-        <nav></nav>
-        <section>
-            <figure>
-                <img src="Assests/images/Certificates/english%20certificate.jpg" alt="" width="200">
-                <!--                <figcaption>AI Robot</figcaption>-->
-            </figure>
-        </section>
-        <nav></nav>
-        <nav></nav>
-        <section>
+                <img src="Assests/images/Certificates/sql%20certificate.png" alt="" width="200">
 
-            <img src="Assests/images/Certificates/sql%20certificate.png" alt="" width="200">
+            </section>
+            <nav></nav>
+        </div>
 
-        </section>
-        <nav></nav>
     </section>
-    <section>
+    <section class="section_06">
         <section>
             <h2>Languages</h2>
             <div>
@@ -311,8 +281,6 @@
             </div>
 
         </section>
-
-
         <section>
             <h2>Tools</h2>
             <div>
@@ -339,52 +307,56 @@
                 <img src="Assests/images/toolsimage/intelij.jpeg" alt="" width="50">
 
             </div>
-
+g
         </section>
 
 
     </section>
 
 
-    <section>
+    <section class="section_07">
+        <div><img
+                src="Assests/images/GalleryImages/6EzLzIRZaH8dsFzpu6Skgd_avp0586_EmZBeCpMXHl0=_plaintext_638126605236423657.jpg"
+                alt="" width="100">
 
-        <img src="Assests/images/GalleryImages/6EzLzIRZaH8dsFzpu6Skgd_avp0586_EmZBeCpMXHl0=_plaintext_638126605236423657.jpg"
-             alt="" width="100">
 
+            <img src="Assests/images/GalleryImages/WhatsApp%20Image%202023-02-22%20at%2016.40.02.jpg" alt=""
+                 width="100">
 
-        <img src="Assests/images/GalleryImages/WhatsApp%20Image%202023-02-22%20at%2016.40.02.jpg" alt="" width="100">
+            <img src="Assests/images/GalleryImages/Screenshot_20230222_043553.png" alt="" height="200">
 
-        <img src="Assests/images/GalleryImages/Screenshot_20230222_043553.png" alt="" height="200">
+            <img src="Assests/images/GalleryImages/IMG-20230222-WA0029.jpg" alt="" width="100">
 
-        <img src="Assests/images/GalleryImages/IMG-20230222-WA0029.jpg" alt="" width="100">
-
-        <img src="Assests/images/GalleryImages/WhatsApp%20Image%202022-05-04%20at%2011.51.56%20AM.jpeg" alt=""
-             width="100">
+            <img src="Assests/images/GalleryImages/WhatsApp%20Image%202022-05-04%20at%2011.51.56%20AM.jpeg" alt=""
+                 width="100"></div>
 
     </section>
 
 </main>
 <footer>
-    <address><a href="tel:0765814060">Tel:0765814060</a></address>
-    <address><a href="mailto:nethmikaumudi7@gmail.com">Email:nethmikaumudi7@gmail.com</a></address>
-    <address>
-        <a href="https://github.com/NethmiKaumudi"><img src="Assests/images/toolsimage/github.png" alt=""
-                                                        width="50"></a>
+    <address class="ad_01"><a href="tel:0765814060">Tel:0765814060</a></address>
+    <address class="ad_02"><a href="mailto:nethmikaumudi7@gmail.com">Email:nethmikaumudi7@gmail.com</a></address>
+    <address class="ad_03">
+        <div><a href="https://github.com/NethmiKaumudi"><img src="Assests/images/toolsimage/github.png" alt=""
+                                                             width="50"></a>
 
-        <a href="https://www.hackerrank.com/dashboard"><img src="Assests/images/SocialMediaImages/hack.png" alt=""
-                                                            width="50"></a>
-
-
-        <a href="https://www.instagram.com/decentcutie"><img src="Assests/images/SocialMediaImages/inster.jpg"
-                                                             alt=""
-                                                             height="50" width="50"></a>
-
-        <a href="https://www.linkedin.com/feed/"><img src="Assests/images/SocialMediaImages/linkedin.png" alt=""
-                                                      width="50"></a>
+            <a href="https://www.hackerrank.com/dashboard">
+                <img src="Assests/images/SocialMediaImages/hack.png" alt="" width="50">
+            </a>
 
 
-        <a href="https://web.facebook.com/home.php"><img src="Assests/images/SocialMediaImages/fb.png" alt=""
-                                                         width="50"></a>
+            <a href="https://www.instagram.com/decentcutie">
+                <img src="Assests/images/SocialMediaImages/inster%20new.jpeg" alt="" height="50">
+            </a>
+
+
+            <a href="https://www.linkedin.com/feed/"><img src="Assests/images/SocialMediaImages/linkedin.png" alt=""
+                                                          width="50"></a>
+
+
+            <a href="https://web.facebook.com/home.php"><img src="Assests/images/SocialMediaImages/fb.png" alt=""
+                                                             width="50"></a></div>
+
     </address>
 
 </footer>

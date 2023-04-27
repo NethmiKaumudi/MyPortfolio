@@ -1,0 +1,10 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url("/Assests/images/2768131.jpg");
+    background-size: cover;
+    background-position: center;
+}
