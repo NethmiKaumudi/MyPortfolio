@@ -184,7 +184,7 @@ main > .section_06 {
     margin-top: 10px;
 }
 
-main > .section_07 > div {
+main > .section_07 {
     width: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("/Assests/images/backgroundImages/sec 07.jpg");
     /*background-image: url("/Assests/images/gold-glitter-abstract-sparkle-burst-background-illustration.jpg");*/
@@ -196,6 +196,114 @@ main > .section_07 > div {
     margin-bottom: 50px;
 }
 
+.section_06>section:nth-child(1){
+    position: relative;
+    border: 3px solid black;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+
+}
+
+.section_06 >section:nth-child(1)> div {
+    border: 1px solid blue;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    margin-left: 20px;
+
+
+}
+
+.section_06 >section:nth-child(1)> div> img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+
+}
+.section_06>section:nth-child(2){
+    position: relative;
+    border: 3px solid black;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+
+}
+
+.section_06 >section:nth-child(2)> div {
+    border: 1px solid blue;
+    height: 100px;
+    width: 100px;
+    border-radius: 100%;
+    margin-left: 20px;
+
+}
+
+.section_06 >section:nth-child(2)> div> img {
+    height: 100%;
+    width: 100%;
+    border-radius: 100%;
+
+
+}
+
+.section_07>{
+    position: relative;
+    border: 3px solid black;
+    display: flex;
+
+
+}
+
+.section_07 > div {
+    border: 1px solid blue;
+    height: 400px;
+    width: 200px;
+
+}
+
+.section_07 > div > img {
+    height: 100%;
+    width: 100%;
+}
+
+.section_07 > div:nth-child(1) {
+    align-self: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    height: 60%;
+    width: 15%;
+}
+
+.section_07 > div:nth-child(2) {
+    align-self: flex-end;
+    margin-right: 50px;
+    height: 25%;
+    width: 30%;
+}
+
+.section_07 > div:nth-child(3){
+    align-self: flex-start;
+    margin-right: 50px;
+    height: 55%;
+    width: 20%;
+
+
+}
+.section_07 > div:nth-child(4){
+    align-self: flex-start;
+    margin-right: 50px;
+    height: 55%;
+    width: 20%;
+}
+
+.section_07 > div:nth-child(5) {
+    align-self: center;
+    margin-right: 50px;
+    margin-left: 50px;
+    height: 60%;
+    width: 15%;
+}
 /*.section_01 > div>.section1>p {*/
 /*    position: absolute;*/
 /*    bottom: 0;*/

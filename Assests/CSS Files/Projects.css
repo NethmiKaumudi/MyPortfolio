@@ -6,21 +6,10 @@
 
 body {
     width: 100%;
-    /*background-color: black;*/
     position: relative;
     color: white;
-    /*margin-top: 10px;*/
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("/Assests/images/projects.jpg");
     background-size: cover;
     background-position: center;
-    height: 90vh;
+    /*height: 90vh;*/
 }
-
-/*body >section{*/
-/*    width: 100%;*/
-/*    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("/Assests/images/backgroundImages/sec 05.jpg");*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*    height: 90vh;*/
-/*    !*margin-top: 70px;*!*/
-/*}*/
