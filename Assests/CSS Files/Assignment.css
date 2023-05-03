@@ -3,6 +3,7 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 body {
     width: 100%;
     /*background-color: black;*/
@@ -14,6 +15,7 @@ body {
     background-position: center;
     height: 90vh;
 }
+
 /*body{*/
 /*    !*width: 100%;*!*/
 /*    !*background-color: black;*!*/
@@ -24,11 +26,48 @@ body {
 
 /*}*/
 
-/*body >section{*/
-/*    width: 100%;*/
-/*    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("/Assests/images/backgroundImages/sec 05.jpg");*/
-/*    background-size: cover;*/
-/*    background-position: center;*/
-/*    height: 90vh;*/
-/*    !*margin-top: 70px;*!*/
-/*}*/
+body > section > section {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: 65%;
+    height: 75px;
+    /*border: 2px solid black;*/
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 2px;
+    margin-bottom: 40px;
+}
+
+body > section:nth-child(2) {
+    position: relative;
+    top: 10px;
+    left: 20px;
+    width: 65%;
+    height: 75px;
+    /*border: 2px solid black;*/
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    grid-gap: 3px;
+    /*margin-left: 20px;*/
+
+}
+
+body > section > h3 {
+    margin-top: 40px;
+    margin-left: 20px;
+
+}
+
+body > section > h2 {
+    margin-top: 40px;
+    /*margin-left: 500px;*/
+    position: relative;
+    right: 40%;
+    left: 40%;
+    top: 10%;
+    margin: autos;
+}
+

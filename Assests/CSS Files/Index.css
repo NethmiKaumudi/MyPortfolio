@@ -120,7 +120,7 @@ main {
 }
 
 main > .section_01 {
-    width: 100%;
+    width: 98%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("/Assests/images/backgroundImages/1st sec.jpg");
     background-size: cover;
     background-position: center;
@@ -130,7 +130,7 @@ main > .section_01 {
 }
 
 main > .section_02 {
-    width: 100%;
+    width: 98%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("/Assests/images/backgroundImages/sec 02.jpg");
     /*background-image: url("/Assests/images/gold-glitter-abstract-sparkle-burst-background-illustration.jpg");*/
     background-size: cover;
@@ -143,7 +143,7 @@ main > .section_02 {
 }
 
 main > .section_03 {
-    width: 100%;
+    width: 98%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("/Assests/images/backgroundImages/sec 03.jpg");
     /*background-image: url("/Assests/images/gold-glitter-abstract-sparkle-burst-background-illustration.jpg");*/
     background-size: cover;
@@ -205,74 +205,122 @@ main > .section_07 {
 
 .section_01 > div > .section1 > .div_image > img {
     position: absolute;
-    top: 0;
+    top: -10%;
     bottom: 0;
     left: 0;
     right: 0;
     margin: auto;
-    height: 350px;
-    width: 350px;
+    height: 375px;
+    width: 375px;
     /*background-color: white;*/
-    border: 2px solid gold;
+    border: 3px solid gold;
     border-radius: 100%;
     /*background-image: url("../images/ProfilePic.jpg");*/
     background-size: 100% 100%;
 
 }
 
-.section_01 > div > .section1 > h2 {
-    /*position: absolute;*/
-    /*!*left: 0;*!*/
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*margin: auto;*/
+.section_01 > div > .section1 > h1 {
+    font-size: 52px;
     position: absolute;
-    top: 40%; /* move the element down 50% of the container's height */
+    top: 32%; /* move the element down 50% of the container's height */
+    left: 200px; /* position the element on the left side */
+    transform: translate(0, -50%);
+
+}
+
+.section_01 > div > .section1 > h2 {
+
+    font-size: 55px;
+    color: gold;
+    position: absolute;
+    top: 43%; /* move the element down 50% of the container's height */
     left: 110px; /* position the element on the left side */
     transform: translate(0, -50%);
 
 }
+
 .section_01 > div > .section1 > h3 {
-    /*position: absolute;*/
-    /*!*left: 0;*!*/
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*margin: auto;*/
+    font-size: 45px;
     position: absolute;
+    color: gold;
     top: 55%; /* move the element down 50% of the container's height */
     left: 100px; /* position the element on the left side */
     transform: translate(0, -50%);
 
 }
-.section_01 > div > .section1 > p{
-    /*position: absolute;*/
-    /*!*left: 0;*!*/
-    /*top: 0;*/
-    /*bottom: 0;*/
-    /*margin: auto;*/
+
+.section_01 > div > .section1 > button {
+    font-size: 25px;
     position: absolute;
-    top: 70%; /* move the element down 50% of the container's height */
-    left: 110px; /* position the element on the left side */
+    top: 72%; /* move the element down 50% of the container's height */
+    left: 200px; /* position the element on the left side */
     transform: translate(0, -50%);
+    background: linear-gradient(to right, gold, white);
+    /*border-radius: 100%;*/
+    border: 2px solid black;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.section_01 > div > .section1 > button > a {
+    text-decoration: none;
+    color: black;
+    font-family: sans-serif;
+}
+
+.section_01 > div > section:nth-child(3) > h3 {
+    font-size: 45px;
+    position: absolute;
+    top: 55%; /* move the element down 50% of the container's height */
+    right: 110px; /* position the element on the left side */
+    transform: translate(0, -50%);
+    color: gold;
 
 }
 
+/*.section_02 > div {*/
+/*    position: absolute;*/
+/*    top: 0;*/
+/*    bottom: 0;*/
+/*    left: 0;*/
+/*    right: 0;*/
+/*    margin: auto;*/
+/*    height: 550px;*/
+/*    width: 600px;*/
+/*    border: 2px solid #1B191A;*/
+/*}*/
 
-.section_02 > div {
+.section_02 > article > pre {
     position: absolute;
-    top: 0;
+    top: 20%;
     bottom: 0;
-    left: 0;
+    left: 25%;
     right: 0;
     margin: auto;
-    height: 550px;
-    width: 600px;
-    border: 2px solid #1B191A;
+    font-size: 25px;
+    /*height: 550px;*/
+    /*width: 600px;*/
+    /*border: 2px solid #1B191A;*/
+    font-family: "Book Antiqua";
 }
 
-.section_02 > div > pre {
-    top: 200px;
+section_02 > h2 {
+    position: relative;
+    /*top: 15%;*/
+    /*bottom: 0;*/
+    /*left: 0;*/
+    /*right: 0;*/
+    /*margin: auto;*/
+    /*height: 550px;*/
+    /*width: 600px;*/
+    /*border: 2px solid #1B191A;*/
+    font-family: "Book Antiqua";
+    color: gold;
 }
+
 
 /*div>article>pre{*/
 /*    position: absolute;*/
@@ -282,6 +330,29 @@ main > .section_07 {
 /*    right: 0;*/
 /*    margin: auto;*/
 /*}*/
+.section_03 > section:nth-child(1) {
+    position: relative;
+    /*height: 400px;*/
+    /*width: 800px;*/
+    border: 3px solid black;
+    top: 50px;
+    left: 20px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.section_03 > section:nth-child(2) {
+    position: relative;
+    /*height: 400px;*/
+    /*width: 800px;*/
+    border: 3px solid black;
+    top: 50px;
+    left: 20px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
 
 .section_06 > section:nth-child(1) {
     border: 3px solid black;
