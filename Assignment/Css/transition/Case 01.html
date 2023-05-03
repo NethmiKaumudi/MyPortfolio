@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transistion Case 01</title>
+    <link rel="stylesheet" href="Assests/Assets/CssFile/normalize.css">
+    <link rel="stylesheet" href="/Assignment/Css/Assets/fontawesome-free-6.4.0-web/css/all.min.css">
+    <style>
+        * {
+            font-family: sans-serif;
+        }
+
+        section {
+            width: 250px;
+            height: 400px;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            /*border: 2px solid black;*/
+            top: 150px;
+
+        }
+
+        section > div {
+            background-color: blueviolet;
+            box-shadow: 0px 1px 4px 2px rebeccapurple;
+            height: 50px;
+            position: relative;
+            left: -200px;
+            transition-duration: 2s;
+
+
+        }
+
+        section > div:hover {
+            left: -10px;
+            transition: all 1s;
+
+        }
+
+        h2 {
+            color: white;
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
+        div > i {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            height: max-content;
+            width: max-content;
+            top: 0;
+            bottom: 0;
+            right: 20px;
+            margin: auto;
+        }
+    </style>
+    <link rel="stylesheet" href="../Assets/fontawesome-free-6.4.0-web/css/all.css">
+</head>
+<body>
+<section class>
+    <div>
+        <h2> Menu One</h2>
+        <i class="fa-solid fa-address-book" aria-hidden="true"></i>
+    </div>
+    <div>
+        <h2> Menu Two</h2>
+        <i class="fa-solid fa-truck fa-sm"></i>
+    </div>
+    <div>
+        <h2> Menu Three</h2>
+        <i class="fa-solid fa-house"></i>
+    </div>
+    <div>
+        <h2> Menu Four</h2>
+        <i class="fa-solid fa-phone"></i>
+    </div>
+    <div>
+        <h2> Menu Five</h2>
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+</section>
+</body>
+</html>

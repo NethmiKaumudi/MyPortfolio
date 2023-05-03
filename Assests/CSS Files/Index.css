@@ -111,7 +111,7 @@ header > .menu_bar > ul > li:hover > .sub_menu_01 > ul > li > a:hover {
 }
 
 main {
-    width: 100%;
+    /*width: 100%;*/
     background-color: black;
     position: relative;
     color: white;
@@ -120,8 +120,8 @@ main {
 }
 
 main > .section_01 {
-    width: 98%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("/Assests/images/backgroundImages/1st sec.jpg");
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("../images/backgroundImages/1st sec.jpg");
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -130,8 +130,8 @@ main > .section_01 {
 }
 
 main > .section_02 {
-    width: 98%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("/Assests/images/backgroundImages/sec 02.jpg");
+    width: 100%;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("../images/backgroundImages/sec 02.jpg");
     /*background-image: url("/Assests/images/gold-glitter-abstract-sparkle-burst-background-illustration.jpg");*/
     background-size: cover;
     background-position: center;
@@ -143,7 +143,7 @@ main > .section_02 {
 }
 
 main > .section_03 {
-    width: 98%;
+    width: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("/Assests/images/backgroundImages/sec 03.jpg");
     /*background-image: url("/Assests/images/gold-glitter-abstract-sparkle-burst-background-illustration.jpg");*/
     background-size: cover;
@@ -234,7 +234,7 @@ main > .section_07 {
     font-size: 55px;
     color: gold;
     position: absolute;
-    top: 43%; /* move the element down 50% of the container's height */
+    top: 45%; /* move the element down 50% of the container's height */
     left: 110px; /* position the element on the left side */
     transform: translate(0, -50%);
 
@@ -307,8 +307,8 @@ main > .section_07 {
     font-family: "Book Antiqua";
 }
 
-section_02 > h2 {
-    position: relative;
+section_02 > article>h2 {
+    /*position: relative;*/
     /*top: 15%;*/
     /*bottom: 0;*/
     /*left: 0;*/
@@ -319,6 +319,7 @@ section_02 > h2 {
     /*border: 2px solid #1B191A;*/
     font-family: "Book Antiqua";
     color: gold;
+    text-align: center;
 }
 
 
