@@ -145,11 +145,10 @@ main > .section_02 {
 main > .section_03 {
     width: 100%;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("/Assests/images/backgroundImages/sec 03.jpg");
-    /*background-image: url("/Assests/images/gold-glitter-abstract-sparkle-burst-background-illustration.jpg");*/
     background-size: cover;
     background-position: center;
     background-color: #1B191A;
-    height: 90vh;
+    height: 100vh;
     margin-top: 10px;
 }
 
@@ -210,8 +209,8 @@ main > .section_07 {
     left: 0;
     right: 0;
     margin: auto;
-    height: 375px;
-    width: 375px;
+    height: 350px;
+    width: 350px;
     /*background-color: white;*/
     border: 3px solid gold;
     border-radius: 100%;
@@ -292,35 +291,59 @@ main > .section_07 {
 /*    width: 600px;*/
 /*    border: 2px solid #1B191A;*/
 /*}*/
+.h21 {
+    padding: 50px;
+    font-size: 55px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 900;
+    margin-bottom: 50px;
+
+}
+
+
 
 .section_02 > article > pre {
     position: absolute;
     top: 20%;
     bottom: 0;
-    left: 25%;
+    left: -20%;
     right: 0;
+
+    text-align: center;
     margin: auto;
-    font-size: 25px;
-    /*height: 550px;*/
-    /*width: 600px;*/
-    /*border: 2px solid #1B191A;*/
-    font-family: "Book Antiqua";
+    font-size: 27px;
+    line-height: 1.7;
+    font-weight: bold;
+    font-style: italic;
 }
 
-section_02 > article>h2 {
-    /*position: relative;*/
-    /*top: 15%;*/
-    /*bottom: 0;*/
-    /*left: 0;*/
-    /*right: 0;*/
-    /*margin: auto;*/
-    /*height: 550px;*/
-    /*width: 600px;*/
-    /*border: 2px solid #1B191A;*/
-    font-family: "Book Antiqua";
-    color: gold;
+
+/*section_02 > article>h1{*/
+/*    !*position: relative;*!*/
+/*    !*top: 15%;*!*/
+/*    !*bottom: 0;*!*/
+/*    !*left: 0;*!*/
+/*    !*right: 0;*!*/
+/*    !*margin: auto;*!*/
+/*    !*height: 550px;*!*/
+/*    !*width: 600px;*!*/
+/*    !*border: 2px solid #1B191A;*!*/
+/*    font-family: "Book Antiqua";*/
+/*    text-align: center;*/
+/*    font-size: 40px;*/
+/*}*/
+.pre {
+    margin-top: 60px;
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 18px;
+    line-height: 1.9;
     text-align: center;
+    color: #ffffff;
+    margin-right: 115px;
+    padding: 0;
 }
+
 
 
 /*div>article>pre{*/
@@ -331,29 +354,29 @@ section_02 > article>h2 {
 /*    right: 0;*/
 /*    margin: auto;*/
 /*}*/
-.section_03 > section:nth-child(1) {
-    position: relative;
-    /*height: 400px;*/
-    /*width: 800px;*/
-    border: 3px solid black;
-    top: 50px;
-    left: 20px;
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-evenly;
-}
+/*.section_03 > section:nth-child(1) {*/
+/*    position: relative;*/
+/*    !*height: 400px;*!*/
+/*    !*width: 800px;*!*/
+/*    border: 3px solid black;*/
+/*    top: 50px;*/
+/*    left: 20px;*/
+/*    display: flex;*/
+/*    align-items: flex-start;*/
+/*    justify-content: space-evenly;*/
+/*}*/
 
-.section_03 > section:nth-child(2) {
-    position: relative;
-    /*height: 400px;*/
-    /*width: 800px;*/
-    border: 3px solid black;
-    top: 50px;
-    left: 20px;
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-evenly;
-}
+/*.section_03 > section:nth-child(2) {*/
+/*    position: relative;*/
+/*    !*height: 400px;*!*/
+/*    !*width: 800px;*!*/
+/*    border: 3px solid black;*/
+/*    top: 50px;*/
+/*    left: 20px;*/
+/*    display: flex;*/
+/*    align-items: flex-end;*/
+/*    justify-content: space-evenly;*/
+/*}*/
 
 .section_06 > section:nth-child(1) {
     border: 3px solid black;
@@ -362,6 +385,63 @@ section_02 > article>h2 {
     justify-content: space-evenly;
 
 }
+
+
+
+
+
+.num_01, .num_02 {
+    display: flex;
+    
+
+    
+    
+
+
+}
+.set_01{
+    border: 4px solid white;
+    padding: 130px 130px;
+    border-radius: 0 0 0 100px;
+
+    margin-left: 200px;
+    
+}
+.set_02{
+    border: 4px solid white;
+    padding: 130px 100px;
+    border-radius: 0 0 0 100px;
+
+    margin-left: 190px;
+    
+    
+}
+
+.set_03{
+    margin-top: 100px;
+    margin-left: 200px;
+    border: 4px solid white;
+    padding: 130px 100px;
+    border-radius: 0 0 0 100px;
+
+}
+
+
+
+.set_04{
+
+    margin-top: 100px;
+    margin-left: 190px;
+    border: 4px solid white;
+    padding: 130px 100px;
+    border-radius: 0 0 0 100px;
+
+}
+
+
+
+
+
 
 .section_06 > section:nth-child(1) > div {
     border: 1px solid blue;
