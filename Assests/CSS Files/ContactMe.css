@@ -3,16 +3,96 @@
     margin: 0;
     box-sizing: border-box;
 }
-body > .sec_01 {
+
+body {
     width: 100%;
-    /*background-color: black;*/
-    position: relative;
-    color: white;
-    /*margin-top: 10px;*/
-    /*Assests/images/projects.jpg*/
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("/Assests/images/backgroundImages/sec 04.jpg");
-    /*background-image: url("/Assests/images/projects.jpg");*/
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%), url("/Assests/images/backgroundImages/sec 04.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
-    height: 100vh;
 }
+
+.gt1 {
+    background-image: url("/Assests/images/backgroundImages/sec 05.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 717px;
+    height: 52vh;
+    padding: 70px 160px;
+    float: right;
+    border-radius: 45px;
+    color: white;
+}
+
+#txtFName,
+#txtEmail,
+#txtmessage {
+    font-family: "Times New Roman";
+    border-radius: 20px;
+    padding: 15px 50px;
+}
+
+#txtmessage {
+    padding: 10px;
+}
+
+#send {
+    font-family: "Times New Roman";
+    margin-top: 70px;
+    margin-left: 140px;
+    padding: 14px 40px;
+    width: 110px;
+    height: 60px;
+    background-color: gold;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out; /* Add transition for a smooth effect */
+}
+
+#send:hover {
+    transform: scale(1.1); /* Add a scale effect on hover */
+}
+
+#send:active {
+    transform: scale(1.2); /* Add a larger scale effect when clicked */
+}
+
+
+
+.mainwow {
+    display: flex;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 180px;
+    margin-left: 300px; /* Add this line to push the content to the right */
+}
+
+.subwow{
+    display: flex;
+}
+
+.wow {
+    color: #eeeeee;
+    margin-top: 100px;
+    margin-right: 90px;
+    /*background-color: #ff253a;*/
+    align-items: center;
+}
+
+.wow h2 {
+
+    font-size: 20px;
+    margin-right: 50px;
+}
+.wow h3 {
+    font-size: 40px;
+    margin-right: 50px;
+}
+.wow img{
+    margin-right: 40px;
+    width:90px;
+    height: 12vh;
+    border-radius: 100%;
+    border: 2px solid white;
+}
+

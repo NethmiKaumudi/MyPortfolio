@@ -527,58 +527,94 @@ main > .section_07 {
     cursor: pointer;
 }
 
-
-
-.section_07 > div {
-    border: 1px solid blue;
-    height: 400px;
-    width: 200px;
-    /*display:inline;*/
+.section_07{
+    margin-left: 180px;
+    padding: 30px 0 0 0 ;
 }
 
-.section_07 > div > img {
-    height: 100%;
-    width: 100%;
-}
+.pic1 img {
 
-.section_07 > div:nth-child(1) {
-    align-self: center;
-    margin-right: 50px;
-    margin-left: 50px;
-    height: 60%;
-    width: 15%;
-}
-
-.section_07 > div:nth-child(2) {
-    align-self: flex-end;
-    margin-right: 50px;
-    height: 25%;
-    width: 30%;
-}
-
-.section_07 > div:nth-child(3) {
-    align-self: flex-start;
-    margin-right: 50px;
-    height: 55%;
-    width: 20%;
+    width: 203px;
+    height: 606px;
 
 
 }
 
-.section_07 > div:nth-child(4) {
-    align-self: flex-start;
-    margin-right: 50px;
-    height: 55%;
-    width: 20%;
+/*.pic2{*/
+/*    background-size: cover;*/
+/*}*/
+.pic2 img {
+
+    margin-left: 80px;
+    width: 280px;
+    height: 440px;
+    border-radius: 50px;
 }
 
-.section_07 > div:nth-child(5) {
-    align-self: center;
-    margin-right: 50px;
-    margin-left: 50px;
-    height: 60%;
-    width: 15%;
+.pic4 img {
+    margin-left: 110px;
+    width: 280px;
+    height: 440px;
+    border-radius: 50px;
+ }
+
+.pic5 img {
+    margin-left: 110px;
+    width: 203px;
+    height: 606px;
 }
+
+
+/*.section_07 > div {*/
+/*    border: 1px solid blue;*/
+/*    height: 400px;*/
+/*    width: 200px;*/
+/*    !*display:inline;*!*/
+/*}*/
+
+/*.section_07 > div > img {*/
+/*    height: 100%;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.section_07 > div:nth-child(1) {*/
+/*    align-self: center;*/
+/*    margin-right: 50px;*/
+/*    margin-left: 50px;*/
+/*    height: 60%;*/
+/*    width: 15%;*/
+/*}*/
+
+/*.section_07 > div:nth-child(2) {*/
+/*    align-self: flex-end;*/
+/*    margin-right: 50px;*/
+/*    height: 25%;*/
+/*    width: 30%;*/
+/*}*/
+
+/*.section_07 > div:nth-child(3) {*/
+/*    align-self: flex-start;*/
+/*    margin-right: 50px;*/
+/*    height: 55%;*/
+/*    width: 20%;*/
+
+
+/*}*/
+
+/*.section_07 > div:nth-child(4) {*/
+/*    align-self: flex-start;*/
+/*    margin-right: 50px;*/
+/*    height: 55%;*/
+/*    width: 20%;*/
+/*}*/
+
+/*.section_07 > div:nth-child(5) {*/
+/*    align-self: center;*/
+/*    margin-right: 50px;*/
+/*    margin-left: 50px;*/
+/*    height: 60%;*/
+/*    width: 15%;*/
+/*}*/
 
 
 /*.div_image > {*/
