@@ -68,6 +68,13 @@ body > section > h2 {
     right: 40%;
     left: 40%;
     top: 10%;
-    margin: autos;
+    margin: auto;
+}
+section>div>img{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    margin-right: 20px;
 }
 

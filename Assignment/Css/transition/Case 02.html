@@ -3,8 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <title>case 02 Transition</title>
+    <style>body {
+        background-color: blue;
+    }
+
+    section > p {
+        font-size: 40px;
+        position: relative;
+        margin: auto;
+        z-index: 1;
+    }
+
+    section {
+        position: absolute;
+        display: flex;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 400px;
+        height: 400px;
+    }
+
+    section > div {
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 400px;
+        height: 400px;
+        border-radius: 100%;
+        background-color: white;;
+        rotate: 317deg;
+
+    }
+
+    .red_div{
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: auto;
+        width: 200px;
+        height: 200px;
+        background-color: #ff253a;
+        border-top-left-radius: 0;
+        border-top-right-radius: 100%;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+    .middle_circle{
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        width: 350px;
+        height: 350px;
+        border-radius: 100%;
+        background-color: #959595;
+    }
+
+    section > div:hover {
+        transform: rotate(360deg);
+        transition: 2s;
+    }</style>
 </head>
 <body>
-
+<section>
+    <p>RWAD</p>
+    <div>
+        <div class="red_div"></div>
+        <div class="middle_circle"></div>
+    </div>
+</section>
 </body>
 </html>
