@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Case 03</title>
+    <style>
+        section {
+            width: 1300px;
+            height: 550px;
+            /*background: yellow;*/
+            position: relative;
+            top: 10px;
+            left: 20px;
+            animation: testThree;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-delay: 3s;
+            animation-direction: alternate-reverse;
+        }
+        section:hover{
+            animation-play-state: paused;
+
+        }
+        @keyframes testThree {
+            0% {
+                transform: rotate(0deg);
+                width: 200px;
+                height: 150px;
+                background: aqua;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            25%{
+                transform: rotate(180deg);
+                width: 200px;
+                height: 150px;
+                background: blue;
+                top: 0px;
+                left: 1300px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            50%{
+                transform: rotate(360deg);
+                width: 200px;
+                height: 150px;
+                background: yellowgreen;
+                top: 550px;
+                left: 1300px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            75%{
+                transform: rotate(360deg);
+                width: 200px;
+                height: 150px;
+                background: green;
+                top: 550px;
+                left: 20px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+            100%{
+                transform: rotate(0deg);
+                width: 200px;
+                height: 150px;
+                background: aqua;
+                top: 10px;
+                left: 20px;
+                border-bottom-left-radius: 10px;
+                border-bottom-right-radius: 10px;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<section></section>
+</body>
+</html>

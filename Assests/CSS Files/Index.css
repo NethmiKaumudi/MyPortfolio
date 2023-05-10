@@ -14,7 +14,7 @@ header {
     z-index: 3;
     color: white;
     font-family: sans-serif;
-    box-shadow: -4px 4px 8px 6px gold;
+    /*box-shadow: -4px 4px 8px 6px gold;*/
 
 
 }
@@ -59,11 +59,13 @@ header > .menu_bar > ul > li > a {
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
     transition: all 0.3s ease-in-out;
 }
-header > .menu_bar > ul > li > a:hover{
+
+header > .menu_bar > ul > li > a:hover {
     transform: scale(1.2);
     cursor: pointer;
     color: gold;
 }
+
 .active, header > .menu_bar > ul > li :hover {
     height: 6.5vh;
     width: 2vw;
@@ -123,7 +125,7 @@ main {
     background-color: black;
     position: relative;
     color: white;
-    margin-top: 70px;
+    margin-top: 50px;
 
 }
 
@@ -180,6 +182,9 @@ main > .section_05 {
     background-color: #1B191A;
     height: 100vh;
     margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 main > .section_06 {
@@ -208,6 +213,8 @@ main > .section_07 {
     position: relative;
     border: 3px solid black;
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .section_01 > div > .section1 > .div_image > img {
@@ -264,12 +271,54 @@ main > .section_07 {
     left: 200px; /* position the element on the left side */
     transform: translate(0, -50%);
     background: linear-gradient(to right, gold, white);
+    /*background: gold;*/
     /*border-radius: 100%;*/
     border: 2px solid black;
+    cursor: pointer;
+    overflow: hidden;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(25, 25, 25, 0.2);
+    z-index: 1;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.2s ease-out;
+}
+
+.btn:hover::before {
+    transform: scaleX(1);
+}
+
+.btn::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.2s ease-out, opacity 0.2s ease-out;
+}
+
+.btn:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
 }
 
 .section_01 > div > .section1 > button > a {
@@ -307,7 +356,6 @@ main > .section_07 {
     margin-bottom: 50px;
 
 }
-
 
 
 .section_02 > article > pre {
@@ -353,7 +401,6 @@ main > .section_07 {
 }
 
 
-
 /*div>article>pre{*/
 /*    position: absolute;*/
 /*    top: 0;*/
@@ -395,37 +442,30 @@ main > .section_07 {
 }
 
 
-
-
-
 .num_01, .num_02 {
     display: flex;
-    
-
-    
-    
-
 
 }
-.set_01{
+
+.set_01 {
     border: 4px solid white;
     padding: 130px 130px;
     border-radius: 0 0 0 100px;
-
     margin-left: 200px;
-    
+
 }
-.set_02{
+
+.set_02 {
     border: 4px solid white;
     padding: 130px 100px;
     border-radius: 0 0 0 100px;
 
     margin-left: 190px;
-    
-    
+
+
 }
 
-.set_03{
+.set_03 {
     margin-top: 100px;
     margin-left: 200px;
     border: 4px solid white;
@@ -435,8 +475,7 @@ main > .section_07 {
 }
 
 
-
-.set_04{
+.set_04 {
 
 
     margin-top: 100px;
@@ -447,7 +486,7 @@ main > .section_07 {
 
 }
 
-.section_04{
+.section_04 {
     display: flex;
 
     /*align-items: center;*/
@@ -461,7 +500,7 @@ main > .section_07 {
     height: 70vh;
 }
 
-.div_01{
+.div_01 {
     border: 4px solid #eeeeee;
     text-align: center;
     align-items: center;
@@ -470,7 +509,7 @@ main > .section_07 {
     border-radius: 50px;
 }
 
-.div_02{
+.div_02 {
     border: 4px solid #eeeeee;
     text-align: center;
     align-items: center;
@@ -486,6 +525,7 @@ main > .section_07 {
     margin-bottom: 10px;
 
 }
+
 .section_04 article p {
     margin-top: 10px;
     font-size: 23px;
@@ -493,7 +533,8 @@ main > .section_07 {
     font-weight: bold;
     font-style: italic;
 }
-.section_04 article img{
+
+.section_04 article img {
     width: 180px;
     height: 180px;
     border-radius: 100px;
@@ -501,19 +542,17 @@ main > .section_07 {
 }
 
 
-
-
-.section_06{
+.section_06 {
     padding: 200px 300px;
 }
 
-.section_06 section .p1{
+.section_06 section .p1 {
     display: flex;
-    padding-top:40px;
+    padding-top: 40px;
     padding-right: 100px;
 }
 
-.section_06 section img{
+.section_06 section img {
     width: 100px;
     height: 100px;
     border-radius: 100px;
@@ -527,43 +566,44 @@ main > .section_07 {
     cursor: pointer;
 }
 
-.section_07{
-    margin-left: 180px;
-    padding: 30px 0 0 0 ;
+
+.section_07 .no1,
+.section_07 .no2,
+.section_07 .no3 {
+    width: 20%;
+    height: 80%;
+    flex-basis: calc(25% - 10px);
+    box-sizing: border-box;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: black;
+    text-align: center;
+    box-shadow: -4px 4px 8px 6px gray;
+    /*margin-left: 30px;*/
+
 }
 
-.pic1 img {
-
-    width: 203px;
-    height: 606px;
-
-
-}
-
-/*.pic2{*/
-/*    background-size: cover;*/
+/*.section_07 img {*/
+/*    width: 100%;*/
+/*    height: 100%;*/
 /*}*/
-.pic2 img {
 
-    margin-left: 80px;
-    width: 280px;
-    height: 440px;
-    border-radius: 50px;
+.section_07 img {
+    /*max-width: 50%;*/
+    width: 100%;
+    height: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    filter: grayscale(50%) brightness(50%);
+
 }
 
-.pic4 img {
-    margin-left: 110px;
-    width: 280px;
-    height: 440px;
-    border-radius: 50px;
- }
+.section_07 img:hover {
+    filter: grayscale(0%) brightness(100%);
 
-.pic5 img {
-    margin-left: 110px;
-    width: 203px;
-    height: 606px;
 }
-
 
 /*.section_07 > div {*/
 /*    border: 1px solid blue;*/
@@ -708,13 +748,13 @@ footer > .ad_03 > div > a {
 
 }
 
-footer > .ad_03 > div > a>img{
+footer > .ad_03 > div > a > img {
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
     transition: all 0.3s ease-in-out;
     border-radius: 100%;
-
 }
-footer > .ad_03 > div > a>img:hover{
+
+footer > .ad_03 > div > a > img:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
