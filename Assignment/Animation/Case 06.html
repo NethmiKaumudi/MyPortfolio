@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Animation Case 6</title>
+    <meta name="viewport" content="width=device-width initial-scale=1">
+    <link rel="stylesheet" href="assets/css/normalize.css">
+    <style>
+        body {
+            overflow: hidden;
+        }
+
+        main {
+            background: url("../Css/Assets/image/CarAnimation/sky.jpg");
+            width: 100vw;
+            height: 100vh;
+            background-size: cover;
+
+        }
+
+        main > #city {
+            height: 31vh;
+            width: 400vw;
+            background: url("../Css/Assets/image/CarAnimation/city.png");
+            position: absolute;
+            bottom: 25vh;
+        }
+
+        main > #road {
+            height: 25vh;
+            background: url("../Css/Assets/image/CarAnimation/road.jpg");
+            position: absolute;
+            width: 400vw;
+            bottom: 0;
+        }
+
+        main > #car {
+            width: 400px;
+            height: 150px;
+            position: absolute;
+            bottom: 20%;
+            left: 0;
+            right: 0;
+            margin: auto;
+            z-index: 2;
+            background: url("../Css/Assets/image/CarAnimation/car.png");
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        #leftWheel, #rightWheel {
+            width: 70px;
+            height: 70px;
+            background: url("../Css/Assets/image/CarAnimation/right wheel.png");
+            background-size: cover;
+            position: absolute;
+            animation-name: wheels;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear; /*ekama speed eken yanwa linear dammot default tiyenne ease-in*/
+        }
+
+        #city, #road{
+            animation-name: city_and_road;
+            animation-duration: 10s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        #rightWheel {
+            right: 48px;
+            bottom: -10px;
+
+        }
+
+        #leftWheel {
+            bottom: -10px;
+            left: 35px;
+        }
+
+        @keyframes wheels {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(-360deg);
+            }
+        }
+
+        @keyframes city_and_road {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(-75%);
+            }
+        }
+
+    </style>
+</head>
+<body>
+<main>
+    <div id="city"></div>
+    <section id="car">
+        <div id="carBody"></div>
+        <div id="leftWheel"></div>
+        <div id="rightWheel"></div>
+    </section>
+    <div id="road"></div>
+</main>
+</body>
+</html>
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>Case 06 Animation</title>-->
+<!--</head>-->
+<!--<body>-->
+
+<!--</body>-->
+<!--</html>-->
