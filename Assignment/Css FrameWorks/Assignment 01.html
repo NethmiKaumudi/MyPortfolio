@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 01 Frame works</title>
+    <link rel="icon" href="../../Assests/images/CSS Framework/Nk logo poss.png">
+    <link rel="stylesheet" href="../../Assests/lib/css/bootstrap.css">
+    <script src="../../Assests/lib/js/bootstrap.js"></script>
+
+</head>
+<body>
+<nav class="navbar fixed-top bg-body-tertiary">
+    <div class="container-fluid" style="background-color: purple">
+
+        <a class="navbar-brand" href="#">
+            <img src="/Assests/images/CSS%20Framework/Nk%20logo%20poss.png" alt="" width="50px" height="50px"> Poss System</a>
+        <div class="navbar-buttons" style="margin-right: 20px">
+            <button class="navbar-button " onclick="button1Click()" style="border-radius: 10px">Customers</button>
+            <button class="navbar-button" onclick="button2Click()" style="border-radius: 10px">Items</button>
+            <button class="navbar-button" onclick="button2Click()" style="border-radius: 10px">Orders</button>
+            <button class="navbar-button" onclick="button2Click()" style="border-radius: 10px; margin-left: 10px"><img
+                    src="/Assests/images/CSS%20Framework/logout%20icon.png" alt="" width="50px" height="50px"></button>
+        </div>
+
+    </div>
+</nav>
+<main>
+    <div style="width: 500px; margin-top: 80px;border: 2px solid black;">
+        <h1 style="font-size: 30px;margin-bottom: 15px">Customer Form</h1>
+        <form>
+            <div class="mb-3">
+                <label for="Customer Id" class="form-label">Id</label>
+                <input type="text" class="form-control" id="Customer Id" aria-describedby="Id">
+            </div>
+            <div class="mb-3">
+                <label for="Customer Name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="Customer Name" aria-describedby="Name">
+                <div id="NameHelp" class="form-text"></div>
+            </div>
+            <div class="mb-3">
+                <label for="Address" class="form-label">Address</label>
+                <input type="text" class="form-control" id="Address" aria-describedby="Address">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="background-color: purple">Save</button>
+        </form>
+    </div>
+
+</main>
+</body>
+</html>
