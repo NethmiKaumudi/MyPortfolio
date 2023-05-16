@@ -718,20 +718,23 @@ main > .section_07 {
     margin-bottom: 10px;
     font-size: 50px;
 }
-
+.h211{
+    margin-left: 10%;
+}
 .slider_wrapper {
-    top: 15%;
-    padding: 10px;
+    top: 5%;
+    /*padding: 10px;*/
     /*background-color: white;*/
     position: relative;
     max-width: 60rem;
     margin: 0 auto;
-    left: -15%;
+    left: 1%;
     height: 85vh;
+    overflow: hidden;
 }
 
 .slider {
-    padding: 5px;
+    /*padding: 5px;*/
     display: flex;
     aspect-ratio: 16/10;
     overflow-x: auto;
