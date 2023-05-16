@@ -39,9 +39,10 @@ body {
 /*}*/
 
 .h212 {
-    margin: 100px auto 50px;
+    margin: 10px auto 30px;
     font-family: sans-serif;
     font-size: 30px;
+    left: -30px;
 }
 
 .row {
