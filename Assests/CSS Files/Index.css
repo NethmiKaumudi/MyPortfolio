@@ -49,6 +49,7 @@ header ul li a {
 
 header ul li a:hover {
     background-color: #1B191A;
+    color: gold;
 }
 
 header ul li ul {
@@ -77,6 +78,8 @@ header ul li ul a {
 
 header ul li ul a:hover {
     background-color: #1B191A;
+    color: gold;
+
 }
 
 main {
@@ -789,7 +792,8 @@ main > .section_07 {
     cursor: pointer;
 }
 .box{
-    margin-top: -10px;
+    position: relative;
+    top: -10%;
     height: 80vh;
     display: flex;
     align-items: center;
@@ -832,7 +836,7 @@ main > .section_07 {
     transition: 1.5s;
 }
 .content span img:hover{
-    transform: translateY(20px) scale(1);
+    transform: translateY(20px) scale(1.5);
     cursor: pointer;
 }
 /*.section_07 .no1,*/

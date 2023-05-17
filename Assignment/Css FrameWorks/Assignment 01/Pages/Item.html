@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 01 Frame works</title>
+    <link rel="icon" href="../../../Css/Assets/POS Images/nk logo green.png">
+    <link rel="stylesheet" href="../../../../Assests/lib/css/bootstrap.css">
+    <script src="../../../../Assests/lib/js/bootstrap.js"></script>
+
+</head>
+<body>
+<header>
+    <nav class="navbar fixed-top bg-body-tertiary">
+        <div class="container-fluid" style="background-color:#0f5132">
+
+            <a class="navbar-brand" href="#">
+                <img src="../../../Css/Assets/POS Images/nk logo green.png" alt="" width="50px" height="50px"
+                     style="border-radius: 100%">
+                Pos System</a>
+            <nav class="navbar navbar-expand-lg navbar-toggler ">
+                <div class="container-fluid" style="background-color: #0f5132">
+                    <!--                <a class="navbar-brand" href="#" ></a>-->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="Customer.html">Customers</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Item.html">Items</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="Order.html">Orders</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                   aria-expanded="false">
+                                    <img src="../../../Css/Assets/POS Images/Account.png" alt=""> </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                                    <li><a class="dropdown-item" href="#">Settings</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">log out</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </nav>
+</header>
+
+<main >
+    <h2 style="margin-top: 80px;margin-left: 20px"><img src="../../../Css/Assets/POS Images/Item.png" alt="" height="50px" style="border: 2px solid black; border-radius: 100%; margin-top: 5px">Item Form</h2>
+    <div class="container text-center">
+        <div class="row mt-4">
+            <div class="col-7 mt-4 " style="width: 500px; height: 450px;margin-top: 80px;border: 3px solid black;border-radius:10px;background-color:#63C228 ">
+
+                <form>
+                    <div>
+                        <h2 style="margin-left: -13px;background-color: white;width: 497px;border-radius: 10px">New Item</h2>
+
+                    </div>
+                    <div class="mb-3" style="width: 350px;margin-left: 70px; margin-top: 15px">
+                        <label for="item-code" class="form-label">Item-code</label>
+                        <input type="text" class="form-control" id="item-code" aria-describedby="Id">
+                    </div>
+                    <div class="mb-3" style="width: 350px;margin-left: 70px;">
+                        <label for="Description" class="form-label">Description</label>
+                        <input type="text" class="form-control" id="Description" aria-describedby="Description">
+                    </div>
+                    <div class="mb-3" style="width: 350px;margin-left: 70px;">
+                        <label for="Quantity" class="form-label">Quantity</label>
+                        <input type="text" class="form-control" id="Quantity" aria-describedby="Quantity">
+                    </div>
+                    <div class="mb-3" style="width: 350px;margin-left: 70px;">
+                        <label for="Unit Price" class="form-label">Unit Price</label>
+                        <input type="text" class="form-control" id="Unit Price" aria-describedby="Unit Price">
+                    </div>
+
+                    <button type="submit" class="btn btn-success" >Save</button>
+                </form>
+            </div>
+
+            <div  class="col-5 mt-4" style="border: 2px solid black; border-radius: 10px;height: 150px;width: 650px;margin-left: 140px">
+                <div style="margin-bottom: 130px">
+                    <h3 style="margin: 20px;">Search Items Here</h3>
+                    <form class="d-flex" role="search" style="margin: 20px">
+                        <input class="form-control me-2" type="search" placeholder="Input Item-code,Description" aria-label="Search" style="width:500px; background-color:#63C228">
+                        <button class="btn btn-outline-success" type="submit" style="width:200px;">Search</button>
+                    </form>
+                </div>
+
+                <div class="mt-4 ">
+                    <table class="table table-hover table-bordered table-striped" style="width: 650px;height: auto; margin-left: -10px;background-color: #0f5132">
+                        <thead>
+                        <tr >
+                            <th>Item-Code</th>
+                            <th>Description</th>
+                            <th> Quantity</th>
+                            <th> Unit Price</th>
+                        </tr>
+                        </thead>
+                        <tbody class="table-light">
+                        <tr >
+                            <!--            <th scope="row">1</th>-->
+                            <td>I-001</td>
+                            <td>Buscuit</td>
+                            <td>100 pack</td>
+                            <td>150.00</td>
+
+                        </tr>
+                        <tr style="background-color: white">
+                            <!--            <th scope="row">1</th>-->
+                            <td>I-002</td>
+                            <td>Rice 50Kg Bags</td>
+                            <td>100 Bags</td>
+                            <td>10000.00</td>
+
+                        </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-4">
+                <button type="submit" class="btn btn-warning" style="margin-top: 20px; width: 150px">Update</button>
+                <button type="submit" class="btn btn-danger" style="margin-left: 20px;margin-top: 20px;width: 150px">Delete</button>
+            </div>
+
+
+        </div>
+    </div>
+
+
+</main>
+</body>
+</html>

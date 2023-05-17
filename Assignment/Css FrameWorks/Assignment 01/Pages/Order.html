@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment 01 Frame works</title>
+    <link rel="icon" href="../../../Css/Assets/POS Images/nk logo green.png">
+    <link rel="stylesheet" href="../../../../Assests/lib/css/bootstrap.css">
+    <script src="../../../../Assests/lib/js/bootstrap.js"></script>
+</head>
+<body>
+<nav class="navbar fixed-top bg-body-tertiary">
+    <div class="container-fluid" style="background-color:#0f5132">
+
+        <a class="navbar-brand" href="#">
+            <img src="../../../Css/Assets/POS Images/nk logo green.png" alt="" width="50px" height="50px"
+                 style="border-radius: 100%">
+            Pos System</a>
+        <nav class="navbar navbar-expand-lg navbar-toggler ">
+            <div class="container-fluid" style="background-color: #0f5132">
+                <!--                <a class="navbar-brand" href="#" ></a>-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Customer.html">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Item.html">Items</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="Order.html">Orders</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                <img src="../../../Css/Assets/POS Images/Account.png" alt=""> </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">log out</a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+</nav>
+<main>
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-7">
+                <h2  style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
+                    <img src="../../../Css/Assets/POS Images/Order.png" alt="" height="70px"
+                         style="border: 2px solid black; border-radius: 100%; margin-top: 15px">
+                    Order Form</h2>
+            </div>
+
+            <div class="col-5">
+                <form class="d-flex" role="search" style="margin: 20px">
+                    <input class="form-control me-2" type="search" placeholder="Search here"
+                           aria-label="Search" style="width:300px; background-color:#63C228">
+                </form>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="mt-4 "
+         style="width: 90vw; height: 350px;border: 3px solid black;background-color:#63C228;border-radius: 10px">
+        <div class="row g-3 align-items-center">
+            <div class="col-auto mb-3" style="width: 350px;margin-left: 70px; margin-top: 5px">
+                <label for="Customer Id" class="form-label">Customer Nic</label>
+                <input type="text" class="form-control" id="Customer Id" aria-describedby="Id">
+            </div>
+            <div class="col-auto mb-3 " style="width: 350px;margin-left: 70px;">
+                <label for="Customer Name" class="form-label">Customer Name</label>
+                <input type="text" class="form-control" id="Customer Name" aria-describedby="Customer Name">
+            </div>
+
+        </div>
+        <div class="row g-3 align-items-center">
+            <div class="col-auto mb-3" style="width: 350px;margin-left: 70px; margin-top: 5px">
+                <label for="Customer Id" class="form-label">Customer Nic</label>
+                <input type="text" class="form-control" id="Customer Id" aria-describedby="Id">
+            </div>
+            <div class="col-auto mb-3 " style="width: 350px;margin-left: 70px;">
+                <label for="Customer Name" class="form-label">Customer Name</label>
+                <input type="text" class="form-control" id="Customer Name" aria-describedby="Customer Name">
+            </div>
+
+
+        </div>
+        <div class="row g-3 align-items-center">
+            <div class="col-auto mb-3" style="width: 350px;margin-left: 70px; margin-top: 10px">
+                <label for="Customer Id" class="form-label">Customer Nic</label>
+                <input type="text" class="form-control" id="Customer Id" aria-describedby="Id">
+            </div>
+            <div class="col-auto mb-3 " style="width: 350px;margin-left: 70px;">
+                <label for="Customer Name" class="form-label">Customer Name</label>
+                <input type="text" class="form-control" id="Customer Name" aria-describedby="Customer Name">
+            </div>
+
+
+        </div>
+        <div class="row g-3 align-items-center">
+            <div class="col-auto mb-3" style="width: 350px;margin-left: 70px; margin-top: 10px">
+                <label for="Customer Id" class="form-label">Customer Nic</label>
+                <input type="text" class="form-control" id="Customer Id" aria-describedby="Id">
+            </div>
+            <div class="col-auto mb-3 " style="width: 350px;margin-left: 70px;">
+                <label for="Customer Name" class="form-label">Customer Name</label>
+                <input type="text" class="form-control" id="Customer Name" aria-describedby="Customer Name">
+            </div>
+
+
+        </div>
+        <div class="mt-4 ">
+            <table class="table table-hover table-bordered table-striped"
+                   style="width: 650px;height:auto; margin-left: -10px;background-color: #0f5132">
+                <thead>
+                <tr>
+                    <th>Customer Nic</th>
+                    <th>Customer Name</th>
+                    <th> Address</th>
+                    <th> Salary</th>
+                </tr>
+                </thead>
+                <tbody class="table-light">
+                <tr>
+                    <!--            <th scope="row">1</th>-->
+                    <td>975632124v</td>
+                    <td>Kamal Perera</td>
+                    <td>Matara</td>
+                    <td>55000.00</td>
+
+                </tr>
+
+                </tbody>
+            </table>
+        </div>
+
+</main>
+</body>
+</html>

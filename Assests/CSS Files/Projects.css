@@ -61,12 +61,12 @@ body {
 }
 
 .card {
-    width: 270px;
-    height: 270px;
+    width: 225px;
+    height: 200px;
     margin: auto;
     perspective: 1000px;
     cursor: pointer;
-    margin-left: 100px;
+    margin-left: 70px;
 }
 
 .inner_box {
@@ -92,26 +92,35 @@ body {
     background-size: cover;
 }
 .front_01{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/projectImages/2d game.jpeg");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/projectImages/2d game.jpeg");
+    background-size: 100% 100%;
 
 }
 .front_02{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/projectImages/hostel.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../images/projectImages/hostel.png");
 
 }
 .front_03{
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/projectImages/HotelMgt.png");
+    background-size: 100% 100%;
 
 }
 .front_04{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/projectImages/backery.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/projectImages/backery.png");
+    background-size: 100% 100%;
 
 }
+.front_05{
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url("../images/projectImages/protfolio img.png");
+    background-size: 100% 100%;
+
+}
+
 .card_front span {
     display: inline-block;
-    width: 100px;
+    width: 110px;
     padding: 14px 0;
-    margin-top: 160px;
+    margin-top: 100px;
     border-radius: 10px;
     background: white;
     color: black;
@@ -131,9 +140,9 @@ body {
 }
 
 .btn {
-    width: 100px;
-    height: 50px;
-    margin-top: 20px;
+    width: 80px;
+    height: 40px;
+    margin-top: 10px;
     margin-left: -25px;
     background-color: white;
     border-radius: 10px;
@@ -150,11 +159,11 @@ p {
     color: black;
     padding-bottom: 10px;
     border-bottom: 1px solid black;
-    margin-top: 140px;
+    margin-top: 90px;
 }
 
 .card:hover span {
-    transform: translateY(140px);
+    transform: translateY(40px);
 }
 
 /*.section_01>h2{*/
