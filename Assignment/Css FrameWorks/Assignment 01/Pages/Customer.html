@@ -5,8 +5,12 @@
     <title>Assignment 01 Frame works</title>
     <link rel="icon" href="../../../Css/Assets/POS Images/nk logo green.png">
     <link rel="stylesheet" href="../../../../Assests/lib/css/bootstrap.css">
-    <script src="../../../../Assests/lib/js/bootstrap.js"></script>
-
+    <meta name="viewport" content="width=device-width initial-scale=1 minimum-scale=1 maximum-scale=2">
+    <style>
+        ul > li {
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -18,7 +22,7 @@
                      style="border-radius: 100%">
                 Pos System</a>
             <nav class="navbar navbar-expand-lg navbar-toggler ">
-                <div class="container-fluid" style="background-color: #0f5132">
+                <div class="container-fluid" style="background-color: #0f5132;margin-right: 30px">
                     <!--                <a class="navbar-brand" href="#" ></a>-->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                             data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -27,6 +31,9 @@
                     </button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="Home.html">Home</a>
+                            </li>
                             <li class="nav-item">
                                 <a class="nav-link active" aria-current="page" href="Customer.html">Customers</a>
                             </li>
@@ -40,7 +47,7 @@
                                 <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                                    aria-expanded="false">
                                     <img src="../../../Css/Assets/POS Images/Account.png" alt=""> </a>
-                                <ul class="dropdown-menu">
+                                <ul class="dropdown-menu" style="background-color: #63C228;width: 35px">
                                     <li><a class="dropdown-item" href="#">Profile</a></li>
                                     <li><a class="dropdown-item" href="#">Settings</a></li>
                                     <li>
@@ -58,6 +65,8 @@
             </nav>
         </div>
     </nav>
+
+
 </header>
 
 <main>
@@ -67,37 +76,53 @@
         Customer Form</h2>
     <div class="container text-center">
         <div class="row mt-4">
-            <div class="col-7 mt-4 "
-                 style="width: 500px; height: 450px;border: 3px solid black;background-color:#63C228;border-radius: 10px">
+            <div class="col-lg-6 mt-lg-0 mt-2">
+                <div class="card" style="margin-top: 35px;background-color: #0f5132;height: 250px">
+                    <div class="card-header font-weight-bolder" style="background-color: #0f5132">
+                        Item Select
+                    </div>
+                    <div class="card-body" style="background-color: #63C228">
+                        <form>
+                            <div class="row">
 
-                <form>
-                    <div>
-                        <h2 style="margin-left: -13px;background-color: white;width: 497px;border-radius: 10px">New Customer</h2>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label>Nic:</label>
+                                        <input class="form-control" id="Nic" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="form-group">
+                                        <label>Customer Name:</label>
+                                        <input class="form-control" id="Cus_Name" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-6">
+                                    <div class="form-group">
+                                        <label class="">Address:</label>
+                                        <input class="form-control" id="Address" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-5">
+                                    <div class="form-group">
+                                        <label class="">Salary :</label>
+                                        <input class="form-control" id="Salary" type="text">
+                                    </div>
+                                </div>
+                            </div>
 
+                        </form>
                     </div>
-                    <div class="mb-3" style="width: 350px;margin-left: 70px; margin-top: 10px">
-                        <label for="Customer Id" class="form-label">Customer Nic</label>
-                        <input type="text" class="form-control" id="Customer Id" aria-describedby="Id">
-                    </div>
-                    <div class="mb-3" style="width: 350px;margin-left: 70px;">
-                        <label for="Customer Name" class="form-label">Customer Name</label>
-                        <input type="text" class="form-control" id="Customer Name" aria-describedby="Customer Name">
-                    </div>
-                    <div class="mb-3" style="width: 350px;margin-left: 70px;">
-                        <label for="Address" class="form-label">Address</label>
-                        <input type="text" class="form-control" id="Address" aria-describedby="Address">
-                    </div>
-                    <div class="mb-3" style="width: 350px;margin-left: 70px;">
-                        <label for="salary" class="form-label">Salary</label>
-                        <input type="text" class="form-control" id="salary" aria-describedby="salary">
-                    </div>
-
-                    <button type="submit" class="btn btn-success">Save</button>
-                </form>
+                </div>
+                <div class="form-group text-right mt-3" >
+                    <button class="btn btn-success col-12 col-sm-auto" id="btnAddToTable" type="button" style="width: 100px">
+                        Add
+                    </button>
+                </div>
             </div>
 
-            <div class="col-5 mt-4"
-                 style="border: 2px solid black; border-radius: 10px;height: 150px;width: 650px;margin-left: 140px">
+            <div class="col-lg-6 mt-lg-0 mt-5  " id="div_02"
+                 style="border: 2px solid black; border-radius: 10px;height: 150px;">
                 <div style="margin-bottom: 130px">
                     <h3 style="margin: 20px;">Search Customer Here</h3>
                     <form class="d-flex" role="search" style="margin: 20px">
@@ -107,10 +132,11 @@
                     </form>
                 </div>
 
-                <div class="mt-4 ">
-                    <table class="table table-hover table-bordered table-striped" style="width: 650px;height: auto; margin-left: -10px;background-color: #0f5132">
+                <div class="col-lg-6 mt-lg-0 mt-3 " >
+                    <table class="table table-hover table-bordered table-striped"
+                           style="width: 650px;height: auto;background-color: #0f5132;" id="div_03">
                         <thead>
-                        <tr >
+                        <tr>
                             <th>Customer Nic</th>
                             <th>Customer Name</th>
                             <th> Address</th>
@@ -118,7 +144,7 @@
                         </tr>
                         </thead>
                         <tbody class="table-light">
-                        <tr >
+                        <tr>
                             <!--            <th scope="row">1</th>-->
                             <td>975632124v</td>
                             <td>Kamal Perera</td>
@@ -140,17 +166,18 @@
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="col-4">
-                <button type="submit" class="btn btn-warning" style="margin-top: 20px">Update</button>
-                <button type="submit" class="btn btn-danger" style="margin-left: 20px;margin-top: 20px">Delete</button>
-            </div>
 
-
-        </div>
     </div>
 
 
 </main>
+<script src="../../../../Assests/lib/js/bootstrap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+
 </body>
 </html>
