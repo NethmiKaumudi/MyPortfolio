@@ -69,16 +69,17 @@
         <div class="jumbotron pt-4">
             <div class="row">
                 <div class="col-6">
-                    <h2  style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
-                        <img  src="../../../Css/Assets/POS Images/Order.png"height="70px"
+                    <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
+                        <img src="../../../Css/Assets/POS Images/Order.png" height="70px"
                              style="border: 2px solid black; border-radius: 100%; margin-top: 11px"><img/>
                         Order Form</h2>
                 </div>
 
                 <div class="col-6 justify-content-end mt-5">
-                    <form class="d-flex" role="search" >
+                    <form class="d-flex" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search here"
-                               aria-label="Search" style="width:300px; background-color:#63C228;margin-top: 50px;margin-left: 300px">
+                               aria-label="Search"
+                               style="width:300px; background-color:#63C228;margin-top: 50px;margin-left: 300px">
                     </form>
                 </div>
 
@@ -186,8 +187,9 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="form-group text-right mt-3" >
-                                    <button class="btn btn-success col-12 col-sm-auto" id="btnAddToTable" type="button" style="width: 100px">
+                                <div class="form-group text-right mt-3">
+                                    <button class="btn btn-success col-12 col-sm-auto" id="btnAddToTable" type="button"
+                                            style="width: 100px">
                                         Add
                                     </button>
                                 </div>
@@ -227,8 +229,12 @@
                             </div>
                         </div>
                     </div>
-                </div>
 
+                </div>
+                <div class="mt-4 ">
+                    <button type="submit" class="btn btn-warning" style="width: 200px; margin-left:70vw">Purchase
+                    </button>
+                </div>
                 <div class="row">
                     <div class=" col-12 mt-5">
                         <table class="table table-hover table-bordered table-striped"
@@ -242,6 +248,8 @@
                                 <th>Unit Price</th>
                                 <th> order Qty</th>
                                 <th> sub Total</th>
+                                <th> Discount</th>
+                                <th> Total</th>
                                 <th> Edit</th>
 
                             </tr>
@@ -256,6 +264,10 @@
                                 <td>150.00</td>
                                 <td>3</td>
                                 <td>450.00</td>
+                                <td>25.00</td>
+                                <td>425.00</td>
+
+
                                 <td>
                                     <Buton class="btn btn-danger">Delete</Buton>
                                 </td>
@@ -269,10 +281,6 @@
                 </div>
 
 
-                <div class="mt-4 ">
-                    <button type="submit" class="btn btn-warning" style="width: 200px; margin-left:70vw">Purchase
-                    </button>
-                </div>
 
             </div>
 
