@@ -4,98 +4,6 @@
     box-sizing: border-box;
 }
 
-/*body {*/
-/*    width: 100%;*/
-/*    background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%), url("/Assests/images/codingg.jpg");*/
-/*    background-size: cover;*/
-/*    background-repeat: no-repeat;*/
-/*    background-position: center;*/
-/*}*/
-
-/*.gt1 {*/
-/*    !*background-image: url("/Assests/images/");*!*/
-/*    background-repeat: no-repeat;*/
-/*    background-size: cover;*/
-/*    width: 717px;*/
-/*    height: 52vh;*/
-/*    padding: 70px 160px;*/
-/*    float: right;*/
-/*    border-radius: 45px;*/
-/*    border: 3px solid black;*/
-/*    color: white;*/
-/*    box-shadow: 20px 20px 50px gray;*/
-/*}*/
-
-/*#txtFName,*/
-/*#txtEmail,*/
-/*#txtmessage {*/
-/*    font-family: "Times New Roman";*/
-/*    border-radius: 20px;*/
-/*    padding: 15px 50px;*/
-/*}*/
-
-/*#txtmessage {*/
-/*    !*padding: 20px 20px;*!*/
-/*}*/
-
-/*#send {*/
-/*    font-family: "Times New Roman";*/
-/*    margin-top: 70px;*/
-/*    margin-left: 140px;*/
-/*    padding: 14px 40px;*/
-/*    width: 110px;*/
-/*    height: 60px;*/
-/*    background-color: gold;*/
-/*    text-align: center;*/
-/*    cursor: pointer;*/
-/*    transition: all 0.2s ease-in-out; !* Add transition for a smooth effect *!*/
-/*}*/
-
-/*#send:hover {*/
-/*    transform: scale(1.1); !* Add a scale effect on hover *!*/
-/*}*/
-
-/*#send:active {*/
-/*    transform: scale(1.2); !* Add a larger scale effect when clicked *!*/
-/*}*/
-
-
-/*.mainwow {*/
-/*    display: flex;*/
-/*    margin-left: auto;*/
-/*    margin-right: auto;*/
-/*    margin-top: 180px;*/
-/*    margin-left: 300px; !* Add this line to push the content to the right *!*/
-/*}*/
-
-/*.subwow{*/
-/*    display: flex;*/
-/*}*/
-
-/*.wow {*/
-/*    color: #eeeeee;*/
-/*    margin-top: 100px;*/
-/*    margin-right: 90px;*/
-/*    !*background-color: #ff253a;*!*/
-/*    align-items: center;*/
-/*}*/
-
-/*.wow h2 {*/
-
-/*    font-size: 20px;*/
-/*    margin-right: 50px;*/
-/*}*/
-/*.wow h3 {*/
-/*    font-size: 40px;*/
-/*    margin-right: 50px;*/
-/*}*/
-/*.wow img{*/
-/*    margin-right: 40px;*/
-/*    width:90px;*/
-/*    height: 12vh;*/
-/*    border-radius: 100%;*/
-/*    border: 2px solid white;*/
-/*}*/
 
 .container {
     min-height: 100vh;
@@ -255,5 +163,124 @@
         position: absolute;
         left: 30%;
         top: 20%;
+    }
+}
+/*Tablet 425-768*/
+@media all and (min-width: 425px) and (max-width: 768px) {
+
+
+    .container h2:nth-child(1){
+        position: absolute;
+        left: 4%;
+        top: 35%;
+        font-size: 30px;
+    }
+    .container h2:nth-child(2){
+        position: absolute;
+        left: 5%;
+        top: 45%;
+        font-size: 27px;
+        color: gold;
+
+    }
+    .container img{
+        position: absolute;
+        left: 17%;
+        top: 55%;
+        border-radius: 100%;
+        height: 60px;
+        width: 60px;
+    }
+    .container form {
+        width: 500px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(9px);
+        flex-wrap: wrap;
+        position: absolute;
+        left: 31%;
+        top: 25%;
+    }
+
+    .container form h1 {
+        color: white;
+        font-weight: 400;
+        margin-top: 20px;
+        width: 400px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .container form input {
+        width: 200px;
+        height: 40px;
+        padding-left: 10px;
+        outline: none;
+        border: none;
+        font-size: 15px;
+        margin-bottom: 11px;
+        background: none;
+        border-bottom: 2px solid white;
+    }
+    .container form input:hover{
+        border-bottom: 2px solid gold;
+
+    }
+    .container form input::placeholder {
+        color: white;
+    }
+
+    .container #Name,
+    .container #Email {
+        margin-left: 20px;
+    }
+
+    .container form h4 {
+        color: white;
+        font-weight: 300;
+        width: 400px;
+        margin-top: 20px;
+        margin-left: 10px;
+    }
+
+    .container form textarea {
+        background: none;
+        border: none;
+        border-bottom: 2px solid white;
+        color: white;
+        font-weight: 200;
+        font-size: 15px;
+        padding: 10px;
+        outline: none;
+        min-width: 420px;
+        max-width: 420px;
+        min-height: 70px;
+        max-height: 70px;
+        margin-left: 30px;
+        /*margin-top: 20px;*/
+
+
+    }
+    .container form textarea:hover{
+        border-bottom: 2px solid gold;
+
+    }
+    .container form #button {
+        border: none;
+        background: white;
+        border-radius: 5px;
+        margin-top: 20px;
+        font-weight: 600;
+        font-size: 18px;
+        color: black;
+        width: 90px;
+    }
+    .container form #button:hover{
+        opacity: 0.7;
+        background: gold;
     }
 }

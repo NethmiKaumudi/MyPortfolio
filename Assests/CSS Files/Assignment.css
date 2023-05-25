@@ -17,27 +17,31 @@ body {
     height: 90vh;
 }
 
-h2{
+h2 {
     margin-top: 25px;
     margin-bottom: 20px;
     font-family: "Book Antiqua";
 }
-.sec_01{
+
+.sec_01 {
     display: flex;
     justify-content: space-evenly;
 
 }
-.sec_02{
+
+.sec_02 {
     display: flex;
     justify-content: space-evenly;
 
 }
-.sec_03{
+
+.sec_03 {
     /*display: flex;*/
     /*justify-content: space-evenly;*/
     margin-left: 25px;
 
 }
+
 .card {
     width: 15%;
     background-color: gray;
@@ -47,10 +51,12 @@ h2{
 
     /*margin-left: 25px;*/
 }
-.card:hover{
+
+.card:hover {
     box-shadow: 2px 2px 10px gold;
 
 }
+
 .image img {
     width: 100%;
     border-top-left-radius: 10px;
@@ -67,24 +73,81 @@ h2{
 .descrption {
     text-align: center;
 }
-.descrption button{
+
+.descrption button {
     margin-top: 20px;
     margin-bottom: 20px;
-    background-color:linen;
+    background-color: linen;
     border: 2px solid black;
     border-radius: 10px;
     padding: 5px;
     cursor: pointer;
 
 }
-.descrption button a{
+
+.descrption button a {
     text-decoration: none;
     color: black;
 }
-.descrption button:hover{
+
+.descrption button:hover {
     background-color: gold;
     transition: 0.5s;
 }
+
 /*responsive*/
 /*@media all and (min-width: 768px) and (max-width: 1024px) {*/
 /*}*/
+/*Tablet 425-768*/
+@media all and (min-width: 425px) and (max-width: 768px) {
+    h2 {
+        margin-top: 35px;
+        margin-bottom: 15px;
+        font-family: "Book Antiqua";
+        margin-left: 15px;
+
+    }
+
+    .sec_01 {
+        /*display: flex;*/
+        /*justify-content: space-evenly;*/
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+        margin-left: 25px;
+
+    }
+
+    .sec_02 {
+        /*display: flex;*/
+        /*justify-content: space-evenly;*/
+        display: grid;
+        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+        margin-left: 25px;
+
+
+    }
+
+    .sec_03 {
+        /*display: flex;*/
+        /*justify-content: space-evenly;*/
+        margin-left: 25px;
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+        width: 95%;
+        background-color: gray;
+        color: black;
+        border-radius: 10px;
+        box-shadow: 2px 2px 10px white;
+        margin-top: 20px;
+
+        /*margin-left: 25px;*/
+    }
+}
