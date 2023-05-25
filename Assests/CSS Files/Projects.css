@@ -18,26 +18,9 @@ body {
 
 .container {
     display: flex;
-    /*align-items: flex-end;*/
-    position: absolute;
-    top: 30%;
-    left: -2%;
+    align-items: center;
+
 }
-
-/*.section_01 {*/
-/*    display: flex;*/
-/*    !*align-items: center;*!*/
-/*    justify-content: space-evenly;*/
-/*}*/
-
-/*.section_01 > div > img {*/
-/*    margin-top: 60px;*/
-/*    border-bottom-left-radius: 10px;*/
-/*    border-bottom-right-radius: 10px;*/
-/*    border-top-left-radius: 10px;*/
-/*    border-top-right-radius: 10px;*/
-/*}*/
-
 .h212 {
     margin: 100px auto 50px;
     font-family: sans-serif;
@@ -48,9 +31,7 @@ body {
     /*width: 85%;*/
     width: 100%;
     margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
 
 }
 
@@ -66,7 +47,7 @@ body {
     margin: auto;
     perspective: 1000px;
     cursor: pointer;
-    margin-left: 70px;
+    /*margin-left: 70px;*/
 }
 
 .inner_box {
@@ -166,6 +147,35 @@ p {
     transform: translateY(40px);
 }
 
-/*.section_01>h2{*/
-/*    margin-top: 40px;*/
-/*}*/
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+    .container {
+        display: flex;
+        align-items: center;
+
+    }
+    .h212 {
+        margin: 80px auto 40px;
+        font-family: sans-serif;
+        font-size: 20px;
+    }
+
+    .card {
+        width: 190px;
+        height: 180px;
+        margin: auto;
+        perspective: 1000px;
+        cursor: pointer;
+        /*margin-left: 70px;*/
+    }
+
+    .btn {
+        width: 70px;
+        height: 30px;
+        margin-top: 6px;
+        margin-left: -5px;
+        background-color: white;
+        border-radius: 10px;
+        border: 3px solid black;
+    }
+}

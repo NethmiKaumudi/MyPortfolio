@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SPA</title>
+    <script src="../../Assests/lib/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../Assests/lib/css/bootstrap.css">
+    <link rel="stylesheet" href="/Assests/fontawesome-free-6.4.0-web">
+    <link rel="icon" href="../Css/Assets/POS Images/nk logo green.png" height="194" width="259"/>
+
+</head>
+<body>
+<section onload="getPageContent('Home')">
+    <header>
+        <nav class="navbar fixed-top bg-body-tertiary">
+            <div class="container-fluid" style="background-color:#0f5132;">
+
+                <a class="navbar-brand" href="#">
+                    <img src="../Css/Assets/POS Images/nk logo green.png" alt="" width="50px" height="50px"
+                         style="border-radius: 100%">
+                    Pos System</a>
+                <nav class="navbar navbar-expand-lg navbar-toggler ">
+                    <div class="container-fluid" style="background-color: #0f5132;margin-right: 30px">
+                        <!--                <a class="navbar-brand" href="#" ></a>-->
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                                aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
+                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                                <li class="nav-item">
+                                    <a class="nav-link active"  aria-current="page" onclick="getPageContent('Home')">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link active" aria-current="page" onclick="getPageContent('Customer')">Customers</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" onclick="getPageContent('Item')">Items</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" onclick="getPageContent('Order')">Orders</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                       aria-expanded="false">
+                                        <img src="../../../Css/Assets/POS Images/Account.png" alt=""> </a>
+                                    <ul class="dropdown-menu" style="background-color: #63C228;width: 35px">
+                                        <li><a class="dropdown-item" href="#">Profile</a></li>
+                                        <li><a class="dropdown-item" href="#">Settings</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">log out</a></li>
+                                    </ul>
+                                </li>
+
+
+                            </ul>
+
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </nav>
+
+
+    </header>
+
+
+    <!--dashboard content-->
+    <main class="container-fluid " id="dashboardContent">
+        <div class="jumbotron pt-md-5">
+            <div id="home-tiles">
+                <div class="row ">
+                    <div class="col-lg-6 col-xl-4 mb-2">
+                        <div class="card" style="background-color:lightseagreen;margin-top: 40px">
+                            <div class="card-header font-weight-bolder" style="background-color:#0f5132;">Customers
+                            </div>
+                            <div class="card-body">
+                                <div class="dash-tile-icon"><i class="fas fa-users"></i></div>
+                                <div class="dash-tile-text text-right text-black-50"><h2>100</h2></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4 mb-2">
+                        <div class="card" style="background-color:lightseagreen;margin-top: 40px">
+                            <div class="card-header  font-weight-bolder" style="background-color:#0f5132;">Items</div>
+                            <div class="card-body">
+                                <div class="dash-tile-icon"><i class="fas fa-cubes"></i></div>
+                                <div class="dash-tile-text text-right text-black-50"><h2>120</h2></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-xl-4 mb-2">
+                        <div class="card" style="background-color:lightseagreen;margin-top: 40px">
+                            <div class="card-header  font-weight-bolder" style="background-color:#0f5132;">My Orders
+                            </div>
+                            <div class="card-body">
+                                <div class="dash-tile-icon"><i class="fas fa-shopping-cart"></i></div>
+                                <div class="dash-tile-text text-right text-black-50"><h2>1100</h2></div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </main>
+</section>
+<!--<section onload="getPageContent('Customer')">-->
+<!--    <header>-->
+<!--        <nav class="navbar fixed-top bg-body-tertiary">-->
+<!--            <div class="container-fluid" style="background-color:#0f5132">-->
+
+<!--                <a class="navbar-brand" href="#">-->
+<!--                    <img src="../../../Css/Assets/POS Images/nk logo green.png" alt="" width="50px" height="50px"-->
+<!--                         style="border-radius: 100%">-->
+<!--                    Pos System</a>-->
+<!--                <nav class="navbar navbar-expand-lg navbar-toggler ">-->
+<!--                    <div class="container-fluid" style="background-color: #0f5132;margin-right: 30px">-->
+<!--                        &lt;!&ndash;                <a class="navbar-brand" href="#" ></a>&ndash;&gt;-->
+<!--                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"-->
+<!--                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"-->
+<!--                                aria-expanded="false" aria-label="Toggle navigation">-->
+<!--                            <span class="navbar-toggler-icon"></span>-->
+<!--                        </button>-->
+<!--                        <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
+<!--                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link active" aria-current="page" href="Home.html">Home</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link active" aria-current="page" href="Customer.html">Customers</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link" href="Item.html">Items</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item">-->
+<!--                                    <a class="nav-link" href="Order.html">Orders</a>-->
+<!--                                </li>-->
+<!--                                <li class="nav-item dropdown">-->
+<!--                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"-->
+<!--                                       aria-expanded="false">-->
+<!--                                        <img src="../../../Css/Assets/POS Images/Account.png" alt=""> </a>-->
+<!--                                    <ul class="dropdown-menu" style="background-color: #63C228;width: 35px">-->
+<!--                                        <li><a class="dropdown-item" href="#">Profile</a></li>-->
+<!--                                        <li><a class="dropdown-item" href="#">Settings</a></li>-->
+<!--                                        <li>-->
+<!--                                            <hr class="dropdown-divider">-->
+<!--                                        </li>-->
+<!--                                        <li><a class="dropdown-item" href="#">log out</a></li>-->
+<!--                                    </ul>-->
+<!--                                </li>-->
+
+
+<!--                            </ul>-->
+
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                </nav>-->
+<!--            </div>-->
+<!--        </nav>-->
+
+
+<!--    </header>-->
+
+<!--    <main>-->
+<!--        <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">-->
+<!--            <img src="../../../Css/Assets/POS Images/cus.jpg" alt="" height="70px"-->
+<!--                 style="border: 2px solid black; border-radius: 100%; margin-top: 15px">-->
+<!--            Customer Form</h2>-->
+<!--        <div class="container text-center">-->
+<!--            <div class="row mt-4">-->
+<!--                <div class="col-lg-6 mt-lg-0 mt-2">-->
+<!--                    <div class="card" style="margin-top: 35px;background-color: #0f5132;height: 250px">-->
+<!--                        <div class="card-header font-weight-bolder" style="background-color: #0f5132">-->
+<!--                            Customer-->
+<!--                        </div>-->
+<!--                        <div class="card-body" style="background-color: #63C228">-->
+<!--                            <form>-->
+<!--                                <div class="row">-->
+
+<!--                                    <div class="col-6">-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label>Customer Nic:</label>-->
+<!--                                            <input class="form-control" id="Nic" type="text">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-5">-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label>Customer Name:</label>-->
+<!--                                            <input class="form-control" id="Cus_Name" type="text">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-6">-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="">Address:</label>-->
+<!--                                            <input class="form-control" id="Address" type="text">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                    <div class="col-5">-->
+<!--                                        <div class="form-group">-->
+<!--                                            <label class="">Salary :</label>-->
+<!--                                            <input class="form-control" id="Salary" type="text">-->
+<!--                                        </div>-->
+<!--                                    </div>-->
+<!--                                </div>-->
+
+<!--                            </form>-->
+<!--                        </div>-->
+<!--                    </div>-->
+<!--                    <div class="form-group text-right mt-3">-->
+<!--                        <button class="btn btn-success col-12 col-sm-auto" id="btnAddToTable" type="button"-->
+<!--                                style="width: 100px">-->
+<!--                            Add-->
+<!--                        </button>-->
+<!--                    </div>-->
+<!--                </div>-->
+
+<!--                <div class="col-lg-6 mt-lg-0 mt-5  " id="div_02"-->
+<!--                     style="border: 2px solid black; border-radius: 10px;height: 150px;">-->
+<!--                    <div style="margin-bottom: 130px">-->
+<!--                        <h3 style="margin: 20px;">Search Customer Here</h3>-->
+<!--                        <form class="d-flex" role="search" style="margin: 20px">-->
+<!--                            <input class="form-control me-2" type="search" placeholder="Input Nic,Name,Address"-->
+<!--                                   aria-label="Search" style="width:500px; background-color:#63C228">-->
+<!--                            <button class="btn btn-outline-success" type="submit" style="width:200px;">Search</button>-->
+<!--                        </form>-->
+<!--                    </div>-->
+
+<!--                    <div class="col-lg-6 mt-lg-0 mt-3 ">-->
+<!--                        <table class="table table-hover table-bordered table-striped"-->
+<!--                               style="width: 650px;height: auto;background-color: #0f5132;" id="div_03">-->
+<!--                            <thead>-->
+<!--                            <tr>-->
+<!--                                <th>Customer Nic</th>-->
+<!--                                <th>Customer Name</th>-->
+<!--                                <th> Address</th>-->
+<!--                                <th> Salary</th>-->
+<!--                            </tr>-->
+<!--                            </thead>-->
+<!--                            <tbody class="table-light">-->
+<!--                            <tr>-->
+<!--                                &lt;!&ndash;            <th scope="row">1</th>&ndash;&gt;-->
+<!--                                <td>975632124v</td>-->
+<!--                                <td>Kamal Perera</td>-->
+<!--                                <td>Matara</td>-->
+<!--                                <td>55000.00</td>-->
+
+<!--                            </tr>-->
+<!--                            <tr style="background-color: white">-->
+<!--                                &lt;!&ndash;            <th scope="row">1</th>&ndash;&gt;-->
+<!--                                <td>755632124v</td>-->
+<!--                                <td>Nimali Perera</td>-->
+<!--                                <td>Colombo</td>-->
+<!--                                <td>100000.00</td>-->
+
+<!--                            </tr>-->
+
+<!--                            </tbody>-->
+<!--                        </table>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+
+<!--        </div>-->
+
+
+<!--    </main>-->
+<!--</section>-->
+<section id="Item"></section>
+<section id="Orders"></section>
+<script src="../../../../Assests/lib/js/bootstrap.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+        crossorigin="anonymous"></script>
+
+<script>
+    var pages = {
+        'Home': alert("Welcome!"),
+        'Customer': alert("Welcome!"),
+        'Item': alert("Welcome!"),
+        'Order': alert("Welcome!"),
+
+    };
+
+    function getPageContent(page) {
+        var contentToReturn;
+        switch (page) {
+            case 'Home':
+                contentToReturn = pages.Home;
+                break;
+            case 'Customer':
+                contentToReturn = pages.Customer;
+                break;
+            case 'Item':
+                contentToReturn = pages.Item;
+                break;
+            case 'Order':
+                contentToReturn = pages.Order;
+                break;
+            default:
+                contentToReturn = pages.Home;
+                break;
+
+        }
+        document.getElementById('content').innerHTML = contentToReturn;
+    }
+
+</script>
+</body>
+
+</html>

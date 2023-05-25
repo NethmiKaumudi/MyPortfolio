@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: Arial;
 }
 
 body {
@@ -16,214 +17,74 @@ body {
     height: 90vh;
 }
 
-.container {
+h2{
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-family: "Book Antiqua";
+}
+.sec_01{
     display: flex;
-    /*align-items: flex-end;*/
-    position: absolute;
-    top: 60%;
-    left: -2%;
+    justify-content: space-evenly;
+
 }
-
-/*.section_01 {*/
-/*    display: flex;*/
-/*    !*align-items: center;*!*/
-/*    justify-content: space-evenly;*/
-/*}*/
-
-/*.section_01 > div > img {*/
-/*    margin-top: 60px;*/
-/*    border-bottom-left-radius: 10px;*/
-/*    border-bottom-right-radius: 10px;*/
-/*    border-top-left-radius: 10px;*/
-/*    border-top-right-radius: 10px;*/
-/*}*/
-
-.h212 {
-    margin: 10px auto 30px;
-    font-family: sans-serif;
-    font-size: 30px;
-    left: -30px;
-}
-
-.row {
-    /*width: 85%;*/
-    width: 100%;
-    margin: auto;
+.sec_02{
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
 
 }
-
-.col {
-    /*flex-basis: 25%;*/
-    overflow: hidden;
+.sec_03{
+    /*display: flex;*/
+    /*justify-content: space-evenly;*/
+    margin-left: 25px;
 
 }
-
 .card {
-    width: 270px;
-    height: 270px;
-    margin: auto;
-    perspective: 1000px;
-    cursor: pointer;
-    margin-left: 100px;
-}
+    width: 15%;
+    background-color: gray;
+    color: black;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px white;
 
-.inner_box {
-    position: relative;
+    /*margin-left: 25px;*/
+}
+.card:hover{
+    box-shadow: 2px 2px 10px gold;
+
+}
+.image img {
     width: 100%;
-    height: 100%;
-    text-align: center;
-    border-radius: 10px;
-    transition: transform 1s;
-    transform-style: preserve-3d;
-}
-
-.card_front, .card_back {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: 10px;
-}
-
-.card_front {
-    background-position: center;
-    background-size: cover;
-}
-.front_01{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/projectImages/2d game.jpeg");
-
-}
-.front_02{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/projectImages/hostel.png");
-
-}
-.front_03{
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../images/projectImages/HotelMgt.png");
-
-}
-
-.card_front span {
-    display: inline-block;
-    width: 100px;
-    padding: 14px 0;
-    margin-top: 160px;
-    border-radius: 10px;
-    background: white;
-    color: black;
-    transition: transform 1s;
-
-}
-
-.card_back {
-    background: linear-gradient(to left, gold, white);
-    color: black;
-    transform: rotateX(180deg);
-}
-
-.card:hover .inner_box {
-    transform: rotateX(-180deg);
-
-}
-
-.btn {
-    width: 100px;
-    height: 50px;
-    margin-top: 20px;
-    margin-left: -25px;
-    background-color: white;
-    border-radius: 10px;
-    border: 3px solid black;
-}
-
-.btn:hover {
-    background-color: gold;
-    color: black;
-}
-
-p {
-    display: inline-block;
-    color: black;
-    padding-bottom: 10px;
-    border-bottom: 1px solid black;
-    margin-top: 140px;
-}
-
-.card:hover span {
-    transform: translateY(140px);
-}
-
-
-/*body{*/
-/*    !*width: 100%;*!*/
-/*    !*background-color: black;*!*/
-/*    !*position: relative;*!*/
-/*    !*color: white;*!*/
-/*    !*margin-top: 10px;*!*/
-/*    */
-
-/*}*/
-
-body > section > section {
-    position: relative;
-    top: 10px;
-    left: 20px;
-    width: 65%;
-    height: 75px;
-    /*border: 2px solid black;*/
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-gap: 2px;
-    margin-bottom: 40px;
-}
-
-body > section:nth-child(2) {
-    position: relative;
-    top: 10px;
-    left: 20px;
-    width: 65%;
-    height: 75px;
-    /*border: 2px solid black;*/
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    grid-gap: 3px;
-    /*margin-left: 20px;*/
-
-}
-
-body > section > h3 {
-    margin-top: 40px;
-    margin-left: 20px;
-
-}
-
-body > section > h2 {
-    margin-top: 40px;
-    /*margin-left: 500px;*/
-    position: relative;
-    right: 40%;
-    left: 40%;
-    top: 10%;
-    margin: auto;
-}
-section>div>a>img{
-    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
-    transition: all 0.3s ease-in-out;
-    border-radius: 100%;
-}
-section>div>a>img:hover{
-    transform: scale(1.2);
-    cursor: pointer;
-}
-section>div>img{
-    border-bottom-left-radius: 10px;
-    border-bottom-right-radius: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    margin-right: 100px;
+
 }
 
+.title {
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.descrption {
+    text-align: center;
+}
+.descrption button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color:linen;
+    border: 2px solid black;
+    border-radius: 10px;
+    padding: 5px;
+    cursor: pointer;
+
+}
+.descrption button a{
+    text-decoration: none;
+    color: black;
+}
+.descrption button:hover{
+    background-color: gold;
+    transition: 0.5s;
+}
+/*responsive*/
+/*@media all and (min-width: 768px) and (max-width: 1024px) {*/
+/*}*/
