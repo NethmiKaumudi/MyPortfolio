@@ -10,66 +10,68 @@
 
 </head>
 <body>
-<section onload="getPageContent('Home')">
-    <header>
-        <nav class="navbar fixed-top bg-body-tertiary">
-            <div class="container-fluid" style="background-color:#0f5132;">
 
-                <a class="navbar-brand" href="#">
-                    <img src="../Css/Assets/POS Images/nk logo green.png" alt="" width="50px" height="50px"
-                         style="border-radius: 100%">
-                    Pos System</a>
-                <nav class="navbar navbar-expand-lg navbar-toggler ">
-                    <div class="container-fluid" style="background-color: #0f5132;margin-right: 30px">
-                        <!--                <a class="navbar-brand" href="#" ></a>-->
-                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                                aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
-                        </button>
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent1">
-                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                                <li class="nav-item">
-                                    <a class="nav-link active"  aria-current="page" onclick="getPageContent('Home')">Home</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link active" aria-current="page" onclick="getPageContent('Customer')">Customers</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" onclick="getPageContent('Item')">Items</a>
-                                </li>
-                                <li class="nav-item">
-                                    <a class="nav-link" onclick="getPageContent('Order')">Orders</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                       aria-expanded="false">
-                                        <img src="../../../Css/Assets/POS Images/Account.png" alt=""> </a>
-                                    <ul class="dropdown-menu" style="background-color: #63C228;width: 35px">
-                                        <li><a class="dropdown-item" href="#">Profile</a></li>
-                                        <li><a class="dropdown-item" href="#">Settings</a></li>
-                                        <li>
-                                            <hr class="dropdown-divider">
-                                        </li>
-                                        <li><a class="dropdown-item" href="#">log out</a></li>
-                                    </ul>
-                                </li>
+<!--Navigation-->
+<nav class="navbar fixed-top bg-body-tertiary">
+    <div class="container-fluid" style="background-color:#0f5132;">
 
-
+        <a class="navbar-brand" href="#">
+            <img src="../../../Css/Assets/POS Images/nk logo green.png" alt="" width="50px" height="50px"
+                 style="border-radius: 100%">
+            Pos System</a>
+        <nav class="navbar navbar-expand-lg navbar-toggler ">
+            <div class="container-fluid" style="background-color: #0f5132;margin-right: 30px">
+                <!--                <a class="navbar-brand" href="#" ></a>-->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link btn_menu" screen_name="home" aria-current="page"
+                               href="#/home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn_menu" screen_name="customer" aria-current="page"
+                               href="#/customer">Customers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn_menu" screen_name="item" href="#/item">Items</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link btn_menu" screen_name="order" href="#/order">Orders</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                               aria-expanded="false">
+                                <img src="../../../Css/Assets/POS Images/Account.png" alt=""> </a>
+                            <ul class="dropdown-menu" style="background-color: #63C228;width: 35px">
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li><a class="dropdown-item" href="#">Settings</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">log out</a></li>
                             </ul>
+                        </li>
 
-                        </div>
-                    </div>
-                </nav>
+
+                    </ul>
+
+                </div>
             </div>
         </nav>
-
-
-    </header>
-
-
-    <!--dashboard content-->
-    <main class="container-fluid " id="dashboardContent">
+    </div>
+</nav>
+<div class="container">
+    <div class="screen_data"></div>
+</div>
+<!--................................................................-->
+<div class="screens">
+    <!--Home-->
+    <div class="secreen_Home">
         <div class="jumbotron pt-md-5">
             <div id="home-tiles">
                 <div class="row ">
@@ -106,213 +108,483 @@
                 </div>
             </div>
         </div>
+    </div>
 
-    </main>
-</section>
-<!--<section onload="getPageContent('Customer')">-->
-<!--    <header>-->
-<!--        <nav class="navbar fixed-top bg-body-tertiary">-->
-<!--            <div class="container-fluid" style="background-color:#0f5132">-->
+    <!--........................................................................-->
+    <!--Customer-->
+    <div class="screen_Customer">
+        <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
+            <img src="../../../Css/Assets/POS Images/cus.jpg" alt="" height="70px"
+                 style="border: 2px solid black; border-radius: 100%; margin-top: 15px">
+            Customer Form</h2>
+        <div class="container text-center">
+            <div class="row mt-4">
+                <div class="col-lg-6 mt-lg-0 mt-2">
+                    <div class="card" style="margin-top: 35px;background-color: #0f5132;height: 250px">
+                        <div class="card-header font-weight-bolder" style="background-color: #0f5132">
+                            Customer
+                        </div>
+                        <div class="card-body" style="background-color: #63C228">
+                            <form>
+                                <div class="row">
 
-<!--                <a class="navbar-brand" href="#">-->
-<!--                    <img src="../../../Css/Assets/POS Images/nk logo green.png" alt="" width="50px" height="50px"-->
-<!--                         style="border-radius: 100%">-->
-<!--                    Pos System</a>-->
-<!--                <nav class="navbar navbar-expand-lg navbar-toggler ">-->
-<!--                    <div class="container-fluid" style="background-color: #0f5132;margin-right: 30px">-->
-<!--                        &lt;!&ndash;                <a class="navbar-brand" href="#" ></a>&ndash;&gt;-->
-<!--                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"-->
-<!--                                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"-->
-<!--                                aria-expanded="false" aria-label="Toggle navigation">-->
-<!--                            <span class="navbar-toggler-icon"></span>-->
-<!--                        </button>-->
-<!--                        <div class="collapse navbar-collapse" id="navbarSupportedContent">-->
-<!--                            <ul class="navbar-nav me-auto mb-2 mb-lg-0">-->
-<!--                                <li class="nav-item">-->
-<!--                                    <a class="nav-link active" aria-current="page" href="Home.html">Home</a>-->
-<!--                                </li>-->
-<!--                                <li class="nav-item">-->
-<!--                                    <a class="nav-link active" aria-current="page" href="Customer.html">Customers</a>-->
-<!--                                </li>-->
-<!--                                <li class="nav-item">-->
-<!--                                    <a class="nav-link" href="Item.html">Items</a>-->
-<!--                                </li>-->
-<!--                                <li class="nav-item">-->
-<!--                                    <a class="nav-link" href="Order.html">Orders</a>-->
-<!--                                </li>-->
-<!--                                <li class="nav-item dropdown">-->
-<!--                                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"-->
-<!--                                       aria-expanded="false">-->
-<!--                                        <img src="../../../Css/Assets/POS Images/Account.png" alt=""> </a>-->
-<!--                                    <ul class="dropdown-menu" style="background-color: #63C228;width: 35px">-->
-<!--                                        <li><a class="dropdown-item" href="#">Profile</a></li>-->
-<!--                                        <li><a class="dropdown-item" href="#">Settings</a></li>-->
-<!--                                        <li>-->
-<!--                                            <hr class="dropdown-divider">-->
-<!--                                        </li>-->
-<!--                                        <li><a class="dropdown-item" href="#">log out</a></li>-->
-<!--                                    </ul>-->
-<!--                                </li>-->
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Customer Nic:</label>
+                                            <input class="form-control" id="Nic" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label>Customer Name:</label>
+                                            <input class="form-control" id="Cus_Name" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label class="">Address:</label>
+                                            <input class="form-control" id="Address" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label class="">Salary :</label>
+                                            <input class="form-control" id="Salary" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="form-group text-right mt-3">
+                        <button class="btn btn-success col-12 col-sm-auto" id="btnAddToTable" type="button"
+                                style="width: 100px">
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-lg-0 mt-5  " id="div_02"
+                     style="border: 2px solid black; border-radius: 10px;height: 150px;">
+                    <div style="margin-bottom: 130px">
+                        <h3 style="margin: 20px;">Search Customer Here</h3>
+                        <form class="d-flex" role="search" style="margin: 20px">
+                            <input class="form-control me-2" type="search" placeholder="Input Nic,Name,Address"
+                                   aria-label="Search" style="width:500px; background-color:#63C228">
+                            <button class="btn btn-outline-success" type="submit" style="width:200px;">Search</button>
+                        </form>
+                    </div>
+
+                    <div class="col-lg-6 mt-lg-0 mt-3 ">
+                        <table class="table table-hover table-bordered table-striped"
+                               style="width: 650px;height: auto;background-color: #0f5132;" id="div_03">
+                            <thead>
+                            <tr>
+                                <th>Customer Nic</th>
+                                <th>Customer Name</th>
+                                <th> Address</th>
+                                <th> Salary</th>
+                            </tr>
+                            </thead>
+                            <tbody class="table-light">
+                            <tr>
+                                <!--            <th scope="row">1</th>-->
+                                <td>975632124v</td>
+                                <td>Kamal Perera</td>
+                                <td>Matara</td>
+                                <td>55000.00</td>
+
+                            </tr>
+                            <tr style="background-color: white">
+                                <!--            <th scope="row">1</th>-->
+                                <td>755632124v</td>
+                                <td>Nimali Perera</td>
+                                <td>Colombo</td>
+                                <td>100000.00</td>
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!--............................................................................-->
+    <!--Item-->
+    <div class="screen_item">
+        <h2 style="margin-top: 80px;margin-left: 20px"><img src="../../../Css/Assets/POS Images/Item.png" alt=""
+                                                            height="50px"
+                                                            style="border: 2px solid black; border-radius: 100%; margin-top: 5px">Item
+            Form</h2>
+        <div class="container text-center">
+            <div class="row mt-4">
+                <div class="col-lg-6 mt-lg-0 mt-2">
+                    <div class="card" style="margin-top: 35px;background-color: #0f5132;height: 250px">
+                        <div class="card-header font-weight-bolder" style="background-color: #0f5132">
+                            Item
+                        </div>
+                        <div class="card-body" style="background-color: #63C228">
+                            <form>
+                                <div class="row">
+
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Item Code :</label>
+                                            <input class="form-control" id="txtItemCode" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label>Description:</label>
+                                            <input class="form-control" id="txtItemDescription" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label class="">Unit Price :</label>
+                                            <input class="form-control" id="txtItemPrice" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label class="">Quantity:</label>
+                                            <input class="form-control" id="txtQTYOnHand" type="text">
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="form-group text-right mt-3">
+                        <button class="btn btn-success col-12 col-sm-auto" id="btnAddToTable" type="button"
+                                style="width: 100px">
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-6 mt-lg-0 mt-5  "
+                     style="border: 2px solid black; border-radius: 10px;height: 150px;">
+                    <div style="margin-bottom: 130px">
+                        <h3 style="margin: 20px;">Search Items Here</h3>
+                        <form class="d-flex" role="search" style="margin: 20px">
+                            <input class="form-control me-2" type="search" placeholder="Input Item-code,Description"
+                                   aria-label="Search" style="width:500px; background-color:#63C228">
+                            <button class="btn btn-outline-success" type="submit" style="width:200px;">Search</button>
+                        </form>
+                    </div>
+
+                    <div class="mt-4 ">
+                        <table class="table table-hover table-bordered table-striped"
+                               style="width: 650px;height: auto;background-color: #0f5132">
+                            <thead>
+                            <tr>
+                                <th>Item-Code</th>
+                                <th>Description</th>
+                                <th> Quantity</th>
+                                <th> Unit Price</th>
+                            </tr>
+                            </thead>
+                            <tbody class="table-light">
+                            <tr>
+                                <!--            <th scope="row">1</th>-->
+                                <td>I-001</td>
+                                <td>Buscuit</td>
+                                <td>100 pack</td>
+                                <td>150.00</td>
+
+                            </tr>
+                            <tr style="background-color: white">
+                                <!--            <th scope="row">1</th>-->
+                                <td>I-002</td>
+                                <td>Rice 50Kg Bags</td>
+                                <td>100 Bags</td>
+                                <td>10000.00</td>
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--...................................................................-->
+    <!--    order-->
+    <div class="screen_order">
+        <div class="container mt-2" style="margin-left:5vw">
+
+            <div class="jumbotron pt-4">
+                <div class="row">
+                    <div class="col-6">
+                        <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
+                            <img src="../../../Css/Assets/POS Images/Order.png" height="70px"
+                                 style="border: 2px solid black; border-radius: 100%; margin-top: 11px"><img/>
+                            Order Form</h2>
+                    </div>
+
+                    <div class="col-6 justify-content-end mt-5">
+                        <form class="d-flex" role="search">
+                            <input class="form-control me-2" type="search" placeholder="Search here"
+                                   aria-label="Search"
+                                   style="width:300px; background-color:#63C228;margin-top: 50px;margin-left: 300px">
+                        </form>
+                    </div>
+
+                </div>
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="card" style="background-color: #0f5132 ;margin-top: 35px">
+                            <div class="card-header  font-weight-bolder" style="background-color: #0f5132">
+                                Invoice Details
+                            </div>
+                            <div class="card-body" style="background-color: #63C228">
+                                <form>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label>Date :</label>
+                                                <input class="form-control" id="txtDate" type="date">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+
+                                            <div class="form-group">
+                                                <label>Order ID :</label>
+                                                <input class="form-control" id="txtOrderID" type="text">
+                                                <span class="control-error"
+                                                      id="orderId-invalid-error"></span>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label for="Nic">Nic</label>
+                                                <input class="form-control" id="Nic2">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label>Name :</label>
+                                                <input class="form-control" id="orderCustomerName" type="text">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label>Address :</label>
+                                                <input class="form-control" id="orderCustomerAddress" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label>Salary :</label>
+                                                <input class="form-control" id="orderCustomerSalary" type="text">
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-lg-0 mt-3">
+                        <div class="card" style="margin-top: 35px;background-color: #0f5132;">
+                            <div class="card-header font-weight-bolder" style="background-color: #0f5132">
+                                Item Select
+                            </div>
+                            <div class="card-body" style="background-color: #63C228">
+                                <form>
+                                    <div class="row">
+
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label>Item Code :</label>
+                                                <input class="form-control" id="ItemCode" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="form-group">
+                                                <label>Description :</label>
+                                                <input class="form-control" id="ItemDescription" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-6">
+                                            <div class="form-group">
+                                                <label class="">Unit Price :</label>
+                                                <input class="form-control" id="ItemPrice" type="text">
+                                            </div>
+                                        </div>
+                                        <div class="col-5">
+                                            <div class="form-group">
+                                                <label class="">Quantity :</label>
+                                                <input class="form-control" id="QTY" type="text">
+                                            </div>
+                                        </div>
+
+                                        <hr class="mt-3 btn-dark">
+                                        <div class="col-12 mt-2">
+                                            <div class="form-group">
+                                                <label>Order Quantity :</label>
+                                                <input class="form-control" id="txtQty" min="1" type="number">
+                                                <span class="control-error" id="order-qty-empty-error"></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-group text-right mt-3">
+                                        <button class="btn btn-success col-12 col-sm-auto" id="Add"
+                                                type="button"
+                                                style="width: 100px">
+                                            Add
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 mt-lg-0 mt-3">
+                        <div class="card" style="background-color: #0f5132;margin-top: 35px">
+                            <div class="card-header font-weight-bolder" style="background-color: #0f5132">
+                                Total
+                            </div>
+                            <div class="card-body" style="background-color: #63C228">
+                                <div class="row">
+                                    <div class="col-6 mt-2">
+                                        <div class="form-group">
+
+                                            <label>Sub -Total</label>
+                                            <input class="form-control" id="SubTotal" type="text">
+                                            <span class="control-error"
+                                                  id="cash-empty-error"></span>
+                                        </div>
+                                    </div>
+                                    <div class="col-6 mt-2">
+                                        <div class="form-group">
+                                            <label>Discount</label>
+                                            <input class="form-control" id="Discount" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-8">
+                                        <div class="form-group">
+                                            <label>Total</label>
+                                            <input class="form-control" id="Total" type="text">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mt-4 ">
+                        <button type="submit" class="btn btn-warning" style="width: 200px; margin-left:70vw">Purchase
+                        </button>
+                    </div>
+                    <div class="row">
+                        <div class=" col-12 mt-5">
+                            <table class="table table-hover table-bordered table-striped"
+                                   style="width: 90vw;height:auto; margin-left: -10px;background-color: #0f5132">
+                                <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Order Id</th>
+                                    <th> Nic</th>
+                                    <th> Item-Code</th>
+                                    <th>Unit Price</th>
+                                    <th> order Qty</th>
+                                    <th> sub Total</th>
+                                    <th> Discount</th>
+                                    <th> Total</th>
+                                    <th> Edit</th>
+
+                                </tr>
+                                </thead>
+                                <tbody class="table-light">
+                                <tr>
+                                    <!--            <th scope="row">1</th>-->
+                                    <td>2023-05-17</td>
+                                    <td>O-001</td>
+                                    <td>975632124v</td>
+                                    <td>I-001</td>
+                                    <td>150.00</td>
+                                    <td>3</td>
+                                    <td>450.00</td>
+                                    <td>25.00</td>
+                                    <td>425.00</td>
 
 
-<!--                            </ul>-->
-
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                </nav>-->
-<!--            </div>-->
-<!--        </nav>-->
+                                    <td>
+                                        <Buton class="btn btn-danger">Delete</Buton>
+                                    </td>
 
 
-<!--    </header>-->
+                                </tr>
 
-<!--    <main>-->
-<!--        <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">-->
-<!--            <img src="../../../Css/Assets/POS Images/cus.jpg" alt="" height="70px"-->
-<!--                 style="border: 2px solid black; border-radius: 100%; margin-top: 15px">-->
-<!--            Customer Form</h2>-->
-<!--        <div class="container text-center">-->
-<!--            <div class="row mt-4">-->
-<!--                <div class="col-lg-6 mt-lg-0 mt-2">-->
-<!--                    <div class="card" style="margin-top: 35px;background-color: #0f5132;height: 250px">-->
-<!--                        <div class="card-header font-weight-bolder" style="background-color: #0f5132">-->
-<!--                            Customer-->
-<!--                        </div>-->
-<!--                        <div class="card-body" style="background-color: #63C228">-->
-<!--                            <form>-->
-<!--                                <div class="row">-->
-
-<!--                                    <div class="col-6">-->
-<!--                                        <div class="form-group">-->
-<!--                                            <label>Customer Nic:</label>-->
-<!--                                            <input class="form-control" id="Nic" type="text">-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="col-5">-->
-<!--                                        <div class="form-group">-->
-<!--                                            <label>Customer Name:</label>-->
-<!--                                            <input class="form-control" id="Cus_Name" type="text">-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="col-6">-->
-<!--                                        <div class="form-group">-->
-<!--                                            <label class="">Address:</label>-->
-<!--                                            <input class="form-control" id="Address" type="text">-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                    <div class="col-5">-->
-<!--                                        <div class="form-group">-->
-<!--                                            <label class="">Salary :</label>-->
-<!--                                            <input class="form-control" id="Salary" type="text">-->
-<!--                                        </div>-->
-<!--                                    </div>-->
-<!--                                </div>-->
-
-<!--                            </form>-->
-<!--                        </div>-->
-<!--                    </div>-->
-<!--                    <div class="form-group text-right mt-3">-->
-<!--                        <button class="btn btn-success col-12 col-sm-auto" id="btnAddToTable" type="button"-->
-<!--                                style="width: 100px">-->
-<!--                            Add-->
-<!--                        </button>-->
-<!--                    </div>-->
-<!--                </div>-->
-
-<!--                <div class="col-lg-6 mt-lg-0 mt-5  " id="div_02"-->
-<!--                     style="border: 2px solid black; border-radius: 10px;height: 150px;">-->
-<!--                    <div style="margin-bottom: 130px">-->
-<!--                        <h3 style="margin: 20px;">Search Customer Here</h3>-->
-<!--                        <form class="d-flex" role="search" style="margin: 20px">-->
-<!--                            <input class="form-control me-2" type="search" placeholder="Input Nic,Name,Address"-->
-<!--                                   aria-label="Search" style="width:500px; background-color:#63C228">-->
-<!--                            <button class="btn btn-outline-success" type="submit" style="width:200px;">Search</button>-->
-<!--                        </form>-->
-<!--                    </div>-->
-
-<!--                    <div class="col-lg-6 mt-lg-0 mt-3 ">-->
-<!--                        <table class="table table-hover table-bordered table-striped"-->
-<!--                               style="width: 650px;height: auto;background-color: #0f5132;" id="div_03">-->
-<!--                            <thead>-->
-<!--                            <tr>-->
-<!--                                <th>Customer Nic</th>-->
-<!--                                <th>Customer Name</th>-->
-<!--                                <th> Address</th>-->
-<!--                                <th> Salary</th>-->
-<!--                            </tr>-->
-<!--                            </thead>-->
-<!--                            <tbody class="table-light">-->
-<!--                            <tr>-->
-<!--                                &lt;!&ndash;            <th scope="row">1</th>&ndash;&gt;-->
-<!--                                <td>975632124v</td>-->
-<!--                                <td>Kamal Perera</td>-->
-<!--                                <td>Matara</td>-->
-<!--                                <td>55000.00</td>-->
-
-<!--                            </tr>-->
-<!--                            <tr style="background-color: white">-->
-<!--                                &lt;!&ndash;            <th scope="row">1</th>&ndash;&gt;-->
-<!--                                <td>755632124v</td>-->
-<!--                                <td>Nimali Perera</td>-->
-<!--                                <td>Colombo</td>-->
-<!--                                <td>100000.00</td>-->
-
-<!--                            </tr>-->
-
-<!--                            </tbody>-->
-<!--                        </table>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--            </div>-->
-
-<!--        </div>-->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
 
 
-<!--    </main>-->
-<!--</section>-->
-<section id="Item"></section>
-<section id="Orders"></section>
-<script src="../../../../Assests/lib/js/bootstrap.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
-        integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
-        crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
-        integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
-        crossorigin="anonymous"></script>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script>
-    var pages = {
-        'Home': alert("Welcome!"),
-        'Customer': alert("Welcome!"),
-        'Item': alert("Welcome!"),
-        'Order': alert("Welcome!"),
+    <script src="../../../../Assests/lib/js/bootstrap.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
+            integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
+            integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
+            crossorigin="anonymous"></script>
 
-    };
+    <script type="text/javascript">
+        $(document).ready(function ($) {
 
-    function getPageContent(page) {
-        var contentToReturn;
-        switch (page) {
-            case 'Home':
-                contentToReturn = pages.Home;
-                break;
-            case 'Customer':
-                contentToReturn = pages.Customer;
-                break;
-            case 'Item':
-                contentToReturn = pages.Item;
-                break;
-            case 'Order':
-                contentToReturn = pages.Order;
-                break;
-            default:
-                contentToReturn = pages.Home;
-                break;
+            var e0 = $(document).find('.screen_data');
+            var s1 = $(document).find('.secreen_Home').html();
+            e0.html(s1);
 
-        }
-        document.getElementById('content').innerHTML = contentToReturn;
-    }
+            $(document).on('click', '.btn_menu', function (event) {
 
-</script>
+                event.preventDefault();
+                var screen_name = $(this).attr('.screen_name');
+
+                window.location.hash = '/' + screen_name;
+                $(document).find('.screen_name').html(screen_name);
+                ;
+                if (screen_name == home) {
+                    var s1 = $(document).find('.screen_data').load("screens/Home.html");
+                    e0.html(s1);
+                } else if (screen_name == customer) {
+                    var s1 = $(document).find('.screen_data').load("screens/Customer.html");
+                    e0.html(s1);
+                } else if (screen_name == item) {
+                    var s1 = $(document).find('.screen_data').load("screens/Item.html");
+                    e0.html(s1);
+                } else if (screen_name == order) {
+                    var s1 = $(document).find('.screen_data').load("screens/Order.html");
+                    e0.html(s1);
+                }
+            });
+
+        });
+    </script>
 </body>
 
 </html>
