@@ -1910,3 +1910,53 @@ footer > .ad_03 > div > a > img:hover {
 
     }
 }
+/*Mobile phone*/
+@media all and (min-width: 375px) and (max-width: 425px) {
+    /*section 03*/
+    .section_03 h2{
+        margin: 0;
+    }
+    .sub_sec {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .time_line {
+        width: 70%;
+        height: auto;
+        max-width: 600px;
+        margin: 0 auto;
+        position: relative;
+    }
+
+    .time_line ul {
+        list-style: none;
+    }
+
+    .time_line ul li {
+        padding: 15px;
+        background-color: #1B191A;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .time_line ul li:last-child {
+        margin-bottom: 0;
+    }
+
+    .time_line_content p {
+        font-size: 12px;
+        line-height: 25px;
+        font-weight: 250;
+    }
+    .time_line_content .date{
+        font-size: 11px;
+        font-weight: 200;
+        margin-bottom: 10px;
+        letter-spacing: 2px;
+    }
+    /*section 07*/
+
+}

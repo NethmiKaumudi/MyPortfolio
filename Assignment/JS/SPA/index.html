@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>SPA</title>
-    <script src="../../Assests/lib/js/bootstrap.js"></script>
-    <link rel="stylesheet" href="../../Assests/lib/css/bootstrap.css">
+    <script src="../../../Assests/lib/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="../../../Assests/lib/css/bootstrap.css">
     <link rel="stylesheet" href="/Assests/fontawesome-free-6.4.0-web">
-    <link rel="icon" href="../Css/Assets/POS Images/nk logo green.png" height="194" width="259"/>
+    <link rel="icon" href="../../Css/Assets/POS%20Images/nk%20logo%20green.png" height="194" width="259"/>
+
 
 </head>
 <body>
@@ -31,18 +32,18 @@
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link btn_menu" screen_name="home" aria-current="page"
-                               href="#/home">Home</a>
-<!--                            <span class="sr_only">(current)</span>-->
+                               href="#/home" onclick="screee('secreen_Home')">Home</a>
+                            <!--                            <span class="sr_only">(current)</span>-->
                         </li>
                         <li class="nav-item">
                             <a class="nav-link btn_menu" screen_name="customer" aria-current="page"
-                               href="#/customer">Customers</a>
+                               href="#/customer" onclick="screee('screen_Customer')">Customers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn_menu" screen_name="item" href="#/item">Items</a>
+                            <a class="nav-link btn_menu" screen_name="item" href="#/item " onclick="screee('screen_item')">Items</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn_menu" screen_name="order" href="#/order">Orders</a>
+                            <a class="nav-link btn_menu" screen_name="order" href="#/order" onclick="screee('screen_order')">Orders</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -70,7 +71,7 @@
     <div class="screen_data"></div>
 </div>
 <!--................................................................-->
-<div  style="display: none" class="screens">
+<div class="screens">
     <!--Home-->
     <div class="secreen_Home">
         <div class="jumbotron pt-md-5">
@@ -556,50 +557,60 @@
 <!--            integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"-->
 <!--            crossorigin="anonymous"></script>-->
 
-    <script type="text/javascript">
-        $(document).ready(function ($) {
+<script>
+    function screee(divName) {
+        const sections=['secreen_Home','screen_Customer','screen_item','screen_order'];
 
-            var e0 = $(document).find('.screen_data');
-            var s1 = $(document).find('.secreen_Home').html();
-            e0.html(s1);
-
-            $(document).on('click', '.btn_menu', function (event) {
-
-                event.preventDefault();
-                var screen_name = $(this).attr('.screen_name');
-
-                window.location.hash = '/' + screen_name;
-                $(document).find('.screen_name').html(screen_name);
-                ;
-                if (screen_name == home) {
-                    // var s1 = $(document).find('.screen_data').load("screens/Home.html");
-                    // e0.html(s1);
-                    var s1 = $(document).find('.secreen_Home').html();
-                    e0.html(s1);
-
-                } else if (screen_name == customer) {
-                    // var s1 = $(document).find('.screen_data').load("screens/Customer.html");
-                    // e0.html(s1);
-                    var s1 = $(document).find('.screen_Customer').html();
-                    e0.html(s1);
-
-                } else if (screen_name == item) {
-                    // var s1 = $(document).find('.screen_data').load("screens/Item.html");
-                    // e0.html(s1);
-                    var s1 = $(document).find('.screen_item').html();
-                    e0.html(s1);
-
-                } else if (screen_name == order) {
-                    // var s1 = $(document).find('.screen_data').load("screens/Order.html");
-                    // e0.html(s1);
-                    var s1 = $(document).find('.screen_order').html();
-                    e0.html(s1);
-
-                }
-            });
-
+        sections.forEach(function (section) {
+            const display = section === divName?'block':'none';
+            document.getElementsByClassName(section)[0].style.display=display;
         });
-    </script>
+
+    }
+  /*  $(document).ready(function ($) {
+
+        var e0 = $(document).find('.screen_data');
+        var s1 = $(document).find('.secreen_Home').html();
+        e0.html(s1);
+
+        $(document).on('click', '.btn_menu', function (event) {
+
+            event.preventDefault();
+            var screen_name = $(this).attr('.screen_name');
+
+            window.location.hash = '/' + screen_name;
+            $(document).find('.screen_name').html(screen_name);
+            ;
+            if (screen_name == home) {
+                // var s1 = $(document).find('.screen_data').load("screens/Home.html");
+                // e0.html(s1);
+                var s1 = $(document).find('.secreen_Home').html();
+                e0.html(s1);
+
+            } else if (screen_name == customer) {
+                // var s1 = $(document).find('.screen_data').load("screens/Customer.html");
+                // e0.html(s1);
+                var s1 = $(document).find('.screen_Customer').html();
+                e0.html(s1);
+
+            } else if (screen_name == item) {
+                // var s1 = $(document).find('.screen_data').load("screens/Item.html");
+                // e0.html(s1);
+                var s1 = $(document).find('.screen_item').html();
+                e0.html(s1);
+
+            } else if (screen_name == order) {
+                // var s1 = $(document).find('.screen_data').load("screens/Order.html");
+                // e0.html(s1);
+                var s1 = $(document).find('.screen_order').html();
+                e0.html(s1);
+
+            }
+        });
+
+    });*/
+</script>
+
 </body>
 
 </html>

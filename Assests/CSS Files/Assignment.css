@@ -36,11 +36,22 @@ h2 {
 }
 
 .sec_03 {
-    /*display: flex;*/
-    /*justify-content: space-evenly;*/
+    display: flex;
+    justify-content: flex-start;
+    /*margin-top: 25px;*/
+
+    /*margin-left: 25px;*/
+
+}
+.sec_03 .card{
     margin-left: 25px;
 
 }
+/*.sec_03 h2 {*/
+/*    margin-top: 25px;*/
+/*    margin-bottom: 20px;*/
+/*    font-family: "Book Antiqua";*/
+/*}*/
 
 .card {
     width: 15%;
@@ -49,7 +60,6 @@ h2 {
     border-radius: 10px;
     box-shadow: 2px 2px 10px white;
 
-    /*margin-left: 25px;*/
 }
 
 .card:hover {
