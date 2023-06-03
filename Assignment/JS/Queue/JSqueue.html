@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JsQueue</title>
+    <style>
+        body {
+            background-color: black;
+        }
+
+        div {
+            width: 200px;
+            height: 100px;
+            border: 2px solid white;
+            display: flex;
+            flex-grow: 1;
+        }
+
+        h1 {
+            color: white;
+            text-align: center;
+        }
+
+        body > section {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            width: 1200px;
+            height: 350px;
+
+        }
+
+        body > section div:nth-child(1) {
+
+            align-self: flex-start;
+        / / y axis eken manage karann
+        }
+
+        body > section div:last-child {
+
+            align-self: flex-end;
+        / / y axis eken manage karann
+
+        }
+
+        #btn1 {
+            background-color: #3dd5f3;
+            width: 120px;
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-bottom: 100px;
+            margin-right: 300px;
+        }
+
+        #btn2 {
+            background-color: red;
+            width: 120px;
+            height: 40px;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            margin-bottom: 100px;
+            margin-right: 150px;
+        }
+
+    </style>
+</head>
+<body>
+<h1>Java Script Queue</h1>
+<section>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+
+</section>
+<button id="btn1">Start</button>
+<button id="btn2">Stop</button>
+
+<script>
+    //literal based array-saved colours
+    let colours = ["red", "yellow", "green", "blue", "deeppink", "orange"];
+    let id;
+    document.getElementById("btn1").addEventListener("click", function () {
+        clearInterval(id);
+
+        id = setInterval(function () {
+            let divArray = document.querySelector("section").children;
+            for (let i = 0; i < divArray.length; i++) {
+                //set he colors array to the div elements
+                divArray[i].style.background = colours[i];
+            }
+            let lv = colours.pop();
+            colours.unshift(lv);
+        }, 500);
+    })
+    document.getElementById("btn2").addEventListener("click", function () {
+        clearInterval(id);
+
+    })
+</script>
+</body>
+</html>

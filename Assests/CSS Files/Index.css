@@ -5,7 +5,6 @@
 }
 
 /*header*/
-
 header {
     width: 100%;
     height: 11vh;
@@ -29,7 +28,7 @@ h3 {
 header ul {
     float: right;
     margin-right: 40px;
-    margin-top: -20px;
+    margin-top: -30px;
 
 }
 
@@ -63,7 +62,7 @@ header ul li ul {
 }
 
 header ul li:hover ul {
-    display: block;
+    display: initial;
 }
 
 header ul li ul {
@@ -82,6 +81,26 @@ header ul li ul a:hover {
     background-color: #1B191A;
     color: gold;
 
+}
+
+#toggler {
+    position: absolute;
+}
+
+header .icon_burger {
+    display: none;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+header .icon_burger .line {
+    width: 30px;
+    height: 6px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 3px;
 }
 
 /*....................................*/
@@ -466,17 +485,17 @@ main > .section_07 {
     font-style: italic;
 }
 
-.pre {
-    margin-top: 60px;
-    font-family: 'Open Sans', sans-serif;
-    font-style: italic;
-    font-size: 18px;
-    line-height: 1.7;
-    text-align: center;
-    color: #ffffff;
-    margin-right: 115px;
-    padding: 0;
-}
+/*.pre {*/
+/*    margin-top: 60px;*/
+/*    font-family: 'Open Sans', sans-serif;*/
+/*    font-style: italic;*/
+/*    font-size: 18px;*/
+/*    line-height: 1.7;*/
+/*    text-align: center;*/
+/*    color: #ffffff;*/
+/*    margin-right: 115px;*/
+/*    padding: 0;*/
+/*}*/
 
 /*.......................................*/
 /*Section 03*/
@@ -518,11 +537,6 @@ main > .section_07 {
     margin-bottom: 0;
 }
 
-.time_line {
-    animation: movedown 5s linear forwards infinite;
-
-}
-
 .time_line_content p {
     font-size: 16px;
     line-height: 30px;
@@ -531,60 +545,12 @@ main > .section_07 {
     margin-left: 20px;
 }
 
-.time_line:before {
-    content: '';
-    position: absolute;
-    height: 100%;
-    left: 50%;
-    width: 2px;
-    transform: translatex(-50%);
-    background: gray;
-}
-
-.time_line ul li:nth-child(odd) {
-    float: left;
-    clear: right;
-    transform: translateX(-40px);
-    border-radius: 30px 0px 30px 30px;
-    /*border: 2px solid white;*/
-}
-
-.time_line ul li:nth-child(even) {
-    float: right;
-    clear: left;
-    transform: translateX(40px);
-    border-radius: 0px 30px 30px 30px;
-    /*border: 2px solid white;*/
-
-}
-
-.time_line ul li:nth-child(odd):after {
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background: #eeeeee;
-    border-radius: 50%;
-    top: 0;
-    transform: translate(50%, -50%);
-    right: -40px;
-}
-
-.time_line ul li:nth-child(even):after {
-    content: '';
-    position: absolute;
-    height: 20px;
-    width: 20px;
-    background: #eeeeee;
-    border-radius: 50%;
-    top: 0;
-    transform: translate(-50%, -50%);
-    left: -40px
-}
-
-.time_line ul li:hover:after {
-    background-color: gold;
-
+.time_line_content4 p {
+    font-size: 15px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-bottom: 20px;
+    margin-left: 20px;
 }
 
 .time_line_content .date {
@@ -598,16 +564,16 @@ main > .section_07 {
     color: gold;
 }
 
-@keyframes movedown {
-    0% {
-        opacity: 1;
-        transform: translateY(-20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0px);
-    }
 
+.time_line_content4 .date {
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 5px;
+    letter-spacing: 2px;
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    color: gold;
 }
 
 /*.section_04 h2{*/
@@ -788,21 +754,25 @@ main > .section_07 {
 .section_06 {
     padding: 200px 300px;
 }
-.section_06 h2{
-    margin-top: 40px;
+
+.section_06 h2 {
+    margin-top: 25px;
 }
+
 .section_06 section .p1,
-.section_06 section .p2{
+.section_06 section .p2 {
     display: flex;
     padding-top: 40px;
     padding-right: 100px;
 }
-.section_06 .git_img{
+
+.section_06 .git_img {
     background-color: white;
     border-radius: 100%;
     width: 100px;
     height: 100px;
 }
+
 .section_06 section img {
     width: 100px;
     height: 100px;
@@ -946,6 +916,83 @@ footer > .ad_03 > div > a > img:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
+
+@media all and (min-width: 1440px) {
+    .time_line {
+        animation: movedown 5s linear forwards infinite;
+
+    }
+
+
+    .time_line:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        width: 2px;
+        transform: translatex(-50%);
+        background: gray;
+    }
+
+    .time_line ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-40px);
+        border-radius: 30px 0px 30px 30px;
+        /*border: 2px solid white;*/
+    }
+
+    .time_line ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(40px);
+        border-radius: 0px 30px 30px 30px;
+        /*border: 2px solid white;*/
+
+    }
+
+    .time_line ul li:nth-child(odd):after {
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background: #eeeeee;
+        border-radius: 50%;
+        top: 0;
+        transform: translate(50%, -50%);
+        right: -40px;
+    }
+
+    .time_line ul li:nth-child(even):after {
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background: #eeeeee;
+        border-radius: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        left: -40px
+    }
+
+    .time_line ul li:hover:after {
+        background-color: gold;
+
+    }
+
+    @keyframes movedown {
+        0% {
+            opacity: 1;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
+    }
+}
+
 /*Responsive*/
 /*laptop large*/
 @media all and (min-width: 1024px) and (max-width: 1440px) {
@@ -953,14 +1000,89 @@ footer > .ad_03 > div > a > img:hover {
     header ul {
         float: right;
         margin-right: 40px;
-        margin-top: -30px;
+        margin-top: -40px;
 
     }
+
     /*section04*/
     .service div {
         margin-top: 150px;
         height: 400px;
         width: 45%;
+    }
+
+    .time_line {
+        animation: movedown 5s linear forwards infinite;
+
+    }
+
+
+    .time_line:before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        left: 50%;
+        width: 2px;
+        transform: translatex(-50%);
+        background: gray;
+    }
+
+    .time_line ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-40px);
+        border-radius: 30px 0px 30px 30px;
+        /*border: 2px solid white;*/
+    }
+
+    .time_line ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(40px);
+        border-radius: 0px 30px 30px 30px;
+        /*border: 2px solid white;*/
+
+    }
+
+    .time_line ul li:nth-child(odd):after {
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background: #eeeeee;
+        border-radius: 50%;
+        top: 0;
+        transform: translate(50%, -50%);
+        right: -40px;
+    }
+
+    .time_line ul li:nth-child(even):after {
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        background: #eeeeee;
+        border-radius: 50%;
+        top: 0;
+        transform: translate(-50%, -50%);
+        left: -40px
+    }
+
+    .time_line ul li:hover:after {
+        background-color: gold;
+
+    }
+
+    @keyframes movedown {
+        0% {
+            opacity: 1;
+            transform: translateY(-20px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0px);
+        }
+
     }
 }
 
@@ -969,7 +1091,7 @@ footer > .ad_03 > div > a > img:hover {
     header ul {
         float: right;
         margin-right: 40px;
-        margin-top: -30px;
+        margin-top: -40px;
 
     }
 
@@ -980,6 +1102,7 @@ footer > .ad_03 > div > a > img:hover {
         left: 6.5%;
         font-size: 30px;
     }
+
     .section_01 > aside > h1:nth-child(2) {
         position: absolute;
         top: 27%;
@@ -1007,6 +1130,7 @@ footer > .ad_03 > div > a > img:hover {
         left: 21.5%;
         color: gold;
     }
+
     .section_01 > aside > h1:nth-child(5) {
         position: absolute;
         top: 42%;
@@ -1232,6 +1356,7 @@ footer > .ad_03 > div > a > img:hover {
         left: 10px;
         color: gold;
     }
+
     /*section 04*/
     .h212 {
         padding-top: 10px;
@@ -1265,23 +1390,27 @@ footer > .ad_03 > div > a > img:hover {
         left: 26%;
 
     }
+
     .service div {
         margin-top: 170px;
         height: 400px;
         width: 40%;
     }
+
     /*section 06*/
     .section_06 {
         padding: 150px 250px;
     }
-    .section_06 h2{
+
+    .section_06 h2 {
         margin-top: 30px;
         margin-left: -25%;
         font-size: 35px;
 
     }
+
     .section_06 section .p1,
-    .section_06 section .p2{
+    .section_06 section .p2 {
         display: flex;
         padding-top: 30px;
         padding-right: 80px;
@@ -1290,7 +1419,7 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     .section_06 section img {
-        width:90px;
+        width: 90px;
         height: 90px;
         border-radius: 100px;
         margin-right: 100px;
@@ -1305,7 +1434,8 @@ footer > .ad_03 > div > a > img:hover {
         transform: scale(1.2);
         cursor: pointer;
     }
-/*section 07*/
+
+    /*section 07*/
     .box {
         position: relative;
         top: -10%;
@@ -1326,7 +1456,7 @@ footer > .ad_03 > div > a > img:hover {
 }
 
 /*Tablet 425-768*/
-@media all and (min-width: 425px) and (max-width: 768px) {
+@media all and (min-width: 427px) and (max-width: 768px) {
     header ul {
         float: right;
         margin-right: 40px;
@@ -1335,7 +1465,6 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     /*section 01*/
-
     .section_01 > aside > h3:nth-child(1) {
         position: absolute;
         top: 20%;
@@ -1551,6 +1680,7 @@ footer > .ad_03 > div > a > img:hover {
         font-weight: 700;
         /*margin-top: 50px;*/
         margin-bottom: 50px;
+
     }
 
     .h21 {
@@ -1582,6 +1712,7 @@ footer > .ad_03 > div > a > img:hover {
         margin-right: 115px;
         padding: 0;
     }
+
     /*section03*/
     .sub_sec {
         /*position: absolute;*/
@@ -1597,6 +1728,7 @@ footer > .ad_03 > div > a > img:hover {
         max-width: 700px;
         margin: 0 auto;
         position: relative;
+        top: -20px;
     }
 
     .time_line ul {
@@ -1605,6 +1737,7 @@ footer > .ad_03 > div > a > img:hover {
 
     .time_line ul li {
         width: 40%;
+        height: 90px;
         padding: 10px;
         background-color: #1B191A;
         color: white;
@@ -1623,6 +1756,16 @@ footer > .ad_03 > div > a > img:hover {
         font-weight: 300;
         margin-bottom: 18px;
         margin-left: 20px;
+        margin-top: -5px;
+    }
+
+    .time_line_content4 p {
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 300;
+        margin-bottom: 18px;
+        margin-left: 20px;
+        margin-top: -25px;
     }
 
     .time_line:before {
@@ -1655,7 +1798,7 @@ footer > .ad_03 > div > a > img:hover {
     .time_line ul li:nth-child(odd):after {
         content: '';
         position: absolute;
-        height: 15px;
+        height: 12px;
         width: 15px;
         background: #eeeeee;
         border-radius: 50%;
@@ -1691,6 +1834,7 @@ footer > .ad_03 > div > a > img:hover {
         left: 10px;
         color: gold;
     }
+
     /*section 04*/
     .h211 {
         padding: 20px;
@@ -1699,7 +1843,7 @@ footer > .ad_03 > div > a > img:hover {
         font-weight: 700;
         /*margin-top: 50px;*/
         margin-bottom: 10px;
-        left: 31%;
+        left: 35%;
     }
 
     .section_04 .service {
@@ -1803,6 +1947,7 @@ footer > .ad_03 > div > a > img:hover {
         width: 60%;
         margin-left: 20%;
     }
+
     /*section 05*/
     h212 {
         padding-top: 10px;
@@ -1810,47 +1955,57 @@ footer > .ad_03 > div > a > img:hover {
         /*border-bottom-width: 40px;*/
         margin-top: -120px;
         /*margin-bottom: 10px;*/
-        font-size: 30px;
+        font-size: 45px;
         text-align: center;
     }
 
     .h211 {
         position: absolute;
-        left: 26%;
-        font-size: 30px;
+        left: 28%;
+        font-size: 45px;
 
     }
+
     .service div {
         margin-top: 200px;
         height: 400px;
         width: 40%;
     }
+
     /*section 06*/
     .section_06 {
         padding: 80px 160px;
     }
-    .section_06 h2{
+    .section_06 .h211{
+        position: absolute;
+        top: 30%;
+        left: 25%;
+    }
+    .section_06 h2 {
         margin-top: 60px;
         margin-left: -26%;
         font-size: 28px;
 
     }
+
     .section_06 section .p1,
-    .section_06 section .p2{
+    .section_06 section .p2 {
         display: flex;
         padding-top: 30px;
         padding-right: 10px;
         margin-left: -25%;
 
     }
-    .section_06 .git_img{
+
+    .section_06 .git_img {
         background-color: white;
         border-radius: 100%;
         width: 75px;
         height: 75px;
     }
+
     .section_06 section img {
-        width:70px;
+        width: 70px;
         height: 70px;
         border-radius: 100px;
         margin-right: 80px;
@@ -1865,6 +2020,7 @@ footer > .ad_03 > div > a > img:hover {
         transform: scale(1.2);
         cursor: pointer;
     }
+
     /*section 07*/
     .box {
         position: relative;
@@ -1910,23 +2066,329 @@ footer > .ad_03 > div > a > img:hover {
 
     }
 }
-/*Mobile phone*/
-@media all and (min-width: 375px) and (max-width: 425px) {
-    /*section 03*/
-    .section_03 h2{
-        margin: 0;
+
+/* large Mobile phone*/
+@media all and (min-width: 425px) and (max-width: 491px) {
+    /*header*/
+    header .icon_burger {
+        display: block;
     }
-    .sub_sec {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+
+    header ul {
+        margin: 5px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        border: 2px solid #1B191A;
+        width: auto;
+        background-color: black;
+        color: white;
+        height: auto;
+        display: none;
+    }
+
+    header ul li {
+        width: 100%;
+        margin: 10px;
+    }
+
+    header ul li ul {
+        position: relative;
+        top: -1px;
+        width: 100%;
+    }
+
+    header ul li ul li {
+        margin: 5px;
+    }
+
+    #toggler:checked ~ ul {
+        display: initial;
+        /*cursor: pointer;*/
+    }
+
+    /*sec01*/
+    .section_01 > aside > h3:nth-child(1) {
+        position: absolute;
+        top: 4%;
+        left: 2%;
+        font-size: 24px;
+    }
+
+    .section_01 > aside > h1:nth-child(2) {
+        position: absolute;
+        top: 10%;
+        left: 8%;
+        font-size: 30px;
+        transition: background-color 0.3s ease;
+
+
+    }
+
+    .section_01 > aside > h1:nth-child(2):hover {
+        color: gold;
+        /*color: rgba(0%, 0%, 0%, 0.1%);*/
+    }
+
+    .section_01 > aside > h3:nth-child(3) {
+        position: absolute;
+        top: 16.5%;
+        left: 2%;
+        font-size: 20px;
+
+    }
+
+    .section_01 > aside > h1:nth-child(4) {
+        position: absolute;
+        top: 17.2%;
+        left: 30%;
+        color: gold;
+        font-size: 25px;
+
+    }
+
+    .section_01 > aside > h1:nth-child(5) {
+        position: absolute;
+        top: 23%;
+        left: 8%;
+        color: gold;
+        font-size: 25px;
+
+    }
+
+    .section_01 > aside > p:nth-child(6) {
+        position: absolute;
+        top: 32%;
+        left: 8%;
+        font-size: 18px;
+    }
+
+    .section_01 > aside > button:nth-child(7) {
+        position: absolute;
+        top: 40%;
+        left: 27%;
+        border: 2px solid white;
+        /*background: linear-gradient(to right, gold, white);*/
+        background-color: black;
+        color: white;
+        padding: 9px 22px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 19px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .section_01 > .sub_section {
+        position: absolute;
+        top: 55%;
+        left: 10%;
+        height: 250px;
+        width: 360px;
+        background-image: url("../images/hacker girl.jpg");
+        background-size: 100% 100%;
+    }
+
+
+    .section_01 > div:nth-child(3) {
+        width: 40px;
+        height: 40px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 8%;
+        left: 70%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        /*display: none;*/
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(4) {
+        width: 20px;
+        height: 20px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 37%;
+        left: 73%;
+        animation: circle 0.5s infinite;
+        display: none;
+
+    }
+
+    .section_01 > div:nth-child(5) {
+        width: 20px;
+        height: 20px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 36%;
+        left: 5%;
+        animation: circle 0.5s infinite;
+        /*display: none;*/
+
+    }
+
+    .section_01 > div:nth-child(7) {
+        width: 20px;
+        height: 20px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 80%;
+        left: 76%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        /*display: none;*/
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(8) {
+        width: 100px;
+        height: 100px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        display: none;
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(9) {
+        width: 100px;
+        height: 100px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 70%;
+        left: 30%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        display: none;
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(10) {
+        width: 100px;
+        height: 100px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 75%;
+        left: 5%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        display: none;
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(11) {
+        width: 100px;
+        height: 100px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 8%;
+        left: 30%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        display: none;
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > aside > button:nth-child(7):hover {
+        background: linear-gradient(to right, gold, white);
+        border: 4px solid black;
+        /*background-color: white;*/
+        color: black;
+        transform: scaleX(1);
+    }
+
+    .btn a {
+        text-decoration: none;
+        color: white;
+
+    }
+
+    /*sec02*/
+    .section_02 article .h21 {
+        /*padding: 45px;*/
+        font-size: 35px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        /*margin-top: 150px;*/
+        margin-bottom: 40px;
+        position: absolute;
+        top: 10%;
+        left: 30%;
+
+    }
+
+    /*.h21 {*/
+    /*    margin: 0;*/
+    /*}*/
+    .section_02 > article > pre {
+        position: absolute;
+        top: 25%;
+        bottom: 0;
+        left: -43%;
+        right: 0;
+        text-align: center;
+        margin: auto;
+        font-size: 15px;
+        line-height: 1.5;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    /*sec 03*/
+    .section_03 h2 {
+        margin: 25px;
+    }
+
+    .h21 {
+        padding: 5px;
+        font-size: 35px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        /*margin-top: 50px;*/
+        margin-bottom: 50px;
     }
 
     .time_line {
-        width: 70%;
-        height: auto;
-        max-width: 600px;
-        margin: 0 auto;
+        width: 100%;
+        height: 10px;
+        max-width: 700px;
+        margin: 10px;
         position: relative;
     }
 
@@ -1934,29 +2396,1187 @@ footer > .ad_03 > div > a > img:hover {
         list-style: none;
     }
 
-    .time_line ul li {
-        padding: 15px;
+    .time_line ul li:nth-child(1),
+    .time_line ul li:nth-child(2),
+    .time_line ul li:nth-child(3) {
+        width: 90%;
+        padding: 10px;
         background-color: #1B191A;
         color: white;
         border-radius: 10px;
-        margin-bottom: 20px;
+        margin-bottom: 50px;
+        margin-left: 15px;
+        position: relative;
+        height: 80px;
+
     }
 
     .time_line ul li:last-child {
-        margin-bottom: 0;
+        width: 90%;
+        height: 85px;
+        margin-left: 15px;
+
+        margin-bottom: 10px;
     }
 
     .time_line_content p {
-        font-size: 12px;
-        line-height: 25px;
-        font-weight: 250;
-    }
-    .time_line_content .date{
-        font-size: 11px;
-        font-weight: 200;
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 300;
         margin-bottom: 10px;
-        letter-spacing: 2px;
+        margin-left: 20px;
     }
-    /*section 07*/
+
+    .time_line_content4 p {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-top: -20px;
+
+    }
+
+    .time_line_content .date {
+        font-size: 13px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        letter-spacing: 2px;
+        position: absolute;
+        top: -30px;
+        left: 10px;
+        color: gold;
+        margin-top: 15px;
+    }
+
+    .time_line_content4 .date {
+        font-size: 13px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        letter-spacing: 2px;
+        position: absolute;
+        top: -30px;
+        left: 10px;
+        color: gold;
+    }
+    /*sec 04*/
+    .h211 {
+        padding: 10px;
+        font-size: 35px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        /*margin-top: 30px;*/
+        position: relative;
+        top: 5%;
+        left: 1%;
+
+    }
+
+    .section_04 .service {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        /*gap: 3px;*/
+        /*align-items: center;*/
+        /*justify-content: space-evenly;*/
+        /*height: 85vh;*/
+        /*width: 100%;*/
+        /*margin: 0px;*/
+        /*padding: 0;*/
+    }
+
+    .service .div_01 {
+        height: 84%;
+        width: 80%;
+        margin-top: 30px;
+        border: 3px solid #eeeeee;
+        text-align: center;
+        align-items: center;
+        /*padding: 50px 25px;*/
+        margin-left: 40px;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        position: relative;
+        top: 8%;
+
+    }
+
+    .service .div_02 {
+        height: 96%;
+        width: 80%;
+        margin-top: 30px;
+        border: 4px solid #eeeeee;
+        text-align: center;
+        align-items: center;
+        /*padding: 30px 25px;*/
+        margin-left: 40px;
+        border-radius: 50px;
+        position: relative;
+        top: 6%;
+
+    }
+
+
+    .section_04 .service h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+
+    }
+
+    .section_04 .service .div_01 p {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.3;
+        font-weight: bold;
+        font-style: normal;
+        margin-bottom: 25px;
+    }
+
+    .section_04 .service .div_02 p {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.3;
+        font-weight: bold;
+        font-style: normal;
+        margin-bottom: 10px;
+    }
+
+
+    .section_04 .service img {
+        width: 50px;
+        height: 40px;
+        border-radius: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .button {
+        font-size: 11px;
+        text-decoration: none;
+        background-color: #1B191A;
+        border: 2px solid white;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+
+    }
+
+    .button:hover {
+        font-size: 13px;
+        background-color: gold;
+        color: black;
+        border: 2px solid black;
+        transition: 0.4s ease;
+    }
+
+    .hr {
+        width: 60%;
+        margin-left: 20%;
+    }
+    /*sec 05*/
+    .h212 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        /*border-bottom-width: 40px;*/
+        margin-top: -100px;
+        margin-bottom: 10px;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    /*.h211 {*/
+    /*    position: absolute;*/
+    /*    left: 35%;*/
+
+    /*}*/
+
+    .slider_wrapper {
+        top: 10%;
+        /*padding: 10px;*/
+        /*background-color: white;*/
+        position: relative;
+        max-width: 35rem;
+        margin: 0 auto;
+        left: 1%;
+        height: 90vh;
+        overflow: hidden;
+        margin-top: 50px;
+    }
+
+    .slider {
+        padding: 1px;
+        display: flex;
+        aspect-ratio: 16/11;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+        border-radius: 15px;
+        border: 3px solid black;
+        background-size: 100% 100%;
+        margin-left: 10px;
+        width: 95%;
+        height: 52%;
+
+    }
+
+    .slider img {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+        background-size: 100% 100%;
+
+    }
+    /*sec 06*/
+    .section_06 {
+        padding: 150px 180px;
+    }
+    .section_06 .h211{
+        font-size: 20px;
+        margin-left: -160px;
+
+    }
+    .section_06 h2 {
+        margin-top: 25px;
+        margin-left: -160px;
+
+    }
+
+    .section_06 section .p1,
+    .section_06 section .p2 {
+        display: flex;
+        padding-top: 40px;
+        padding-right: 10px;
+        margin-left: -160px;
+
+    }
+
+    .section_06 .git_img {
+        background-color: white;
+        border-radius: 100%;
+        width: 50px;
+        height: 50px;
+    }
+
+    .section_06 section img {
+        width: 50px;
+        height: 50px;
+        border-radius: 100px;
+        margin-right: 30px;
+        /*object-fit: cover;*/
+        background-size: cover; /* Adjusts the background image to cover the entire container */
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+        transition: all 0.3s ease-in-out;
+    }
+
+    .section_06 section img:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+}
+
+/*medium mobile phone*/
+@media all and (min-width: 320px) and (max-width: 425px) {
+    /*header*/
+    header .icon_burger {
+        display: block;
+    }
+
+    header ul {
+        margin: 5px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        border: 2px solid #1B191A;
+        width: auto;
+        background-color: black;
+        color: white;
+        height: auto;
+        display: none;
+    }
+
+    header ul li {
+        width: 100%;
+        margin: 10px;
+    }
+
+    header ul li ul {
+        position: relative;
+        top: -1px;
+        width: 100%;
+    }
+
+    header ul li ul li {
+        margin: 5px;
+    }
+
+    #toggler:checked ~ ul {
+        display: initial;
+        /*cursor: pointer;*/
+    }
+
+    /*sec01*/
+    .section_01 > aside > h3:nth-child(1) {
+        position: absolute;
+        top: 4%;
+        left: 2%;
+        font-size: 24px;
+    }
+
+    .section_01 > aside > h1:nth-child(2) {
+        position: absolute;
+        top: 10%;
+        left: 8%;
+        font-size: 30px;
+        transition: background-color 0.3s ease;
+
+
+    }
+
+    .section_01 > aside > h1:nth-child(2):hover {
+        color: gold;
+        /*color: rgba(0%, 0%, 0%, 0.1%);*/
+    }
+
+    .section_01 > aside > h3:nth-child(3) {
+        position: absolute;
+        top: 16.5%;
+        left: 2%;
+        font-size: 20px;
+
+    }
+
+    .section_01 > aside > h1:nth-child(4) {
+        position: absolute;
+        top: 17.2%;
+        left: 30%;
+        color: gold;
+        font-size: 25px;
+
+    }
+
+    .section_01 > aside > h1:nth-child(5) {
+        position: absolute;
+        top: 23%;
+        left: 8%;
+        color: gold;
+        font-size: 25px;
+
+    }
+
+    .section_01 > aside > p:nth-child(6) {
+        position: absolute;
+        top: 32%;
+        left: 8%;
+        font-size: 18px;
+    }
+
+    .section_01 > aside > button:nth-child(7) {
+        position: absolute;
+        top: 40%;
+        left: 27%;
+        border: 2px solid white;
+        /*background: linear-gradient(to right, gold, white);*/
+        background-color: black;
+        color: white;
+        padding: 9px 22px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 19px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .section_01 > .sub_section {
+        position: absolute;
+        top: 55%;
+        left: 10%;
+        height: 250px;
+        width: 360px;
+        background-image: url("../images/hacker girl.jpg");
+        background-size: 100% 100%;
+    }
+
+
+    .section_01 > div:nth-child(3) {
+        width: 40px;
+        height: 40px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 8%;
+        left: 70%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        /*display: none;*/
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(4) {
+        width: 20px;
+        height: 20px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 37%;
+        left: 73%;
+        animation: circle 0.5s infinite;
+        display: none;
+
+    }
+
+    .section_01 > div:nth-child(5) {
+        width: 20px;
+        height: 20px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 36%;
+        left: 5%;
+        animation: circle 0.5s infinite;
+        /*display: none;*/
+
+    }
+
+    .section_01 > div:nth-child(7) {
+        width: 20px;
+        height: 20px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 80%;
+        left: 76%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        /*display: none;*/
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(8) {
+        width: 100px;
+        height: 100px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        display: none;
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(9) {
+        width: 100px;
+        height: 100px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 70%;
+        left: 30%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        display: none;
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(10) {
+        width: 100px;
+        height: 100px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 75%;
+        left: 5%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        display: none;
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(11) {
+        width: 100px;
+        height: 100px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 8%;
+        left: 30%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        display: none;
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > aside > button:nth-child(7):hover {
+        background: linear-gradient(to right, gold, white);
+        border: 4px solid black;
+        /*background-color: white;*/
+        color: black;
+        transform: scaleX(1);
+    }
+
+    .btn a {
+        text-decoration: none;
+        color: white;
+
+    }
+
+    /*sec 02*/
+    .section_02 .h21 {
+        position: absolute;
+
+        /*padding-top: 10px;*/
+        font-size: 35px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        margin-top: 50px;
+        top: -5%;
+        left: 1%;
+        right: 0;
+
+        /*margin-bottom: 40px;*/
+
+    }
+
+    /*.h21 {*/
+    /*    margin: 0;*/
+    /*}*/
+    .section_02 > article > pre {
+        position: absolute;
+        top: 20%;
+        bottom: 0;
+        left: -52%;
+        right: 0;
+        text-align: center;
+        margin: auto;
+        font-size: 15px;
+        line-height: 1.5;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    /*sec 03*/
+    .section_03 h2 {
+        margin: 27px;
+    }
+
+    .h21 {
+        padding: 5px;
+        font-size: 30px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        /*margin-top: 50px;*/
+        margin-bottom: 50px;
+    }
+
+    .time_line {
+        width: 100%;
+        height: 10px;
+        max-width: 700px;
+        margin: 10px;
+        position: relative;
+    }
+
+    .time_line ul {
+        list-style: none;
+    }
+
+    .time_line ul li:nth-child(1),
+    .time_line ul li:nth-child(2),
+    .time_line ul li:nth-child(3) {
+        width: 90%;
+        padding: 10px;
+        background-color: #1B191A;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 50px;
+        margin-left: 15px;
+        position: relative;
+        height: 80px;
+
+    }
+
+    .time_line ul li:last-child {
+        width: 90%;
+        height: 85px;
+        margin-left: 15px;
+
+        margin-bottom: 10px;
+    }
+
+    .time_line_content p {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        margin-left: 20px;
+    }
+
+    .time_line_content4 p {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-top: -20px;
+
+    }
+
+    .time_line_content .date {
+        font-size: 13px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        letter-spacing: 2px;
+        position: absolute;
+        top: -30px;
+        left: 10px;
+        color: gold;
+        margin-top: 15px;
+    }
+
+    .time_line_content4 .date {
+        font-size: 13px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        letter-spacing: 2px;
+        position: absolute;
+        top: -30px;
+        left: 10px;
+        color: gold;
+    }
+    /*sec 04*/
+    .h211 {
+        padding: 10px;
+        font-size: 35px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        /*margin-top: 30px;*/
+        position: relative;
+        top: 5%;
+        left: 1%;
+
+    }
+
+    .section_04 .service {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        /*gap: 3px;*/
+        /*align-items: center;*/
+        /*justify-content: space-evenly;*/
+        /*height: 85vh;*/
+        /*width: 100%;*/
+        /*margin: 0px;*/
+        /*padding: 0;*/
+    }
+
+    .service .div_01 {
+        height: 84%;
+        width: 80%;
+        margin-top: 30px;
+        border: 3px solid #eeeeee;
+        text-align: center;
+        align-items: center;
+        /*padding: 50px 25px;*/
+        margin-left: 40px;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        position: relative;
+        top: 8%;
+
+    }
+
+    .service .div_02 {
+        height: 96%;
+        width: 80%;
+        margin-top: 30px;
+        border: 4px solid #eeeeee;
+        text-align: center;
+        align-items: center;
+        /*padding: 30px 25px;*/
+        margin-left: 40px;
+        border-radius: 50px;
+        position: relative;
+        top: 6%;
+
+    }
+
+
+    .section_04 .service h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+
+    }
+
+    .section_04 .service .div_01 p {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.3;
+        font-weight: bold;
+        font-style: normal;
+        margin-bottom: 25px;
+    }
+
+    .section_04 .service .div_02 p {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.3;
+        font-weight: bold;
+        font-style: normal;
+        margin-bottom: 10px;
+    }
+
+
+    .section_04 .service img {
+        width: 50px;
+        height: 40px;
+        border-radius: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .button {
+        font-size: 11px;
+        text-decoration: none;
+        background-color: #1B191A;
+        border: 2px solid white;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+
+    }
+
+    .button:hover {
+        font-size: 13px;
+        background-color: gold;
+        color: black;
+        border: 2px solid black;
+        transition: 0.4s ease;
+    }
+
+    .hr {
+        width: 60%;
+        margin-left: 20%;
+    }
+
+
+
+}
+
+/*small mobile phone*/
+@media all and (max-width: 320px) {
+    /*header*/
+    header .icon_burger {
+        display: block;
+    }
+
+    header ul {
+        margin: 5px;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        right: 0;
+        border: 2px solid #1B191A;
+        width: auto;
+        background-color: black;
+        color: white;
+        height: auto;
+        display: none;
+    }
+
+    header ul li {
+        width: 100%;
+        margin: 10px;
+    }
+
+    header ul li ul {
+        position: relative;
+        top: -1px;
+        width: 100%;
+    }
+
+    header ul li ul li {
+        margin: 5px;
+    }
+
+    #toggler:checked ~ ul {
+        display: initial;
+        /*cursor: pointer;*/
+    }
+
+    /*sec01*/
+    .section_01 > aside > h3:nth-child(1) {
+        position: absolute;
+        top: 4%;
+        left: 2%;
+        font-size: 24px;
+    }
+
+    .section_01 > aside > h1:nth-child(2) {
+        position: absolute;
+        top: 10%;
+        left: 8%;
+        font-size: 30px;
+        transition: background-color 0.3s ease;
+
+
+    }
+
+    .section_01 > aside > h1:nth-child(2):hover {
+        color: gold;
+        /*color: rgba(0%, 0%, 0%, 0.1%);*/
+    }
+
+    .section_01 > aside > h3:nth-child(3) {
+        position: absolute;
+        top: 16.5%;
+        left: 2%;
+        font-size: 20px;
+
+    }
+
+    .section_01 > aside > h1:nth-child(4) {
+        position: absolute;
+        top: 17.2%;
+        left: 30%;
+        color: gold;
+        font-size: 25px;
+
+    }
+
+    .section_01 > aside > h1:nth-child(5) {
+        position: absolute;
+        top: 23%;
+        left: 8%;
+        color: gold;
+        font-size: 25px;
+
+    }
+
+    .section_01 > aside > p:nth-child(6) {
+        position: absolute;
+        top: 32%;
+        left: 8%;
+        font-size: 18px;
+    }
+
+    .section_01 > aside > button:nth-child(7) {
+        position: absolute;
+        top: 40%;
+        left: 27%;
+        border: 2px solid white;
+        /*background: linear-gradient(to right, gold, white);*/
+        background-color: black;
+        color: white;
+        padding: 9px 22px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 19px;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+
+    .section_01 > .sub_section {
+        position: absolute;
+        top: 55%;
+        left: 10%;
+        height: 250px;
+        width: 360px;
+        background-image: url("../images/hacker girl.jpg");
+        background-size: 100% 100%;
+    }
+
+
+    .section_01 > div:nth-child(3) {
+        width: 40px;
+        height: 40px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 8%;
+        left: 70%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        /*display: none;*/
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(4) {
+        width: 20px;
+        height: 20px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 37%;
+        left: 73%;
+        animation: circle 0.5s infinite;
+        display: none;
+
+    }
+
+    .section_01 > div:nth-child(5) {
+        width: 20px;
+        height: 20px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 36%;
+        left: 5%;
+        animation: circle 0.5s infinite;
+        /*display: none;*/
+
+    }
+
+    .section_01 > div:nth-child(7) {
+        width: 20px;
+        height: 20px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 80%;
+        left: 76%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        /*display: none;*/
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(8) {
+        width: 100px;
+        height: 100px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 30%;
+        left: 40%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        display: none;
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(9) {
+        width: 100px;
+        height: 100px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 70%;
+        left: 30%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        display: none;
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(10) {
+        width: 100px;
+        height: 100px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 75%;
+        left: 5%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        display: none;
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > div:nth-child(11) {
+        width: 100px;
+        height: 100px;
+        border: 3px solid gold;
+        border-radius: 100%;
+        position: absolute;
+        top: 8%;
+        left: 30%;
+        /*animation-name: circle;*/
+        /*animation-duration: 0.2s;*/
+        /*animation-iteration-count: infinite;*/
+        animation: circle 0.5s infinite;
+        display: none;
+
+        /*animation-timing-function: linear;*/
+    }
+
+    .section_01 > aside > button:nth-child(7):hover {
+        background: linear-gradient(to right, gold, white);
+        border: 4px solid black;
+        /*background-color: white;*/
+        color: black;
+        transform: scaleX(1);
+    }
+
+    .btn a {
+        text-decoration: none;
+        color: white;
+
+    }
+    /*sec 04*/
+    .h211 {
+        padding: 10px;
+        font-size: 30px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 800;
+        /*margin-top: 30px;*/
+        position: relative;
+        top: 5%;
+        left: 2%;
+
+    }
+
+    .section_04 .service {
+        display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: repeat(1, 1fr);
+        /*gap: 3px;*/
+        /*align-items: center;*/
+        /*justify-content: space-evenly;*/
+        /*height: 85vh;*/
+        /*width: 100%;*/
+        /*margin: 0px;*/
+        /*padding: 0;*/
+    }
+
+    .service .div_01 {
+        height: 88%;
+        width: 80%;
+        margin-top: 30px;
+        border: 3px solid #eeeeee;
+        text-align: center;
+        align-items: center;
+        /*padding: 50px 25px;*/
+        margin-left: 35px;
+        border-radius: 50px;
+        margin-bottom: 20px;
+        position: relative;
+        top: 8%;
+
+    }
+
+    .service .div_02 {
+        height: 96%;
+        width: 80%;
+        margin-top: 30px;
+        border: 4px solid #eeeeee;
+        text-align: center;
+        align-items: center;
+        /*padding: 30px 25px;*/
+        margin-left: 35px;
+        border-radius: 50px;
+        position: relative;
+        top: 6%;
+
+    }
+
+
+    .section_04 .service h2 {
+        font-size: 20px;
+        margin-bottom: 10px;
+
+    }
+
+    .section_04 .service .div_01 p {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.3;
+        font-weight: bold;
+        font-style: normal;
+        margin-bottom: 25px;
+    }
+
+    .section_04 .service .div_02 p {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 1.3;
+        font-weight: bold;
+        font-style: normal;
+        margin-bottom: 10px;
+    }
+
+
+    .section_04 .service img {
+        width: 50px;
+        height: 40px;
+        border-radius: 100%;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+
+    .button {
+        font-size: 11px;
+        text-decoration: none;
+        background-color: #1B191A;
+        border: 2px solid white;
+        color: white;
+        padding: 8px 12px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+
+    }
+
+    .button:hover {
+        font-size: 13px;
+        background-color: gold;
+        color: black;
+        border: 2px solid black;
+        transition: 0.4s ease;
+    }
+
+    .hr {
+        width: 60%;
+        margin-left: 20%;
+    }
+
 
 }
