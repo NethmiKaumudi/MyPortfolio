@@ -1,102 +1,121 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Knight</title>
-    <style>  body {
-        background-color: white;
-    }
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <style>
+        body {
+            background-color: black;
+        }
 
-    div {
-        width: 200px;
-        height: 100px;
-        border: 2px solid black;
-        display: flex;
-        flex-grow: 1;
-    }
+        .div {
+            width: 150px;
+            height: 50px;
+            position: relative;
+            left: 350px;
+            top: 300px;
+            float: left;
+            background-color: black;
+            margin: 0 0 0 5px;
+            border: 2px solid black;
+        }
 
-    h1 {
-        color: white;
-        text-align: center;
-    }
+        .btn {
+            width: 70px;
+            height: 40px;
+            border-radius: 10px;
+        }
 
-    body > section {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        width: 1200px;
-        height: 350px;
+        h1 {
+            text-align: center;
+            color: white;
+        }
 
-    }
+        .start-btn,
+        .stop-btn {
+            width: 100px;
+            height: 40px;
+            border-radius: 10px;
+            font-size: 16px;
+            background-color: #4caf50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin: 0 10px;
+        }
 
+        .btn-container {
+            position: absolute;
+            left: 700px;
+            top: 250px;
+        }
 
-    #btn1 {
-        background-color: blue;
-        width: 120px;
-        height: 40px;
-        position: absolute;
-        top: 60%;
-        right: 50%;
-        left: 40%;
-        color: r;
-        /*margin-right: 50px;*/
-    }
-
-    #btn2 {
-        background-color: red;
-        width: 120px;
-        height: 40px;
-        position: absolute;
-        top: 60%;
-        right: 50%;
-        left: 50%;
-        /*margin-bottom: 100px;*/
-        /*margin-right: 150px;*/
-    }
-
+        .stop-btn {
+            background-color: #f44336;
+        }
     </style>
+    <title>Document</title>
 </head>
 <body>
-
-<section>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
+<h1>Knight Rider</h1>
+<audio src="audio/audio.mp3" id="audio-kr"></audio>
+<section id="light-panel">
+    <div class="div"></div>
+    <div class="div"></div>
+    <div class="div"></div>
+    <div class="div"></div>
+    <div class="div"></div>
+    <div class="div"></div>
+    <!--    <div class="div"></div>-->
+    <!--    <div class="div"></div>-->
 
 </section>
-<button id="btn1">Start</button>
-<button id="btn2">Stop</button>
+<div class="btn-container">
+    <button class="start-btn" onclick="startLights()">START</button>
+    <button class="stop-btn" onclick="stopLights()">STOP</button>
+</div>
 
+<script
+        src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+        crossorigin="anonymous"
+></script>
 <script>
-    //literal based array-saved colours
-    let colours = ["#EA000E", "#CA2F38", "#A8454B", "#C8646A", "#DEB9BB", "white", "white", "white", "white"];
-    let id;
-    document.getElementById("btn1").addEventListener("click", function () {
-        clearInterval(id);
+    let lightNumber = 0;
+    let direction = 1;
+    const lights = $(".div");
+    let interval;
 
-        id = setInterval(function () {
-            let divArray = document.querySelector("section").children;
-            for (let i = 0; i < divArray.length; i++) {
-                //set he colors array to the div elements
-                divArray[i].style.background = colours[i];
+    const startLights = () => {
+        clearInterval(interval);
+
+        $("#audio-kr")[0].play();
+        interval = setInterval(() => {
+            lights.css("background-color", "white");
+            lights.eq(lightNumber).css("background-color", "red");
+            if (lightNumber > 0) {
+                lights.eq(lightNumber - 1).css("background-color", "pink");
             }
-            let lv = colours.pop();
-            colours.unshift(lv);
-            colours.reverse();
+            if (lightNumber < 6) {
+                lights.eq(lightNumber + 1).css("background-color", "pink");
+            }
+            if (lightNumber === 6) {
+                direction = -1;
+            } else if (lightNumber === 0) {
+                direction = 1;
+            }
+            lightNumber += direction;
+        }, 100);
+    };
 
-        }, 300);
-    })
-    document.getElementById("btn2").addEventListener("click", function () {
-        clearInterval(id);
-
-    })
+    const stopLights = () => {
+        $("#audio-kr")[0].pause();
+        clearInterval(interval);
+        // lights.css("background-color", "black");
+        // lightNumber = 0;
+    };
 </script>
 </body>
 </html>
