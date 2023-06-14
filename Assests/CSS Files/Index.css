@@ -920,7 +920,6 @@ footer > .ad_03 > div > a > img:hover {
 @media all and (min-width: 1440px) {
     .time_line {
         animation: movedown 5s linear forwards infinite;
-
     }
 
 
@@ -1015,7 +1014,6 @@ footer > .ad_03 > div > a > img:hover {
         animation: movedown 5s linear forwards infinite;
 
     }
-
 
     .time_line:before {
         content: '';
@@ -1976,11 +1974,13 @@ footer > .ad_03 > div > a > img:hover {
     .section_06 {
         padding: 80px 160px;
     }
-    .section_06 .h211{
+
+    .section_06 .h211 {
         position: absolute;
         top: 30%;
         left: 25%;
     }
+
     .section_06 h2 {
         margin-top: 60px;
         margin-left: -26%;
@@ -2459,6 +2459,7 @@ footer > .ad_03 > div > a > img:hover {
         left: 10px;
         color: gold;
     }
+
     /*sec 04*/
     .h211 {
         padding: 10px;
@@ -2574,6 +2575,7 @@ footer > .ad_03 > div > a > img:hover {
         width: 60%;
         margin-left: 20%;
     }
+
     /*sec 05*/
     .h212 {
         padding-top: 10px;
@@ -2588,9 +2590,7 @@ footer > .ad_03 > div > a > img:hover {
     /*.h211 {*/
     /*    position: absolute;*/
     /*    left: 35%;*/
-
     /*}*/
-
     .slider_wrapper {
         top: 10%;
         /*padding: 10px;*/
@@ -2628,15 +2628,18 @@ footer > .ad_03 > div > a > img:hover {
         background-size: 100% 100%;
 
     }
+
     /*sec 06*/
     .section_06 {
         padding: 150px 180px;
     }
-    .section_06 .h211{
+
+    .section_06 .h211 {
         font-size: 20px;
         margin-left: -160px;
 
     }
+
     .section_06 h2 {
         margin-top: 25px;
         margin-left: -160px;
@@ -3071,6 +3074,7 @@ footer > .ad_03 > div > a > img:hover {
         left: 10px;
         color: gold;
     }
+
     /*sec 04*/
     .h211 {
         padding: 10px;
@@ -3186,7 +3190,6 @@ footer > .ad_03 > div > a > img:hover {
         width: 60%;
         margin-left: 20%;
     }
-
 
 
 }
@@ -3462,6 +3465,7 @@ footer > .ad_03 > div > a > img:hover {
         color: white;
 
     }
+
     /*sec 04*/
     .h211 {
         padding: 10px;

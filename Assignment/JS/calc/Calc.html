@@ -2,9 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cal {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: black;
+            padding: 15px;
+            border-radius: 11px;
+            border: 2px solid white;
+        }
+
+        button {
+            width: 50px;
+            height: 50px;
+            outline: none;
+            box-shadow: none;
+            margin: 2.5px;
+            font-size: 15px;
+            font-weight: bold;
+            border-radius: 11px;
+            background-image: linear-gradient(to bottom, white, grey);
+        }
+
+        .clear, .back {
+            width: 110px;
+            height: 45px;
+        }
+
+        .result {
+            width: 220px;
+            height: 40px;
+            margin: 2px;
+            background: #6c757d;
+            text-align: right;
+            font-size: 18px;
+            padding: 2px;
+            border-radius: 10px;
+            outline: none;
+            box-shadow: none;
+            font-weight: bold;
+            font-family: Tahoma;
+        }
+
+        h1 {
+            text-align: center;
+            position: absolute;
+            top: 12%;
+            left: 43%;
+            font-size: 50px;
+        }
+    </style>
+
 </head>
 <body>
+<h1>Calculator</h1>
+<div class="cal">
 
+    <input type="text" class="result" value="" readonly>
+    <div>
+        <button type="button" class="clear">C</button>
+        <button type="button" class="back"><<</button>
+
+    </div>
+    <div>
+        <button type="button" class="calc_btn">7</button>
+        <button type="button" class="calc_btn">8</button>
+        <button type="button" class="calc_btn">9</button>
+        <button type="button" class="calc_btn">x</button>
+
+    </div>
+    <div>
+        <button type="button" class="calc_btn">4</button>
+        <button type="button" class="calc_btn">5</button>
+        <button type="button" class="calc_btn">6</button>
+        <button type="button" class="calc_btn">-</button>
+
+    </div>
+    <div>
+        <button type="button" class="calc_btn">1</button>
+        <button type="button" class="calc_btn">2</button>
+        <button type="button" class="calc_btn">3</button>
+        <button type="button" class="calc_btn">+</button>
+
+    </div>
+    <div>
+        <button type="button" class="calc_btn">0</button>
+        <button type="button" class="calc_btn">.</button>
+        <button type="button" class="calc_btn">/</button>
+        <button type="button" class="equal">=</button>
+
+    </div>
+
+
+</div>
+<script src="assest/jquery-3.7.0.min.js"></script>
+
+<script>
+    $(function () {
+        $('.calc_btn').on('click', function () {
+            $('.result').val($('.result').val() + $(this).html());
+        })
+        $('.equal').on('click', function () {
+            exp = $('.result').val();
+            if (exp.includes('x')) {
+                exp = exp.replace('x', '*');
+            }
+            $('.result').val(eval(exp));
+        })
+        $('.clear').on('click', function () {
+            $('.result').val('');
+        })
+        $('.back').on('click', function () {
+            ex = $('.result').val();
+            $('.result').val(ex.substring(0, ex.length - 1));
+
+
+        })
+    })
+</script>
 </body>
 </html>

@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,11 +54,16 @@
         .stop-btn {
             background-color: #f44336;
         }
+        .start-btn{
+            background-color: #0a53be;
+        }
     </style>
     <title>Document</title>
 </head>
 <body>
 <h1>Knight Rider</h1>
+<audio src="audio/knight-rider-ringtone.mp3" id="audio"></audio>
+
 <audio src="audio/audio.mp3" id="audio-kr"></audio>
 <section id="light-panel">
     <div class="div"></div>
@@ -83,6 +87,8 @@
         crossorigin="anonymous"
 ></script>
 <script>
+    // $("audio").play();
+
     let lightNumber = 0;
     let direction = 1;
     const lights = $(".div");

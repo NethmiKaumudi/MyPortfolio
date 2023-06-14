@@ -569,48 +569,18 @@
 
     }
 
-    /*  $(document).ready(function ($) {
 
-          var e0 = $(document).find('.screen_data');
-          var s1 = $(document).find('.secreen_Home').html();
-          e0.html(s1);
+    // document.addEventListener('DOMContentLoaded', function () {
+    //     const lastActiveSection = localStorage.getItem('activeSection');
+    //     if (lastActiveSection) {
+    //         loadSection(lastActiveSection);
+    //     } else {
+    //         // Set a default section if no active section is found
+    //         loadSection('dashboard');
+    //     }
+    // });
 
-          $(document).on('click', '.btn_menu', function (event) {
 
-              event.preventDefault();
-              var screen_name = $(this).attr('.screen_name');
-
-              window.location.hash = '/' + screen_name;
-              $(document).find('.screen_name').html(screen_name);
-              ;
-              if (screen_name == home) {
-                  // var s1 = $(document).find('.screen_data').load("screens/Home.html");
-                  // e0.html(s1);
-                  var s1 = $(document).find('.secreen_Home').html();
-                  e0.html(s1);
-
-              } else if (screen_name == customer) {
-                  // var s1 = $(document).find('.screen_data').load("screens/Customer.html");
-                  // e0.html(s1);
-                  var s1 = $(document).find('.screen_Customer').html();
-                  e0.html(s1);
-
-              } else if (screen_name == item) {
-                  // var s1 = $(document).find('.screen_data').load("screens/Item.html");
-                  // e0.html(s1);
-                  var s1 = $(document).find('.screen_item').html();
-                  e0.html(s1);
-
-              } else if (screen_name == order) {
-                  // var s1 = $(document).find('.screen_data').load("screens/Order.html");
-                  // e0.html(s1);
-                  var s1 = $(document).find('.screen_order').html();
-                  e0.html(s1);
-
-              }
-          });
-
-      });*/
 </script>
 
 </body>

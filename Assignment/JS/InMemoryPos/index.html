@@ -72,6 +72,7 @@
 <div class="container">
     <div class="screen_data"></div>
 </div>
+
 <!--................................................................-->
 <div class="screens">
     <!--Home-->
@@ -161,12 +162,33 @@
                             </form>
                         </div>
                     </div>
-                    <div class="form-group text-right mt-3">
-                        <button class="btn btn-success col-12 col-sm-auto" id="btnAddToCustomerTable" type="button"
-                                style="width: 100px">
-                            Add
-                        </button>
+                    <div class="row" style="width: 500px; ">
+                        <div class="col-3 form-group text-right mt-3">
+                            <button class="btn btn-success col-12 col-sm-auto" id="btnAddToCustomerTable" type="button"
+                                    style="width: 100px">
+                                Add
+                            </button>
+                        </div>
+                        <div class="col -3 form-group text-right mt-3">
+                            <button class="btn btn-warning col-12 col-sm-auto" id="btnUpdateCustomer" type="button"
+                                    style="width: 100px">
+                                Update
+                            </button>
+                        </div>
+                        <div class="col-3 form-group text-right mt-3">
+                            <button class="btn btn-danger col-12 col-sm-auto" id="btndeleteCustomer" type="button"
+                                    style="width: 100px">
+                                Delete
+                            </button>
+                        </div>
+                        <div class="col -3 form-group text-right mt-3">
+                            <button class="btn btn-primary col-12 col-sm-auto" id="btngetCustomer" type="button"
+                                    style="width: 100px">
+                                GetAll
+                            </button>
+                        </div>
                     </div>
+
                 </div>
 
                 <div class="col-lg-6 mt-lg-0 mt-5  " id="div_02"
@@ -560,85 +582,148 @@
 <script src="assest/jquery-3.7.0.min.js"></script>
 
 <script>
-    function screee(divName) {
-        const sections = ['secreen_Home', 'screen_Customer', 'screen_item', 'screen_order'];
+    // function screee(divName) {
+    //     const sections = ['screen_Home', 'screen_Customer', 'screen_item', 'screen_order'];
+    //     sections.forEach(function (section) {
+    //         const display = section === divName ? 'block' : 'none';
+    //         document.getElementsByClassName(section)[0].style.display = display;
+    //     });
+    //
+    // }
+    initiateUI();
 
-        sections.forEach(function (section) {
-            const display = section === divName ? 'block' : 'none';
-            document.getElementsByClassName(section)[0].style.display = display;
-        });
-
+    function initiateUI() {
+        clearAll();
+        $("#dashboardContent").css("display", "block");
+        setTheLastView();
     }
 
-    // document.getElementById("btnAddToTable").addEventListener("click", function () {
-    //     let Id = document.getElementById("Nic").value;
-    //     let Name = document.getElementById("Cus_Name").value;
-    //     let Address = document.getElementById("Address").value;
-    //     let Salary = document.getElementById("Salary").value;
-    //
-    //     let tbody = document.getElementById("tblCustomer");
-    //
-    //     let tr = document.createElement("tr");
-    //     let col1 = document.createElement("td");
-    //     let col2 = document.createElement("td");
-    //     let col3 = document.createElement("td");
-    //     let col4 = document.createElement("td");
-    //     col1.textContent = Id;
-    //     col2.textContent = Name;
-    //     col3.textContent = Address;
-    //     col4.textContent = Salary;
-    //
-    //     tr.appendChild(col1);
-    //     tr.appendChild(col2);
-    //     tr.appendChild(col3);
-    //     tr.appendChild(col4);
-    //
-    //     tbody.appendChild(tr);
-    //
-    // })
+    function saveLastView(clickedID) {
+        switch (clickedID) {
+            case "dashboardContent":
+                localStorage.setItem("view", "HOME");
+                break;
+            case "customerContent":
+                localStorage.setItem("view", "CUSTOMER");
+                break;
+            case "itemContent":
+                localStorage.setItem("view", "ITEM");
+                break;
+            case "orderContent":
+                localStorage.setItem("view", "ORDER");
+                break;
+        }
+    }
 
+    function setTheLastView() {
+        let view = localStorage.getItem("view");
+        switch (view) {
+            case "HOME":
+                setView($("#dashboardContent"));
+                break;
+            case "ITEM":
+                setView($("#itemContent"));
+                break;
+            case "CUSTOMER":
+                setView($("#customerContent"));
+                break;
+            case "ORDER":
+                setView($("#orderContent"));
+                break;
+            default:
+                setView($("#dashboardContent"));
+        }
+    }
 
-    // function addCustomer() {
-    //     let Nic = $("#cusNic").val();
-    //     let Name = $("#cusName").val();
-    //     let Address = $("#cusAddress").val();
-    //     let Salary = $("#cusSalary").val();
-    //
-    //     let createTr = $(<tr></tr>);
-    //     let createTh = $(<th></th>).attr('scope', 'row').text(rowNo);
-    //     let colNic = $(<td></td>).text(Nic);
-    //     let colName = $(<td></td>).text(Name);
-    //     let colAddress = $(<td></td>.text(Address);
-    //     let colSalary = $(<td></td>).text(Salary);
-    //     var tBody = $("tblCustomer");
-    //     createTr.append(createTh, colNic, colName, colAddress, colSalary);
-    //     tBody.append(createTr);
-    //     rowNo++;
-    // }
+    function clearAll() {
+        $("#dashboardContent,#customerContent,#itemContent,#orderContent").css('display', 'none');
+    }
+
+    function setView(viewOb) {
+        clearAll();
+        viewOb.css("display", "block");
+        saveLastView(viewOb.get(0).id);
+        console.log(viewOb.get(0).id);
+    }
+
+    //bind events
+    $("#lnkHome").click(function () {
+        setView($("#dashboardContent"));
+    });
+
+    $("#lnkCustomer").click(function () {
+        setView($("#customerContent"));
+    });
+
+    $("#lnkItem").click(function () {
+        setView($("#itemContent"));
+    });
+
+    $("#lnkOrders").click(function () {
+        setView($("#orderContent"));
+    });
 
 </script>
-<script> var rowNo = 2;
-$("#btnAddToCustomerTable").click(function () {
-    // addCustomer();
-    let nic = $("#Nic").val();
-    let name = $("#Cus_Name").val();
-    let address = $("#Address").val();
-    let salary = $("#Salary").val();
 
-    let createTr = $(<tr></tr>);
-    let createTh = $(<th></th>).attr('scope', 'row').text(rowNo);
-    let colNic = $(<td></td>).text(nic);
-    let colName = $(<td></td>).text(name);
-    let colAddress = $(<td></td>).text(address);
-    let colSalary = $(<td></td>).text(salary);
+<script>
 
-    var tBody = $("#tblCustomer");
 
-    createTr.append(createTh, colNic, colName, colAddress, colSalary);
-    tBody.append(createTr);
-    rowNo++;
-})</script>
+    let customerDB = [];
+    $("#btnAddToCustomerTable").click(function () {
+        // addCustomer();
+        let nic = $("#Nic").val();
+        let name = $("#Cus_Name").val();
+        let address = $("#Address").val();
+        let salary = $("#Salary").val();
+        let CustomerObj = {
+            Cus_id: nic,
+            Cus_name: name,
+            Cus_address: address,
+            Cus_salary: salary
+        }
+        customerDB.push(CustomerObj);
+        // let customer = [nic, name, address, salary];
+        // CustomerObj.nic = nic;
+        // CustomerObj.name = name;
+        // CustomerObj.address = address
+        // CustomerObj.salary = salary;
 
+        // customerDB.push(customer);
+        // let row = `<tr>
+        // <td>${nic}</td>
+        // <td>${name}</td>
+        // <td>${address}</td>
+        // <td>${salary}</td>
+        //     </tr>`;
+        // $("#tblCustomer").append(row);
+        let row = `<tr>
+        <td>${CustomerObj.Cus_id}</td>
+        <td>${CustomerObj.Cus_name}</td>
+        <td>${CustomerObj.Cus_address}</td>
+        <td>${CustomerObj.Cus_salary}</td>
+            </tr>`;
+        $("#tblCustomer").append(row);
+
+    });
+    $("#btngetCustomer").click(function () {
+        $("#tblCustomer").empty();
+        for (var i = 0; i < customerDB.length; i++) {
+            let customer_nic = customerDB[i][0];
+            let customer_name = customerDB[i][1];
+            let customer_address = customerDB[i][2];
+            let customer_salary = customerDB[i][3];
+
+            let row = `<tr>
+            <td>${customer_nic}</td>
+            <td>${customer_name}</td>
+            <td>${customer_address}</td>
+            <td>${customer_salary}</td>
+                </tr>`;
+            $("#tblCustomer").append(row);
+        }
+    });
+
+</script>
 </body>
 
 </html>
