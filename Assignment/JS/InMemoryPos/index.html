@@ -288,12 +288,39 @@
                             </form>
                         </div>
                     </div>
-                    <div class="form-group text-right mt-3">
-                        <button class="btn btn-success col-12 col-sm-auto" id="btnAdd" type="button"
-                                style="width: 100px">
-                            Add
-                        </button>
+                    <!--                    <div class="form-group text-right mt-3">-->
+                    <!--                        <button class="btn btn-success col-12 col-sm-auto" id="btnAdd" type="button"-->
+                    <!--                                style="width: 100px">-->
+                    <!--                            Add-->
+                    <!--                        </button>-->
+                    <!--                    </div>-->
+                    <div class="row" style="width: 500px; ">
+                        <div class="col-3 form-group text-right mt-3">
+                            <button class="btn btn-success col-12 col-sm-auto" id="btnAddToItemTable" type="button"
+                                    style="width: 100px">
+                                Add
+                            </button>
+                        </div>
+                        <div class="col -3 form-group text-right mt-3">
+                            <button class="btn btn-warning col-12 col-sm-auto" id="btnUpdateItem" type="button"
+                                    style="width: 100px">
+                                Update
+                            </button>
+                        </div>
+                        <div class="col-3 form-group text-right mt-3">
+                            <button class="btn btn-danger col-12 col-sm-auto" id="btndeleteItem" type="button"
+                                    style="width: 100px">
+                                Delete
+                            </button>
+                        </div>
+                        <div class="col -3 form-group text-right mt-3">
+                            <button class="btn btn-primary col-12 col-sm-auto" id="btngetItem" type="button"
+                                    style="width: 100px">
+                                GetAll
+                            </button>
+                        </div>
                     </div>
+
                 </div>
 
                 <div class="col-lg-6 mt-lg-0 mt-5  "
@@ -318,23 +345,23 @@
                                 <th> Unit Price</th>
                             </tr>
                             </thead>
-                            <tbody class="table-light">
-                            <tr>
-                                <!--            <th scope="row">1</th>-->
-                                <td>I-001</td>
-                                <td>Buscuit</td>
-                                <td>100 pack</td>
-                                <td>150.00</td>
+                            <tbody class="table-light" id="tblItem">
+                            <!--                            <tr>-->
+                            <!--                                &lt;!&ndash;            <th scope="row">1</th>&ndash;&gt;-->
+                            <!--                                <td>I-001</td>-->
+                            <!--                                <td>Buscuit</td>-->
+                            <!--                                <td>100 pack</td>-->
+                            <!--                                <td>150.00</td>-->
 
-                            </tr>
-                            <tr style="background-color: white">
-                                <!--            <th scope="row">1</th>-->
-                                <td>I-002</td>
-                                <td>Rice 50Kg Bags</td>
-                                <td>100 Bags</td>
-                                <td>10000.00</td>
+                            <!--                            </tr>-->
+                            <!--                            <tr style="background-color: white">-->
+                            <!--                                &lt;!&ndash;            <th scope="row">1</th>&ndash;&gt;-->
+                            <!--                                <td>I-002</td>-->
+                            <!--                                <td>Rice 50Kg Bags</td>-->
+                            <!--                                <td>100 Bags</td>-->
+                            <!--                                <td>10000.00</td>-->
 
-                            </tr>
+                            <!--                            </tr>-->
 
                             </tbody>
                         </table>
@@ -667,7 +694,7 @@
 
 <script>
 
-
+//customers
     let customerDB = [];
     $("#btnAddToCustomerTable").click(function () {
         // addCustomer();
@@ -720,6 +747,49 @@
             <td>${customer_salary}</td>
                 </tr>`;
             $("#tblCustomer").append(row);
+        }
+    });
+
+    //Items
+    let itemDB = [];
+    $("#btnAddToItemTable").click(function () {
+        // addCustomer();
+        let code = $("#txtItemCode").val();
+        let description = $("#txtItemDescription").val();
+        let unitPrice = $("#txtItemPrice").val();
+        let quantity = $("#txtQTYOnHand").val();
+        let ItemObj = {
+            code: code,
+            description: description,
+            unitPrice: unitPrice,
+            quantity: quantity
+        }
+        itemDB.push(ItemObj);
+
+        let row = `<tr>
+        <td>${ItemObj.code}</td>
+        <td>${ItemObj.description}</td>
+        <td>${ItemObj.unitPrice}</td>
+        <td>${ItemObj.quantity}</td>
+            </tr>`;
+        $("#tblItem").append(row);
+
+    });
+    $("#btngetItem").click(function () {
+        $("#tblItem").empty();
+        for (var i = 0; i < itemDB.length; i++) {
+            let item_code = itemDB[i][0];
+            let description = itemDB[i][1];
+            let unit_price = itemDB[i][2];
+            let qty = itemDB[i][3];
+
+            let row = `<tr>
+            <td>${item_code}</td>
+            <td>${description}</td>
+            <td>${unit_price}</td>
+            <td>${qty}</td>
+                </tr>`;
+            $("#tblItem").append(row);
         }
     });
 

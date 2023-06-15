@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SPA</title>
-    <link rel="stylesheet" href="/Assests/fontawesome-free-6.4.0-web">
+    <link rel="stylesheet" href="assest/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="icon" href="../../Css/Assets/POS%20Images/nk%20logo%20green.png" height="194" width="259"/>
     <script src="../../../Assests/lib/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../../../Assests/lib/css/bootstrap.css">
@@ -31,20 +31,20 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link btn_menu" screen_name="home" aria-current="page"
-                               href="#/home" onclick="screee('secreen_Home')">Home</a>
+                            <a class="nav-link btn_menu" id="home" aria-current="page" href="#"
+                               onclick="screee('secreen_Home')">Home</a>
                             <!--                            <span class="sr_only">(current)</span>-->
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn_menu" screen_name="customer" aria-current="page"
-                               href="#/customer" onclick="screee('screen_Customer')">Customers</a>
+                            <a class="nav-link btn_menu" id="customer" aria-current="page"
+                               href="#" onclick="screee('screen_Customer')">Customers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn_menu" screen_name="item" href="#/item "
+                            <a class="nav-link btn_menu" id="item" href="# "
                                onclick="screee('screen_item')">Items</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link btn_menu" screen_name="order" href="#/order"
+                            <a class="nav-link btn_menu" id="order" href="#"
                                onclick="screee('screen_order')">Orders</a>
                         </li>
                         <li class="nav-item dropdown">
@@ -73,7 +73,7 @@
     <div class="screen_data"></div>
 </div>
 <!--................................................................-->
-<div class="screens">
+<div id="screens">
     <!--Home-->
     <div class="secreen_Home mt-5">
         <div class="jumbotron pt-md-5">
@@ -116,7 +116,7 @@
 
     <!--........................................................................-->
     <!--Customer-->
-    <div class="screen_Customer">
+    <div id="screen_Customer">
         <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
             <img src="/Assignment/Css/Assets/POS%20Images/cus.jpg" alt="" height="70px"
                  style="border: 2px solid black; border-radius: 100%; margin-top: 15px">
@@ -220,7 +220,7 @@
 
     <!--............................................................................-->
     <!--Item-->
-    <div class="screen_item mt-5">
+    <div id="screen_item mt-5">
         <h2 style="margin-top: 80px;margin-left: 20px"><img src="/Assignment/Css/Assets/POS%20Images/Item.png" alt=""
                                                             height="50px"
                                                             style="border: 2px solid black; border-radius: 100%; margin-top: 5px">Item
@@ -325,7 +325,7 @@
 
     <!--...................................................................-->
     <!--    order-->
-    <div class="screen_order mt-5 ">
+    <div id="screen_order mt-5 ">
         <div class="container mt-2" style="margin-left:5vw; margin-top: 200px">
 
             <div class="jumbotron pt-4">
@@ -564,21 +564,17 @@
 
         sections.forEach(function (section) {
             const display = section === divName ? 'block' : 'none';
-            document.getElementsByClassName(section)[0].style.display = display;
+            document.getElementById(section).style.display = display;
         });
+        const sectionTitles = {
+            secreen_Home: 'Home',
+            screen_Customer: 'Customers',
+            screen_item: 'Items',
+            screen_order: 'Orders',
+        };
+
 
     }
-
-
-    // document.addEventListener('DOMContentLoaded', function () {
-    //     const lastActiveSection = localStorage.getItem('activeSection');
-    //     if (lastActiveSection) {
-    //         loadSection(lastActiveSection);
-    //     } else {
-    //         // Set a default section if no active section is found
-    //         loadSection('dashboard');
-    //     }
-    // });
 
 
 </script>
