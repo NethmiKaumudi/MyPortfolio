@@ -30,22 +30,18 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link btn_menu" id="home" aria-current="page" href="#"
-                               onclick="screee('secreen_Home')">Home</a>
+                        <li class="nav-item" id="home">
+                            <a class="nav-link btn_menu" aria-current="page" onclick="screee('home')" href="#homeContent">Home</a>
                             <!--                            <span class="sr_only">(current)</span>-->
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn_menu" id="customer" aria-current="page"
-                               href="#" onclick="screee('screen_Customer')">Customers</a>
+                        <li class="nav-item" id="customer">
+                            <a class="nav-link btn_menu" aria-current="page" onclick="screee('customer')" href="#customerContent">Customers</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn_menu" id="item" href="# "
-                               onclick="screee('screen_item')">Items</a>
+                        <li class="nav-item" id="items">
+                            <a class="nav-link btn_menu" href="#itemContent">Items</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn_menu" id="order" href="#"
-                               onclick="screee('screen_order')">Orders</a>
+                        <li class="nav-item" id="orders">
+                            <a class="nav-link btn_menu" href="#orderContent">Orders</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -75,7 +71,7 @@
 <!--................................................................-->
 <div id="screens">
     <!--Home-->
-    <div class="secreen_Home mt-5">
+    <div class=" mt-5" id="homeContent">
         <div class="jumbotron pt-md-5">
             <div id="home-tiles">
                 <div class="row ">
@@ -116,7 +112,7 @@
 
     <!--........................................................................-->
     <!--Customer-->
-    <div id="screen_Customer">
+    <div class="screen_Customer" id="customerContent">
         <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
             <img src="/Assignment/Css/Assets/POS%20Images/cus.jpg" alt="" height="70px"
                  style="border: 2px solid black; border-radius: 100%; margin-top: 15px">
@@ -220,7 +216,7 @@
 
     <!--............................................................................-->
     <!--Item-->
-    <div id="screen_item mt-5">
+    <div class="screen_item mt-5" id="itemContent">
         <h2 style="margin-top: 80px;margin-left: 20px"><img src="/Assignment/Css/Assets/POS%20Images/Item.png" alt=""
                                                             height="50px"
                                                             style="border: 2px solid black; border-radius: 100%; margin-top: 5px">Item
@@ -325,7 +321,7 @@
 
     <!--...................................................................-->
     <!--    order-->
-    <div id="screen_order mt-5 ">
+    <div class="screen_order  mt-5 " id="orderContent">
         <div class="container mt-2" style="margin-left:5vw; margin-top: 200px">
 
             <div class="jumbotron pt-4">
@@ -559,22 +555,37 @@
         crossorigin="anonymous"></script>
 
 <script>
-    function screee(divName) {
-        const sections = ['secreen_Home', 'screen_Customer', 'screen_item', 'screen_order'];
+//..................SPA..........................................
+    document.getElementById("homeContent").style.display = 'block';
+    document.getElementById("customerContent").style.display = 'none';
+    document.getElementById("itemContent").style.display = 'none';
+    document.getElementById("orderContent").style.display = 'none';
 
-        sections.forEach(function (section) {
-            const display = section === divName ? 'block' : 'none';
-            document.getElementById(section).style.display = display;
-        });
-        const sectionTitles = {
-            secreen_Home: 'Home',
-            screen_Customer: 'Customers',
-            screen_item: 'Items',
-            screen_order: 'Orders',
-        };
-
-
-    }
+    document.getElementById("home").addEventListener("click", function () {
+        document.getElementById("homeContent").style.display = 'block';
+        document.getElementById("customerContent").style.display = 'none';
+        document.getElementById("itemContent").style.display = 'none';
+        document.getElementById("orderContent").style.display = 'none';
+    })
+    document.getElementById("customer").addEventListener("click", function () {
+        document.getElementById("homeContent").style.display = 'none';
+        document.getElementById("customerContent").style.display = 'block';
+        document.getElementById("itemContent").style.display = 'none';
+        document.getElementById("orderContent").style.display = 'none';
+    })
+    document.getElementById("items").addEventListener("click", function () {
+        document.getElementById("homeContent").style.display = 'none';
+        document.getElementById("customerContent").style.display = 'none';
+        document.getElementById("itemContent").style.display = 'block';
+        document.getElementById("orderContent").style.display = 'none';
+    })
+    document.getElementById("orders").addEventListener("click", function () {
+        document.getElementById("homeContent").style.display = 'none';
+        document.getElementById("customerContent").style.display = 'none';
+        document.getElementById("itemContent").style.display = 'none';
+        document.getElementById("orderContent").style.display = 'block';
+    })
+//................................SPA FINISHED HERE................................
 
 
 </script>

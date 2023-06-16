@@ -1086,6 +1086,7 @@ footer > .ad_03 > div > a > img:hover {
 
 /*Normal Laptop*/
 @media all and (min-width: 768px) and (max-width: 1024px) {
+
     header ul {
         float: right;
         margin-right: 40px;

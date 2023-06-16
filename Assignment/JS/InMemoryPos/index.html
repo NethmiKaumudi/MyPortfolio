@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>SPA</title>
-    <link rel="stylesheet" href="/Assests/fontawesome-free-6.4.0-web">
+    <link rel="stylesheet" href="assest/fontawesome-free-6.4.0-web/css/all.min.css">
     <link rel="icon" href="../../Css/Assets/POS%20Images/nk%20logo%20green.png" height="194" width="259"/>
     <script src="../../../Assests/lib/js/bootstrap.js"></script>
     <link rel="stylesheet" href="../../../Assests/lib/css/bootstrap.css">
@@ -30,22 +30,18 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link btn_menu" screen_name="home" aria-current="page"
-                               href="#/home" onclick="screee('secreen_Home')">Home</a>
+                        <li class="nav-item" id="home">
+                            <a class="nav-link btn_menu" aria-current="page" onclick="screee('home')" href="#homeContent">Home</a>
                             <!--                            <span class="sr_only">(current)</span>-->
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn_menu" screen_name="customer" aria-current="page"
-                               href="#/customer" onclick="screee('screen_Customer')">Customers</a>
+                        <li class="nav-item" id="customer">
+                            <a class="nav-link btn_menu" aria-current="page" onclick="screee('customer')" href="#customerContent">Customers</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn_menu" screen_name="item" href="#/item "
-                               onclick="screee('screen_item')">Items</a>
+                        <li class="nav-item" id="items">
+                            <a class="nav-link btn_menu" href="#itemContent">Items</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn_menu" screen_name="order" href="#/order"
-                               onclick="screee('screen_order')">Orders</a>
+                        <li class="nav-item" id="orders">
+                            <a class="nav-link btn_menu" href="#orderContent">Orders</a>
                         </li>
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
@@ -76,7 +72,7 @@
 <!--................................................................-->
 <div class="screens">
     <!--Home-->
-    <div class="secreen_Home mt-5">
+    <div class="secreen_Home mt-5" id="homeContent">
         <div class="jumbotron pt-md-5">
             <div id="home-tiles">
                 <div class="row ">
@@ -117,7 +113,7 @@
 
     <!--........................................................................-->
     <!--Customer-->
-    <div class="screen_Customer">
+    <div class="screen_Customer" id="customerContent">
         <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
             <img src="/Assignment/Css/Assets/POS%20Images/cus.jpg" alt="" height="70px"
                  style="border: 2px solid black; border-radius: 100%; margin-top: 15px">
@@ -137,12 +133,16 @@
                                         <div class="form-group">
                                             <label>Customer Nic:</label>
                                             <input class="form-control" id="Nic" type="text">
+                                            <label class="text-bg-danger" id="nicError"></label>
+                                            <!--                                            <p><small class="text-bg-danger p1"id="nicError"></small></p>-->
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-6">
                                         <div class="form-group">
                                             <label>Customer Name:</label>
                                             <input class="form-control" id="Cus_Name" type="text">
+                                            <label class="text-bg-danger" id="nameError"></label>
+
                                         </div>
                                     </div>
                                     <div class="col-6">
@@ -151,7 +151,7 @@
                                             <input class="form-control" id="Address" type="text">
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-6">
                                         <div class="form-group">
                                             <label class="">Salary :</label>
                                             <input class="form-control" id="Salary" type="text">
@@ -242,7 +242,7 @@
 
     <!--............................................................................-->
     <!--Item-->
-    <div class="screen_item mt-5">
+    <div class="screen_item mt-5" id="itemContent">
         <h2 style="margin-top: 80px;margin-left: 20px"><img src="/Assignment/Css/Assets/POS%20Images/Item.png" alt=""
                                                             height="50px"
                                                             style="border: 2px solid black; border-radius: 100%; margin-top: 5px">Item
@@ -264,7 +264,7 @@
                                             <input class="form-control" id="txtItemCode" type="text">
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-6">
                                         <div class="form-group">
                                             <label>Description:</label>
                                             <input class="form-control" id="txtItemDescription" type="text">
@@ -276,7 +276,7 @@
                                             <input class="form-control" id="txtItemPrice" type="text">
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-6">
                                         <div class="form-group">
                                             <label class="">Quantity:</label>
                                             <input class="form-control" id="txtQTYOnHand" type="text">
@@ -374,7 +374,7 @@
 
     <!--...................................................................-->
     <!--    order-->
-    <div class="screen_order mt-5 ">
+    <div class="screen_order mt-5 " id="orderContent">
         <div class="container mt-2" style="margin-left:5vw; margin-top: 200px">
 
             <div class="jumbotron pt-4">
@@ -609,136 +609,225 @@
 <script src="assest/jquery-3.7.0.min.js"></script>
 
 <script>
-    // function screee(divName) {
-    //     const sections = ['screen_Home', 'screen_Customer', 'screen_item', 'screen_order'];
-    //     sections.forEach(function (section) {
-    //         const display = section === divName ? 'block' : 'none';
-    //         document.getElementsByClassName(section)[0].style.display = display;
-    //     });
-    //
-    // }
-    initiateUI();
-
-    function initiateUI() {
-        clearAll();
-        $("#dashboardContent").css("display", "block");
-        setTheLastView();
-    }
-
-    function saveLastView(clickedID) {
-        switch (clickedID) {
-            case "dashboardContent":
-                localStorage.setItem("view", "HOME");
-                break;
-            case "customerContent":
-                localStorage.setItem("view", "CUSTOMER");
-                break;
-            case "itemContent":
-                localStorage.setItem("view", "ITEM");
-                break;
-            case "orderContent":
-                localStorage.setItem("view", "ORDER");
-                break;
-        }
-    }
-
-    function setTheLastView() {
-        let view = localStorage.getItem("view");
-        switch (view) {
-            case "HOME":
-                setView($("#dashboardContent"));
-                break;
-            case "ITEM":
-                setView($("#itemContent"));
-                break;
-            case "CUSTOMER":
-                setView($("#customerContent"));
-                break;
-            case "ORDER":
-                setView($("#orderContent"));
-                break;
-            default:
-                setView($("#dashboardContent"));
-        }
-    }
-
-    function clearAll() {
-        $("#dashboardContent,#customerContent,#itemContent,#orderContent").css('display', 'none');
-    }
-
-    function setView(viewOb) {
-        clearAll();
-        viewOb.css("display", "block");
-        saveLastView(viewOb.get(0).id);
-        console.log(viewOb.get(0).id);
-    }
-
-    //bind events
-    $("#lnkHome").click(function () {
-        setView($("#dashboardContent"));
-    });
-
-    $("#lnkCustomer").click(function () {
-        setView($("#customerContent"));
-    });
-
-    $("#lnkItem").click(function () {
-        setView($("#itemContent"));
-    });
-
-    $("#lnkOrders").click(function () {
-        setView($("#orderContent"));
-    });
 
 </script>
 
 <script>
+//.........................SPA.................................................
+    document.getElementById("homeContent").style.display = 'block';
+    document.getElementById("customerContent").style.display = 'none';
+    document.getElementById("itemContent").style.display = 'none';
+    document.getElementById("orderContent").style.display = 'none';
 
-//customers
+    document.getElementById("home").addEventListener("click", function () {
+        document.getElementById("homeContent").style.display = 'block';
+        document.getElementById("customerContent").style.display = 'none';
+        document.getElementById("itemContent").style.display = 'none';
+        document.getElementById("orderContent").style.display = 'none';
+    })
+    document.getElementById("customer").addEventListener("click", function () {
+        document.getElementById("homeContent").style.display = 'none';
+        document.getElementById("customerContent").style.display = 'block';
+        document.getElementById("itemContent").style.display = 'none';
+        document.getElementById("orderContent").style.display = 'none';
+    })
+    document.getElementById("items").addEventListener("click", function () {
+        document.getElementById("homeContent").style.display = 'none';
+        document.getElementById("customerContent").style.display = 'none';
+        document.getElementById("itemContent").style.display = 'block';
+        document.getElementById("orderContent").style.display = 'none';
+    })
+    document.getElementById("orders").addEventListener("click", function () {
+        document.getElementById("homeContent").style.display = 'none';
+        document.getElementById("customerContent").style.display = 'none';
+        document.getElementById("itemContent").style.display = 'none';
+        document.getElementById("orderContent").style.display = 'block';
+    })
+
+//....................SPA FINISHED HERE......................................
+
+    //customers
     let customerDB = [];
     $("#btnAddToCustomerTable").click(function () {
-        // addCustomer();
-        let nic = $("#Nic").val();
-        let name = $("#Cus_Name").val();
-        let address = $("#Address").val();
-        let salary = $("#Salary").val();
-        let CustomerObj = {
-            Cus_id: nic,
-            Cus_name: name,
-            Cus_address: address,
-            Cus_salary: salary
-        }
-        customerDB.push(CustomerObj);
-        // let customer = [nic, name, address, salary];
-        // CustomerObj.nic = nic;
-        // CustomerObj.name = name;
-        // CustomerObj.address = address
-        // CustomerObj.salary = salary;
-
-        // customerDB.push(customer);
-        // let row = `<tr>
-        // <td>${nic}</td>
-        // <td>${name}</td>
-        // <td>${address}</td>
-        // <td>${salary}</td>
-        //     </tr>`;
-        // $("#tblCustomer").append(row);
-        let row = `<tr>
-        <td>${CustomerObj.Cus_id}</td>
-        <td>${CustomerObj.Cus_name}</td>
-        <td>${CustomerObj.Cus_address}</td>
-        <td>${CustomerObj.Cus_salary}</td>
-            </tr>`;
-        $("#tblCustomer").append(row);
+        saveCustomer();
 
     });
+
+
+    function saveCustomer() {
+        let nic = $("#Nic").val();
+        if (searchCustomer(nic.trim()) == undefined) {
+            let name = $("#Cus_Name").val();
+            let address = $("#Address").val();
+            let salary = $("#Salary").val();
+            let CustomerObj = {
+                Cus_id: nic,
+                Cus_name: name,
+                Cus_address: address,
+                Cus_salary: salary
+            }
+            customerDB.push(CustomerObj);
+            // let customer = [nic, name, address, salary];
+            // CustomerObj.nic = nic;
+            // CustomerObj.name = name;
+            // CustomerObj.address = address
+            // CustomerObj.salary = salary;
+
+            // customerDB.push(customer);
+            // let row = `<tr>
+            // <td>${nic}</td>
+            // <td>${name}</td>
+            // <td>${address}</td>
+            // <td>${salary}</td>
+            //     </tr>`;
+            // $("#tblCustomer").append(row);
+            let row = `<tr>
+          <td>${CustomerObj.Cus_id}</td>
+          <td>${CustomerObj.Cus_name}</td>
+          <td>${CustomerObj.Cus_address}</td>
+          <td>${CustomerObj.Cus_salary}</td>
+            </tr>`;
+            $("#tblCustomer").append(row);
+            loadDataCustomer();
+            clearAllfocus();
+
+        } else {
+            alert("Customer already exsist!")
+            clearAllfocus();
+
+        }
+
+    }
+
+    // let nicCheck = /^(?:19|20)?\d{2}[0-9]{10}|[0-9]{9}[x|X|v|V]$/;
+    // nicCheck.test("");
+    // let nameCheck = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    // nicCheck.test('');
+    //disable tab
+    $("#Nic,#Cus_Name,#Address,#Salary").keydown(function (e) {
+        console.log(e);
+        if (e.key == "Tab") {
+            e.preventDefault();
+        }
+
+    });
+    let nicCheck = /^(?:19|20)?\d{2}[0-9]{10}|[0-9]{9}[x|X|v|V]$/;
+
+    $("#Nic").keydown(function (e) {
+        console.log(e.key);
+        if (e.key == "Enter") {
+            $("#Cus_Name").focus();
+        }
+        let nic = $("#Nic").val();
+        if (nicCheck.test(nic)) {
+            $("#Nic").css('border', '2px solid blue');
+            $("#nicError").text(" ");
+
+        } else {
+            $("#Nic").css('border', '2px solid red');
+            $("#nicError").text("Invalid Nic");
+
+        }
+    })
+    let nameCheck = /^[a-zA-Z]+ [a-zA-Z]+$/;
+
+    $("#Cus_Name").keydown(function (e) {
+        console.log(e.key);
+        if (e.key == "Enter") {
+            $("#Address").focus();
+        }
+        let name = $("#Cus_Name").val();
+
+        if (nameCheck.test(name)) {
+            $("#Cus_Name").css('border', '2px solid blue');
+            $("#nicError").text(" ");
+
+        } else {
+            $("#Cus_Name").css('border', '2px solid red');
+            $("#nameError").text("Invalid Name");
+
+        }
+    })
+    $("#Address").keydown(function (e) {
+        console.log(e.key);
+        if (e.key == "Enter") {
+            $("#Salary").focus();
+        }
+    })
+    $("#Salary").keydown(function (e) {
+        console.log(e.key);
+        if (e.key == "Enter") {
+            saveCustomer();
+        }
+    })
+
+    function loadDataCustomer() {
+        $("#tblCustomer>tr").click(function () {
+            let nic = $(this).children(":eq(0)").text();
+            let name = $(this).children(":eq(1)").text();
+            let address = $(this).children(":eq(2)").text();
+            let salary = $(this).children(":eq(3)").text();
+            $("#Nic").val(nic);
+            $("#Cus_Name").val(name);
+            $("#Address").val(address);
+            $("#Salary").val(salary);
+
+        });
+    }
+
+
     $("#btngetCustomer").click(function () {
+        getAllCustomers();
+    });
+
+
+    $("#btndeleteCustomer").click(function () {
+        let nic = $("#Nic").val();
+        let confirmed = confirm("Do You Want to delete");
+        if (confirmed) {
+            let response = removeCustomer(nic);
+            if (response) {
+                alert("Customer Deleted")
+                clearAllfocus();
+                getAllCustomers();
+
+            } else {
+                alert("Customer Not Deleted")
+
+            }
+
+
+        } else {
+
+        }
+        loadDataCustomer();
+
+
+    })
+    $("#btnUpdateCustomer").click(function () {
+        let nic = $("#Nic").val();
+        updateCustomer(nic);
+        clearAllfocus();
+        loadDataCustomer();
+
+    })
+
+    function clearAllfocus() {
+        $("#Nic").val("");
+        $("#Cus_Name").val("");
+        $("#Address").val("");
+        $("#Salary").val("");
+        $("#Nic").focus();
+
+    }
+
+    function getAllCustomers() {
         $("#tblCustomer").empty();
         for (var i = 0; i < customerDB.length; i++) {
-            let customer_nic = customerDB[i][0];
-            let customer_name = customerDB[i][1];
-            let customer_address = customerDB[i][2];
-            let customer_salary = customerDB[i][3];
+            let customer_nic = customerDB[i].Cus_id;
+            let customer_name = customerDB[i].Cus_name;
+            let customer_address = customerDB[i].Cus_address;
+            let customer_salary = customerDB[i].Cus_salary;
 
             let row = `<tr>
             <td>${customer_nic}</td>
@@ -748,7 +837,50 @@
                 </tr>`;
             $("#tblCustomer").append(row);
         }
-    });
+    }
+
+    function removeCustomer(nic) {
+        for (var i = 0; i < customerDB.length; i++) {
+            if (customerDB[i].Cus_id == nic) {
+                customerDB.splice(i, 1);
+                return true;
+            }
+        }
+        return false;
+
+
+    }
+
+
+    function searchCustomer(nic) {
+        return customerDB.find(function (customer) {
+            return customer.Cus_id == nic;
+        })
+    }
+
+
+    function updateCustomer(nic) {
+        if (searchCustomer(nic) == undefined) {
+            alert("No such customer............please check the id again.")
+        } else {
+            let consent = confirm("do you realy want to update?");
+            if (consent) {
+                let customer = searchCustomer(nic);
+
+                // let nic = $("#Nic").val();
+                let name = $("#Cus_Name").val();
+                let address = $("#Address").val();
+                let salary = $("#Salary").val();
+
+                // customer.Cus_id=nic;
+                customer.Cus_name = name;
+                customer.Cus_address = address;
+                customer.Cus_salary = salary;
+                getAllCustomers();
+
+            }
+        }
+    }
 
     //Items
     let itemDB = [];
@@ -759,32 +891,33 @@
         let unitPrice = $("#txtItemPrice").val();
         let quantity = $("#txtQTYOnHand").val();
         let ItemObj = {
-            code: code,
-            description: description,
-            unitPrice: unitPrice,
-            quantity: quantity
+            item_code: code,
+            item_description: description,
+            item_unitPrice: unitPrice,
+            item_quantity: quantity
         }
         itemDB.push(ItemObj);
 
         let row = `<tr>
-        <td>${ItemObj.code}</td>
-        <td>${ItemObj.description}</td>
-        <td>${ItemObj.unitPrice}</td>
-        <td>${ItemObj.quantity}</td>
+        <td>${ItemObj.item_code}</td>
+        <td>${ItemObj.item_description}</td>
+        <td>${ItemObj.item_unitPrice}</td>
+        <td>${ItemObj.item_quantity}</td>
             </tr>`;
         $("#tblItem").append(row);
+        loadDataItem();
 
     });
     $("#btngetItem").click(function () {
         $("#tblItem").empty();
         for (var i = 0; i < itemDB.length; i++) {
-            let item_code = itemDB[i][0];
-            let description = itemDB[i][1];
-            let unit_price = itemDB[i][2];
-            let qty = itemDB[i][3];
+            let i_code = itemDB[i].item_code;
+            let description = itemDB[i].item_description;
+            let unit_price = itemDB[i].item_unitPrice;
+            let qty = itemDB[i].item_quantity;
 
             let row = `<tr>
-            <td>${item_code}</td>
+            <td>${i_code}</td>
             <td>${description}</td>
             <td>${unit_price}</td>
             <td>${qty}</td>
@@ -793,6 +926,19 @@
         }
     });
 
+    function loadDataItem() {
+        $("#tblItem>tr").click(function () {
+            let code = $(this).children(":eq(0)").text();
+            let description = $(this).children(":eq(1)").text();
+            let unit_price = $(this).children(":eq(2)").text();
+            let quantity = $(this).children(":eq(3)").text();
+            $("#txtItemCode").val(code);
+            $("#txtItemDescription").val(description);
+            $("#txtItemPrice").val(unit_price);
+            $("#txtQTYOnHand").val(quantity);
+
+        });
+    }
 </script>
 </body>
 
