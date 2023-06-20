@@ -131,9 +131,9 @@
 
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label>Customer Nic:</label>
-                                            <input class="form-control" id="Nic" type="text">
-                                            <label class="text-bg-danger" id="nicError"></label>
+                                            <label>Customer Id:</label>
+                                            <input class="form-control" id="Cus_Id" type="text">
+                                            <label class="text-bg-danger" id="idError"></label>
                                             <!--                                            <p><small class="text-bg-danger p1"id="nicError"></small></p>-->
                                         </div>
                                     </div>
@@ -162,29 +162,39 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row" style="width: 500px; ">
-                        <div class="col-3 form-group text-right mt-3">
+                    <div class="row" style="width: 450px; margin-left: 50px">
+                        <div class="col-4 form-group text-right mt-3">
                             <button class="btn btn-success col-12 col-sm-auto" id="btnAddToCustomerTable" type="button"
                                     style="width: 100px">
                                 Add
                             </button>
                         </div>
-                        <div class="col -3 form-group text-right mt-3">
+                        <div class="col -4 form-group text-right mt-3">
                             <button class="btn btn-warning col-12 col-sm-auto" id="btnUpdateCustomer" type="button"
                                     style="width: 100px">
                                 Update
                             </button>
                         </div>
-                        <div class="col-3 form-group text-right mt-3">
-                            <button class="btn btn-danger col-12 col-sm-auto" id="btndeleteCustomer" type="button"
+                        <div class="col -4 form-group text-right mt-3">
+                            <button class="btn btn-primary col-12 col-sm-auto" id="btnGetCustomer" type="button"
+                                    style="width: 100px">
+                                GetAll
+                            </button>
+                        </div>
+
+                    </div>
+                    <div class="row" style="width: 300px; margin-left: 100px">
+
+                        <div class="col -6 form-group text-right mt-3">
+                            <button class="btn btn-danger col-12 col-sm-auto" id="btnDeleteCustomer" type="button"
                                     style="width: 100px">
                                 Delete
                             </button>
                         </div>
-                        <div class="col -3 form-group text-right mt-3">
-                            <button class="btn btn-primary col-12 col-sm-auto" id="btngetCustomer" type="button"
+                        <div class="col -6 form-group text-right mt-3">
+                            <button class="btn btn-dark col-12 col-sm-auto" id="btnClearCustomer" type="button"
                                     style="width: 100px">
-                                GetAll
+                                Clear
                             </button>
                         </div>
                     </div>
@@ -207,7 +217,7 @@
                                style="width: 650px;height: auto;background-color: #0f5132;" id="div_03">
                             <thead>
                             <tr>
-                                <th id="cusNic">Customer Nic</th>
+                                <th id="cusId">Customer Id</th>
                                 <th id="cusName">Customer Name</th>
                                 <th id="cusAddress"> Address</th>
                                 <th id="cusSalary"> Salary</th>
@@ -606,283 +616,255 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js"
         integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ"
         crossorigin="anonymous"></script>
-<script src="assest/jquery-3.7.0.min.js"></script>
+<script src="assest/js/jquery-3.7.0.min.js"></script>
+<script src="controller/DashBoardController.js"></script>
+<script src="controller/validations/CustomerValidation.js"></script>
+<script src="db/db.js"></script>
+<script src="models/Customer.js"></script>
+<script src="controller/CustomerController.js"></script>
+
 
 <script>
+//SPA//
 
-</script>
-
-<script>
-//.........................SPA.................................................
-    document.getElementById("homeContent").style.display = 'block';
-    document.getElementById("customerContent").style.display = 'none';
-    document.getElementById("itemContent").style.display = 'none';
-    document.getElementById("orderContent").style.display = 'none';
-
-    document.getElementById("home").addEventListener("click", function () {
-        document.getElementById("homeContent").style.display = 'block';
-        document.getElementById("customerContent").style.display = 'none';
-        document.getElementById("itemContent").style.display = 'none';
-        document.getElementById("orderContent").style.display = 'none';
-    })
-    document.getElementById("customer").addEventListener("click", function () {
-        document.getElementById("homeContent").style.display = 'none';
-        document.getElementById("customerContent").style.display = 'block';
-        document.getElementById("itemContent").style.display = 'none';
-        document.getElementById("orderContent").style.display = 'none';
-    })
-    document.getElementById("items").addEventListener("click", function () {
-        document.getElementById("homeContent").style.display = 'none';
-        document.getElementById("customerContent").style.display = 'none';
-        document.getElementById("itemContent").style.display = 'block';
-        document.getElementById("orderContent").style.display = 'none';
-    })
-    document.getElementById("orders").addEventListener("click", function () {
-        document.getElementById("homeContent").style.display = 'none';
-        document.getElementById("customerContent").style.display = 'none';
-        document.getElementById("itemContent").style.display = 'none';
-        document.getElementById("orderContent").style.display = 'block';
-    })
-
-//....................SPA FINISHED HERE......................................
-
-    //customers
-    let customerDB = [];
-    $("#btnAddToCustomerTable").click(function () {
-        saveCustomer();
-
-    });
-
-
-    function saveCustomer() {
-        let nic = $("#Nic").val();
-        if (searchCustomer(nic.trim()) == undefined) {
-            let name = $("#Cus_Name").val();
-            let address = $("#Address").val();
-            let salary = $("#Salary").val();
-            let CustomerObj = {
-                Cus_id: nic,
-                Cus_name: name,
-                Cus_address: address,
-                Cus_salary: salary
-            }
-            customerDB.push(CustomerObj);
-            // let customer = [nic, name, address, salary];
-            // CustomerObj.nic = nic;
-            // CustomerObj.name = name;
-            // CustomerObj.address = address
-            // CustomerObj.salary = salary;
-
-            // customerDB.push(customer);
-            // let row = `<tr>
-            // <td>${nic}</td>
-            // <td>${name}</td>
-            // <td>${address}</td>
-            // <td>${salary}</td>
-            //     </tr>`;
-            // $("#tblCustomer").append(row);
-            let row = `<tr>
-          <td>${CustomerObj.Cus_id}</td>
-          <td>${CustomerObj.Cus_name}</td>
-          <td>${CustomerObj.Cus_address}</td>
-          <td>${CustomerObj.Cus_salary}</td>
-            </tr>`;
-            $("#tblCustomer").append(row);
-            loadDataCustomer();
-            clearAllfocus();
-
-        } else {
-            alert("Customer already exsist!")
-            clearAllfocus();
-
-        }
-
-    }
-
+    //
+    // //customers
+    // let customerDB = [];
+    // $("#btnAddToCustomerTable").click(function () {
+    //     saveCustomer();
+    //
+    // });
+    //
+    //
+    // function saveCustomer() {
+    //     let nic = $("#Nic").val();
+    //     if (searchCustomer(nic.trim()) == undefined) {
+    //         let name = $("#Cus_Name").val();
+    //         let address = $("#Address").val();
+    //         let salary = $("#Salary").val();
+    //         let CustomerObj = {
+    //             Cus_id: nic,
+    //             Cus_name: name,
+    //             Cus_address: address,
+    //             Cus_salary: salary
+    //         }
+    //         customerDB.push(CustomerObj);
+    //         // let customer = [nic, name, address, salary];
+    //         // CustomerObj.nic = nic;
+    //         // CustomerObj.name = name;
+    //         // CustomerObj.address = address
+    //         // CustomerObj.salary = salary;
+    //
+    //         // customerDB.push(customer);
+    //         // let row = `<tr>
+    //         // <td>${nic}</td>
+    //         // <td>${name}</td>
+    //         // <td>${address}</td>
+    //         // <td>${salary}</td>
+    //         //     </tr>`;
+    //         // $("#tblCustomer").append(row);
+    //         let row = `<tr>
+    //       <td>${CustomerObj.Cus_id}</td>
+    //       <td>${CustomerObj.Cus_name}</td>
+    //       <td>${CustomerObj.Cus_address}</td>
+    //       <td>${CustomerObj.Cus_salary}</td>
+    //         </tr>`;
+    //         $("#tblCustomer").append(row);
+    //         loadDataCustomer();
+    //         clearAllfocus();
+    //
+    //     } else {
+    //         alert("Customer already exsist!")
+    //         clearAllfocus();
+    //
+    //     }
+    //
+    // }
+    //
+    // // let nicCheck = /^(?:19|20)?\d{2}[0-9]{10}|[0-9]{9}[x|X|v|V]$/;
+    // // nicCheck.test("");
+    // // let nameCheck = /^[a-zA-Z]+ [a-zA-Z]+$/;
+    // // nicCheck.test('');
+    // //disable tab
+    // $("#Nic,#Cus_Name,#Address,#Salary").keydown(function (e) {
+    //     console.log(e);
+    //     if (e.key == "Tab") {
+    //         e.preventDefault();
+    //     }
+    //
+    // });
     // let nicCheck = /^(?:19|20)?\d{2}[0-9]{10}|[0-9]{9}[x|X|v|V]$/;
-    // nicCheck.test("");
+    //
+    // $("#Nic").keydown(function (e) {
+    //     console.log(e.key);
+    //     if (e.key == "Enter") {
+    //         $("#Cus_Name").focus();
+    //     }
+    //     let nic = $("#Nic").val();
+    //     if (nicCheck.test(nic)) {
+    //         $("#Nic").css('border', '2px solid blue');
+    //         $("#nicError").text(" ");
+    //
+    //     } else {
+    //         $("#Nic").css('border', '2px solid red');
+    //         $("#nicError").text("Invalid Nic");
+    //
+    //     }
+    // })
     // let nameCheck = /^[a-zA-Z]+ [a-zA-Z]+$/;
-    // nicCheck.test('');
-    //disable tab
-    $("#Nic,#Cus_Name,#Address,#Salary").keydown(function (e) {
-        console.log(e);
-        if (e.key == "Tab") {
-            e.preventDefault();
-        }
+    //
+    // $("#Cus_Name").keydown(function (e) {
+    //     console.log(e.key);
+    //     if (e.key == "Enter") {
+    //         $("#Address").focus();
+    //     }
+    //     let name = $("#Cus_Name").val();
+    //
+    //     if (nameCheck.test(name)) {
+    //         $("#Cus_Name").css('border', '2px solid blue');
+    //         $("#nicError").text(" ");
+    //
+    //     } else {
+    //         $("#Cus_Name").css('border', '2px solid red');
+    //         $("#nameError").text("Invalid Name");
+    //
+    //     }
+    // })
+    // $("#Address").keydown(function (e) {
+    //     console.log(e.key);
+    //     if (e.key == "Enter") {
+    //         $("#Salary").focus();
+    //     }
+    // })
+    // $("#Salary").keydown(function (e) {
+    //     console.log(e.key);
+    //     if (e.key == "Enter") {
+    //         saveCustomer();
+    //     }
+    // })
+    //
+    // function loadDataCustomer() {
+    //     $("#tblCustomer>tr").click(function () {
+    //         let nic = $(this).children(":eq(0)").text();
+    //         let name = $(this).children(":eq(1)").text();
+    //         let address = $(this).children(":eq(2)").text();
+    //         let salary = $(this).children(":eq(3)").text();
+    //         $("#Nic").val(nic);
+    //         $("#Cus_Name").val(name);
+    //         $("#Address").val(address);
+    //         $("#Salary").val(salary);
+    //
+    //     });
+    // }
+    //
+    //
+    // $("#btngetCustomer").click(function () {
+    //     getAllCustomers();
+    // });
+    //
+    //
+    // $("#btndeleteCustomer").click(function () {
+    //     let nic = $("#Nic").val();
+    //     let confirmed = confirm("Do You Want to delete");
+    //     if (confirmed) {
+    //         let response = removeCustomer(nic);
+    //         if (response) {
+    //             alert("Customer Deleted")
+    //             clearAllfocus();
+    //             getAllCustomers();
+    //
+    //         } else {
+    //             alert("Customer Not Deleted")
+    //
+    //         }
+    //
+    //
+    //     } else {
+    //
+    //     }
+    //     loadDataCustomer();
+    //
+    //
+    // })
+    // $("#btnUpdateCustomer").click(function () {
+    //     let nic = $("#Nic").val();
+    //     updateCustomer(nic);
+    //     clearAllfocus();
+    //     loadDataCustomer();
+    //
+    // })
+    //
+    // function clearAllfocus() {
+    //     $("#Nic").val("");
+    //     $("#Cus_Name").val("");
+    //     $("#Address").val("");
+    //     $("#Salary").val("");
+    //     $("#Nic").focus();
+    //
+    // }
+    //
+    // function getAllCustomers() {
+    //     $("#tblCustomer").empty();
+    //     for (var i = 0; i < customerDB.length; i++) {
+    //         let customer_nic = customerDB[i].Cus_id;
+    //         let customer_name = customerDB[i].Cus_name;
+    //         let customer_address = customerDB[i].Cus_address;
+    //         let customer_salary = customerDB[i].Cus_salary;
+    //
+    //         let row = `<tr>
+    //         <td>${customer_nic}</td>
+    //         <td>${customer_name}</td>
+    //         <td>${customer_address}</td>
+    //         <td>${customer_salary}</td>
+    //             </tr>`;
+    //         $("#tblCustomer").append(row);
+    //     }
+    // }
+    //
+    // function removeCustomer(nic) {
+    //     for (var i = 0; i < customerDB.length; i++) {
+    //         if (customerDB[i].Cus_id == nic) {
+    //             customerDB.splice(i, 1);
+    //             return true;
+    //         }
+    //     }
+    //     return false;
+    //
+    //
+    // }
+    //
+    //
+    // function searchCustomer(nic) {
+    //     return customerDB.find(function (customer) {
+    //         return customer.Cus_id == nic;
+    //     })
+    // }
+    //
+    //
+    // function updateCustomer(nic) {
+    //     if (searchCustomer(nic) == undefined) {
+    //         alert("No such customer............please check the id again.")
+    //     } else {
+    //         let consent = confirm("do you realy want to update?");
+    //         if (consent) {
+    //             let customer = searchCustomer(nic);
+    //
+    //             // let nic = $("#Nic").val();
+    //             let name = $("#Cus_Name").val();
+    //             let address = $("#Address").val();
+    //             let salary = $("#Salary").val();
+    //
+    //             // customer.Cus_id=nic;
+    //             customer.Cus_name = name;
+    //             customer.Cus_address = address;
+    //             customer.Cus_salary = salary;
+    //             getAllCustomers();
+    //
+    //         }
+    //     }
+    // }
 
-    });
-    let nicCheck = /^(?:19|20)?\d{2}[0-9]{10}|[0-9]{9}[x|X|v|V]$/;
-
-    $("#Nic").keydown(function (e) {
-        console.log(e.key);
-        if (e.key == "Enter") {
-            $("#Cus_Name").focus();
-        }
-        let nic = $("#Nic").val();
-        if (nicCheck.test(nic)) {
-            $("#Nic").css('border', '2px solid blue');
-            $("#nicError").text(" ");
-
-        } else {
-            $("#Nic").css('border', '2px solid red');
-            $("#nicError").text("Invalid Nic");
-
-        }
-    })
-    let nameCheck = /^[a-zA-Z]+ [a-zA-Z]+$/;
-
-    $("#Cus_Name").keydown(function (e) {
-        console.log(e.key);
-        if (e.key == "Enter") {
-            $("#Address").focus();
-        }
-        let name = $("#Cus_Name").val();
-
-        if (nameCheck.test(name)) {
-            $("#Cus_Name").css('border', '2px solid blue');
-            $("#nicError").text(" ");
-
-        } else {
-            $("#Cus_Name").css('border', '2px solid red');
-            $("#nameError").text("Invalid Name");
-
-        }
-    })
-    $("#Address").keydown(function (e) {
-        console.log(e.key);
-        if (e.key == "Enter") {
-            $("#Salary").focus();
-        }
-    })
-    $("#Salary").keydown(function (e) {
-        console.log(e.key);
-        if (e.key == "Enter") {
-            saveCustomer();
-        }
-    })
-
-    function loadDataCustomer() {
-        $("#tblCustomer>tr").click(function () {
-            let nic = $(this).children(":eq(0)").text();
-            let name = $(this).children(":eq(1)").text();
-            let address = $(this).children(":eq(2)").text();
-            let salary = $(this).children(":eq(3)").text();
-            $("#Nic").val(nic);
-            $("#Cus_Name").val(name);
-            $("#Address").val(address);
-            $("#Salary").val(salary);
-
-        });
-    }
-
-
-    $("#btngetCustomer").click(function () {
-        getAllCustomers();
-    });
-
-
-    $("#btndeleteCustomer").click(function () {
-        let nic = $("#Nic").val();
-        let confirmed = confirm("Do You Want to delete");
-        if (confirmed) {
-            let response = removeCustomer(nic);
-            if (response) {
-                alert("Customer Deleted")
-                clearAllfocus();
-                getAllCustomers();
-
-            } else {
-                alert("Customer Not Deleted")
-
-            }
-
-
-        } else {
-
-        }
-        loadDataCustomer();
-
-
-    })
-    $("#btnUpdateCustomer").click(function () {
-        let nic = $("#Nic").val();
-        updateCustomer(nic);
-        clearAllfocus();
-        loadDataCustomer();
-
-    })
-
-    function clearAllfocus() {
-        $("#Nic").val("");
-        $("#Cus_Name").val("");
-        $("#Address").val("");
-        $("#Salary").val("");
-        $("#Nic").focus();
-
-    }
-
-    function getAllCustomers() {
-        $("#tblCustomer").empty();
-        for (var i = 0; i < customerDB.length; i++) {
-            let customer_nic = customerDB[i].Cus_id;
-            let customer_name = customerDB[i].Cus_name;
-            let customer_address = customerDB[i].Cus_address;
-            let customer_salary = customerDB[i].Cus_salary;
-
-            let row = `<tr>
-            <td>${customer_nic}</td>
-            <td>${customer_name}</td>
-            <td>${customer_address}</td>
-            <td>${customer_salary}</td>
-                </tr>`;
-            $("#tblCustomer").append(row);
-        }
-    }
-
-    function removeCustomer(nic) {
-        for (var i = 0; i < customerDB.length; i++) {
-            if (customerDB[i].Cus_id == nic) {
-                customerDB.splice(i, 1);
-                return true;
-            }
-        }
-        return false;
-
-
-    }
-
-
-    function searchCustomer(nic) {
-        return customerDB.find(function (customer) {
-            return customer.Cus_id == nic;
-        })
-    }
-
-
-    function updateCustomer(nic) {
-        if (searchCustomer(nic) == undefined) {
-            alert("No such customer............please check the id again.")
-        } else {
-            let consent = confirm("do you realy want to update?");
-            if (consent) {
-                let customer = searchCustomer(nic);
-
-                // let nic = $("#Nic").val();
-                let name = $("#Cus_Name").val();
-                let address = $("#Address").val();
-                let salary = $("#Salary").val();
-
-                // customer.Cus_id=nic;
-                customer.Cus_name = name;
-                customer.Cus_address = address;
-                customer.Cus_salary = salary;
-                getAllCustomers();
-
-            }
-        }
-    }
-
-    //Items
+    //Items........................................................
     let itemDB = [];
     $("#btnAddToItemTable").click(function () {
         // addCustomer();
