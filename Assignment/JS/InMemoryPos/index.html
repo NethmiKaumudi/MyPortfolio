@@ -13,7 +13,7 @@
 <body>
 
 <!--Navigation-->
-<nav class="navbar fixed-top bg-body-tertiary">
+<nav class="navbar fixed-top bg-body-tertiary" id="navBar">
     <div class="container-fluid" style="background-color:#0f5132;">
 
         <a class="navbar-brand" href="#">
@@ -31,11 +31,11 @@
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item" id="home">
-                            <a class="nav-link btn_menu" aria-current="page" onclick="screee('home')" href="#homeContent">Home</a>
+                            <a class="nav-link btn_menu" aria-current="page" href="#homeContent">Home</a>
                             <!--                            <span class="sr_only">(current)</span>-->
                         </li>
                         <li class="nav-item" id="customer">
-                            <a class="nav-link btn_menu" aria-current="page" onclick="screee('customer')" href="#customerContent">Customers</a>
+                            <a class="nav-link btn_menu" aria-current="page" href="#customerContent">Customers</a>
                         </li>
                         <li class="nav-item" id="items">
                             <a class="nav-link btn_menu" href="#itemContent">Items</a>
@@ -53,7 +53,7 @@
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
-                                <li><a class="dropdown-item" href="#">log out</a></li>
+                                <li><a class="dropdown-item" id="logoutbtn" href="#">log out</a></li>
                             </ul>
                         </li>
 
@@ -71,6 +71,38 @@
 
 <!--................................................................-->
 <div class="screens">
+    <!--    <section id="loginContent">-->
+    <!--        <div class="position-absolute start-0 end-0 top-0 bottom-0 m-auto row justify-content-center align-content-center text-center">-->
+    <!--            <section class="row w-50 h-50 shadow-lg" style="border-radius: 40px">-->
+    <!--                <div class="row align-items-start position-relative">-->
+    <!--                    <div class="row justify-content-center m-auto position-absolute start-0 end-0 top-0 bottom-0">-->
+    <!--                        <h1>Log In</h1>-->
+    <!--                        <form class="d-flex row justify-content-center align-content-center">-->
+    <!--                            <div class="mb-3">-->
+    <!--                                <label for="exampleInputEmail1" class="form-label">Email address</label>-->
+    <!--                                <input type="email" class="form-control" id="exampleInputEmail1"-->
+    <!--                                       aria-describedby="emailHelp">-->
+    <!--                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>-->
+    <!--                            </div>-->
+    <!--                            <div class="mb-3">-->
+    <!--                                <label for="exampleInputPassword1" class="form-label">Password</label>-->
+    <!--                                <input type="password" class="form-control" id="exampleInputPassword1">-->
+    <!--                            </div>-->
+    <!--                            &lt;!&ndash;<button type="submit" class="btn btn-primary w-50">Log In</button>&ndash;&gt;-->
+    <!--                            <ul class="nav nav-pills w-50 d-flex justify-content-center">-->
+    <!--                                <li class="nav-item">-->
+    <!--                                    <a class="nav-link nav-pills active" aria-current="page"-->
+    <!--                                       href="#" id="log_in">Log In</a>-->
+    <!--                                </li>-->
+    <!--                            </ul>-->
+
+    <!--                        </form>&lt;!&ndash;form&ndash;&gt;-->
+    <!--                    </div>-->
+    <!--                </div>-->
+    <!--            </section>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
     <!--Home-->
     <div class="secreen_Home mt-5" id="homeContent">
         <div class="jumbotron pt-md-5">
@@ -162,42 +194,33 @@
                             </form>
                         </div>
                     </div>
-                    <div class="row" style="width: 450px; margin-left: 50px">
-                        <div class="col-4 form-group text-right mt-3">
-                            <button class="btn btn-success col-12 col-sm-auto" id="btnAddToCustomerTable" type="button"
-                                    style="width: 100px">
-                                Add
-                            </button>
-                        </div>
-                        <div class="col -4 form-group text-right mt-3">
-                            <button class="btn btn-warning col-12 col-sm-auto" id="btnUpdateCustomer" type="button"
-                                    style="width: 100px">
-                                Update
-                            </button>
-                        </div>
-                        <div class="col -4 form-group text-right mt-3">
-                            <button class="btn btn-primary col-12 col-sm-auto" id="btnGetCustomer" type="button"
-                                    style="width: 100px">
-                                GetAll
-                            </button>
-                        </div>
+                    <div class="row mt-3" style=" margin-left: 20px">
 
-                    </div>
-                    <div class="row" style="width: 300px; margin-left: 100px">
+                        <button class="btn btn-success col-12 col-sm-auto" id="btnAddToCustomerTable" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            Add
+                        </button>
 
-                        <div class="col -6 form-group text-right mt-3">
-                            <button class="btn btn-danger col-12 col-sm-auto" id="btnDeleteCustomer" type="button"
-                                    style="width: 100px">
-                                Delete
-                            </button>
-                        </div>
-                        <div class="col -6 form-group text-right mt-3">
-                            <button class="btn btn-dark col-12 col-sm-auto" id="btnClearCustomer" type="button"
-                                    style="width: 100px">
-                                Clear
-                            </button>
-                        </div>
+
+                        <button class="btn btn-warning col-12 col-sm-auto" id="btnUpdateCustomer" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            Update
+                        </button>
+
+                        <button class="btn btn-primary col-12 col-sm-auto" id="btnGetCustomer" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            GetAll
+                        </button>
+                        <button class="btn btn-danger col-12 col-sm-auto mt-1" id="btnDeleteCustomer" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            Delete
+                        </button>
+                        <button class="btn btn-dark col-12 col-sm-auto mt-1" id="btnClearCustomer" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            Clear
+                        </button>
                     </div>
+
 
                 </div>
 
@@ -206,9 +229,16 @@
                     <div style="margin-bottom: 130px">
                         <h3 style="margin: 20px;">Search Customer Here</h3>
                         <form class="d-flex" role="search" style="margin: 20px">
-                            <input class="form-control me-2" type="search" placeholder="Input Nic,Name,Address"
+                            <input class="form-control me-2" type="search" id="searchCustomerField"
+                                   placeholder="Input CustomerId"
                                    aria-label="Search" style="width:500px; background-color:#63C228">
-                            <button class="btn btn-outline-success" type="submit" style="width:200px;">Search</button>
+                            <button class="btn btn-outline-success" id="customerSearchbtn" type="submit"
+                                    style="width:100px; margin-right: 10px">Search
+                            </button>
+                            <button class="btn btn-outline-danger" id="customerSearchClearBtn" type="submit"
+                                    style="width:100px;">clear
+                            </button>
+
                         </form>
                     </div>
 
@@ -224,22 +254,6 @@
                             </tr>
                             </thead>
                             <tbody class="table-light" id="tblCustomer">
-                            <!--                            <tr>-->
-                            <!--                                &lt;!&ndash;            <th scope="row">1</th>&ndash;&gt;-->
-                            <!--                                <td>975632124v</td>-->
-                            <!--                                <td>Kamal Perera</td>-->
-                            <!--                                <td>Matara</td>-->
-                            <!--                                <td>55000.00</td>-->
-
-                            <!--                            </tr>-->
-                            <!--                            <tr style="background-color: white">-->
-                            <!--                                &lt;!&ndash;            <th scope="row">1</th>&ndash;&gt;-->
-                            <!--                                <td>755632124v</td>-->
-                            <!--                                <td>Nimali Perera</td>-->
-                            <!--                                <td>Colombo</td>-->
-                            <!--                                <td>100000.00</td>-->
-
-                            <!--                            </tr>-->
 
                             </tbody>
                         </table>
@@ -274,7 +288,7 @@
                                             <input class="form-control" id="txtItemCode" type="text">
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-5">
                                         <div class="form-group">
                                             <label>Description:</label>
                                             <input class="form-control" id="txtItemDescription" type="text">
@@ -286,7 +300,7 @@
                                             <input class="form-control" id="txtItemPrice" type="text">
                                         </div>
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col-5">
                                         <div class="form-group">
                                             <label class="">Quantity:</label>
                                             <input class="form-control" id="txtQTYOnHand" type="text">
@@ -298,49 +312,46 @@
                             </form>
                         </div>
                     </div>
-                    <!--                    <div class="form-group text-right mt-3">-->
-                    <!--                        <button class="btn btn-success col-12 col-sm-auto" id="btnAdd" type="button"-->
-                    <!--                                style="width: 100px">-->
-                    <!--                            Add-->
-                    <!--                        </button>-->
-                    <!--                    </div>-->
-                    <div class="row" style="width: 500px; ">
-                        <div class="col-3 form-group text-right mt-3">
-                            <button class="btn btn-success col-12 col-sm-auto" id="btnAddToItemTable" type="button"
-                                    style="width: 100px">
-                                Add
-                            </button>
-                        </div>
-                        <div class="col -3 form-group text-right mt-3">
-                            <button class="btn btn-warning col-12 col-sm-auto" id="btnUpdateItem" type="button"
-                                    style="width: 100px">
-                                Update
-                            </button>
-                        </div>
-                        <div class="col-3 form-group text-right mt-3">
-                            <button class="btn btn-danger col-12 col-sm-auto" id="btndeleteItem" type="button"
-                                    style="width: 100px">
-                                Delete
-                            </button>
-                        </div>
-                        <div class="col -3 form-group text-right mt-3">
-                            <button class="btn btn-primary col-12 col-sm-auto" id="btngetItem" type="button"
-                                    style="width: 100px">
-                                GetAll
-                            </button>
-                        </div>
+                    <div class=" row form-group text-right mt-3" style="margin-left: 20px">
+                        <button class="btn btn-success col-12 col-sm-auto" id="btnAddItem" type="button"
+                                style="width: 100px;margin-right: 10px">
+                            Add
+                        </button>
+                        <button class="btn btn-warning col-12 col-sm-auto" id="btnUpdateItem" type="button"
+                                style="width: 100px;margin-right: 10px">
+                            Update
+                        </button>
+                        <button class="btn btn-primary col-12 col-sm-auto" id="btnGetAllItem" type="button"
+                                style="width: 100px;margin-right: 10px">
+                            GetAll
+                        </button>
+                        <button class="btn btn-danger col-12 col-sm-auto mt-1" id="btnDeleteItem" type="button"
+                                style="width: 100px;margin-right: 10px">
+                            Delete
+                        </button>
+                        <button class="btn btn-dark col-12 col-sm-auto mt-1" id="btnClearAllItem" type="button"
+                                style="width: 100px;margin-right: 10px">
+                            ClearAll
+                        </button>
                     </div>
-
                 </div>
 
-                <div class="col-lg-6 mt-lg-0 mt-5  "
+
+                <div class="col-lg-6 mt-lg-0 mt-5  " id="div_022"
                      style="border: 2px solid black; border-radius: 10px;height: 150px;">
                     <div style="margin-bottom: 130px">
-                        <h3 style="margin: 20px;">Search Items Here</h3>
+                        <h3 style="margin: 20px;">Search Item Here</h3>
                         <form class="d-flex" role="search" style="margin: 20px">
-                            <input class="form-control me-2" type="search" placeholder="Input Item-code,Description"
+                            <input class="form-control me-2" type="search" id="searchItemField"
+                                   placeholder="Input ItemCode"
                                    aria-label="Search" style="width:500px; background-color:#63C228">
-                            <button class="btn btn-outline-success" type="submit" style="width:200px;">Search</button>
+                            <button class="btn btn-outline-success" id="itemSearchbtn" type="submit"
+                                    style="width:100px; margin-right: 10px">Search
+                            </button>
+                            <button class="btn btn-outline-danger" id="itemSearchClearBtn" type="submit"
+                                    style="width:100px;">clear
+                            </button>
+
                         </form>
                     </div>
 
@@ -356,22 +367,7 @@
                             </tr>
                             </thead>
                             <tbody class="table-light" id="tblItem">
-                            <!--                            <tr>-->
-                            <!--                                &lt;!&ndash;            <th scope="row">1</th>&ndash;&gt;-->
-                            <!--                                <td>I-001</td>-->
-                            <!--                                <td>Buscuit</td>-->
-                            <!--                                <td>100 pack</td>-->
-                            <!--                                <td>150.00</td>-->
 
-                            <!--                            </tr>-->
-                            <!--                            <tr style="background-color: white">-->
-                            <!--                                &lt;!&ndash;            <th scope="row">1</th>&ndash;&gt;-->
-                            <!--                                <td>I-002</td>-->
-                            <!--                                <td>Rice 50Kg Bags</td>-->
-                            <!--                                <td>100 Bags</td>-->
-                            <!--                                <td>10000.00</td>-->
-
-                            <!--                            </tr>-->
 
                             </tbody>
                         </table>
@@ -382,231 +378,236 @@
 
     </div>
 
-    <!--...................................................................-->
-    <!--    order-->
-    <div class="screen_order mt-5 " id="orderContent">
-        <div class="container mt-2" style="margin-left:5vw; margin-top: 200px">
+</div>
 
-            <div class="jumbotron pt-4">
-                <div class="row">
-                    <div class="col-6">
-                        <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
-                            <img src="/Assignment/Css/Assets/POS%20Images/Order.png" height="70px"
-                                 style="border: 2px solid black; border-radius: 100%; margin-top: 11px"><img/>
-                            Order Form</h2>
-                    </div>
+<!--...................................................................-->
+<!--    order-->
+<div class="screen_order mt-5 " id="orderContent">
+    <div class="container mt-2" style="margin-left:5vw; margin-top: 200px">
 
-                    <div class="col-6 justify-content-end mt-5">
-                        <form class="d-flex" role="search">
-                            <input class="form-control me-2" type="search" placeholder="Search here"
-                                   aria-label="Search"
-                                   style="width:300px; background-color:#63C228;margin-top: 50px;margin-left: 300px">
-                        </form>
-                    </div>
-
+        <div class="jumbotron pt-4">
+            <div class="row">
+                <div class="col-6">
+                    <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
+                        <img src="/Assignment/Css/Assets/POS%20Images/Order.png" height="70px"
+                             style="border: 2px solid black; border-radius: 100%; margin-top: 11px"><img/>
+                        Order Form</h2>
                 </div>
-                <div class="row">
-                    <div class="col-lg-4">
-                        <div class="card" style="background-color: #0f5132 ;margin-top: 35px">
-                            <div class="card-header  font-weight-bolder" style="background-color: #0f5132">
-                                Invoice Details
-                            </div>
-                            <div class="card-body" style="background-color: #63C228">
-                                <form>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Date :</label>
-                                                <input class="form-control" id="txtDate" type="date">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
 
-                                            <div class="form-group">
-                                                <label>Order ID :</label>
-                                                <input class="form-control" id="txtOrderID" type="text">
-                                                <span class="control-error"
-                                                      id="orderId-invalid-error"></span>
-                                            </div>
-                                        </div>
+                <div class="col-6 justify-content-end mt-5">
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search here"
+                               aria-label="Search"
+                               style="width:300px; background-color:#63C228;margin-top: 50px;margin-left: 300px">
+                    </form>
+                </div>
 
-                                    </div>
-                                    <div class="row">
-
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label for="Nic">Nic</label>
-                                                <input class="form-control" id="Nic2">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Name :</label>
-                                                <input class="form-control" id="orderCustomerName" type="text">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Address :</label>
-                                                <input class="form-control" id="orderCustomerAddress" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Salary :</label>
-                                                <input class="form-control" id="orderCustomerSalary" type="text">
-                                            </div>
-                                        </div>
-
-                                    </div>
-                                </form>
-                            </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="card" style="background-color: #0f5132 ;margin-top: 35px">
+                        <div class="card-header  font-weight-bolder" style="background-color: #0f5132">
+                            Invoice Details
                         </div>
-                    </div>
-                    <div class="col-lg-4 mt-lg-0 mt-3">
-                        <div class="card" style="margin-top: 35px;background-color: #0f5132;">
-                            <div class="card-header font-weight-bolder" style="background-color: #0f5132">
-                                Item Select
-                            </div>
-                            <div class="card-body" style="background-color: #63C228">
-                                <form>
-                                    <div class="row">
-
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label>Item Code :</label>
-                                                <input class="form-control" id="ItemCode" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-5">
-                                            <div class="form-group">
-                                                <label>Description :</label>
-                                                <input class="form-control" id="ItemDescription" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-6">
-                                            <div class="form-group">
-                                                <label class="">Unit Price :</label>
-                                                <input class="form-control" id="ItemPrice" type="text">
-                                            </div>
-                                        </div>
-                                        <div class="col-5">
-                                            <div class="form-group">
-                                                <label class="">Quantity :</label>
-                                                <input class="form-control" id="QTY" type="text">
-                                            </div>
-                                        </div>
-
-                                        <hr class="mt-3 btn-dark">
-                                        <div class="col-12 mt-2">
-                                            <div class="form-group">
-                                                <label>Order Quantity :</label>
-                                                <input class="form-control" id="txtQty" min="1" type="number">
-                                                <span class="control-error" id="order-qty-empty-error"></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="form-group text-right mt-3">
-                                        <button class="btn btn-success col-12 col-sm-auto" id="Add"
-                                                type="button"
-                                                style="width: 100px">
-                                            Add
-                                        </button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 mt-lg-0 mt-3">
-                        <div class="card" style="background-color: #0f5132;margin-top: 35px">
-                            <div class="card-header font-weight-bolder" style="background-color: #0f5132">
-                                Total
-                            </div>
-                            <div class="card-body" style="background-color: #63C228">
+                        <div class="card-body" style="background-color: #63C228">
+                            <form>
                                 <div class="row">
-                                    <div class="col-6 mt-2">
+                                    <div class="col-6">
                                         <div class="form-group">
+                                            <label>Date :</label>
+                                            <input class="form-control" id="txtDate" type="date">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
 
-                                            <label>Sub -Total</label>
-                                            <input class="form-control" id="SubTotal" type="text">
+                                        <div class="form-group">
+                                            <label>Order ID :</label>
+                                            <input class="form-control" id="txtOrderID" type="text">
                                             <span class="control-error"
-                                                  id="cash-empty-error"></span>
-                                        </div>
-                                    </div>
-                                    <div class="col-6 mt-2">
-                                        <div class="form-group">
-                                            <label>Discount</label>
-                                            <input class="form-control" id="Discount" type="text">
-                                        </div>
-                                    </div>
-                                    <div class="col-8">
-                                        <div class="form-group">
-                                            <label>Total</label>
-                                            <input class="form-control" id="Total" type="text">
+                                                  id="orderId-invalid-error"></span>
                                         </div>
                                     </div>
 
                                 </div>
+                                <div class="row">
+
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Id</label>
+                                            <input class="form-control" id="Id2">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Name :</label>
+                                            <input class="form-control" id="orderCustomerName" type="text">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Address :</label>
+                                            <input class="form-control" id="orderCustomerAddress" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Salary :</label>
+                                            <input class="form-control" id="orderCustomerSalary" type="text">
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-lg-0 mt-3">
+                    <div class="card" style="margin-top: 35px;background-color: #0f5132;">
+                        <div class="card-header font-weight-bolder" style="background-color: #0f5132">
+                            Item Select
+                        </div>
+                        <div class="card-body" style="background-color: #63C228">
+                            <form>
+                                <div class="row">
+
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Item Code :</label>
+                                            <input class="form-control" id="ItemCode" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label>Description :</label>
+                                            <input class="form-control" id="ItemDescription" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label class="">Unit Price :</label>
+                                            <input class="form-control" id="ItemPrice" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label class="">Quantity :</label>
+                                            <input class="form-control" id="QTY" type="text">
+                                        </div>
+                                    </div>
+
+                                    <hr class="mt-3 btn-dark">
+                                    <div class="col-12 mt-2">
+                                        <div class="form-group">
+                                            <label>Order Quantity :</label>
+                                            <input class="form-control" id="txtQty" min="1" type="number">
+                                            <span class="control-error" id="order-qty-empty-error"></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-group text-right mt-3">
+                                    <button class="btn btn-success col-12 col-sm-auto" id="Add"
+                                            type="button"
+                                            style="width: 100px">
+                                        Add
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 mt-lg-0 mt-3">
+                    <div class="card" style="background-color: #0f5132;margin-top: 35px">
+                        <div class="card-header font-weight-bolder" style="background-color: #0f5132">
+                            Total
+                        </div>
+                        <div class="card-body" style="background-color: #63C228">
+                            <div class="row">
+                                <div class="col-6 mt-2">
+                                    <div class="form-group">
+
+                                        <label>Sub -Total</label>
+                                        <input class="form-control" id="SubTotal" type="text">
+                                        <span class="control-error"
+                                              id="cash-empty-error"></span>
+                                    </div>
+                                </div>
+                                <div class="col-6 mt-2">
+                                    <div class="form-group">
+                                        <label>Discount</label>
+                                        <input class="form-control" id="Discount" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-8">
+                                    <div class="form-group">
+                                        <label>Total</label>
+                                        <input class="form-control" id="Total" type="text">
+                                    </div>
+                                </div>
+                                <div class="col-2 mt-4 ">
+                                    <button type="submit" class="btn btn-warning">Purchase
+                                    </button>
+                                </div>
                             </div>
                         </div>
-
                     </div>
-                    <div class="mt-4 ">
-                        <button type="submit" class="btn btn-warning" style="width: 200px; margin-left:70vw">Purchase
-                        </button>
-                    </div>
-                    <div class="row">
-                        <div class=" col-12 mt-5">
-                            <table class="table table-hover table-bordered table-striped"
-                                   style="width: 90vw;height:auto; margin-left: -10px;background-color: #0f5132">
-                                <thead>
-                                <tr>
-                                    <th>Date</th>
-                                    <th>Order Id</th>
-                                    <th> Nic</th>
-                                    <th> Item-Code</th>
-                                    <th>Unit Price</th>
-                                    <th> order Qty</th>
-                                    <th> sub Total</th>
-                                    <th> Discount</th>
-                                    <th> Total</th>
-                                    <th> Edit</th>
-
-                                </tr>
-                                </thead>
-                                <tbody class="table-light">
-                                <tr>
-                                    <!--            <th scope="row">1</th>-->
-                                    <td>2023-05-17</td>
-                                    <td>O-001</td>
-                                    <td>975632124v</td>
-                                    <td>I-001</td>
-                                    <td>150.00</td>
-                                    <td>3</td>
-                                    <td>450.00</td>
-                                    <td>25.00</td>
-                                    <td>425.00</td>
-
-
-                                    <td>
-                                        <Buton class="btn btn-danger">Delete</Buton>
-                                    </td>
-
-
-                                </tr>
-
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-
 
                 </div>
+
+                <div class="row">
+                    <div class=" col-12 mt-5">
+                        <table class="table table-hover table-bordered table-striped"
+                               style="width: 90vw;height:auto; margin-left: -10px;background-color: #0f5132">
+                            <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Order Id</th>
+                                <th> Nic</th>
+                                <th> Item-Code</th>
+                                <th>Unit Price</th>
+                                <th> order Qty</th>
+                                <th> sub Total</th>
+                                <th> Discount</th>
+                                <th> Total</th>
+                                <th> Edit</th>
+
+                            </tr>
+                            </thead>
+                            <tbody class="table-light">
+                            <tr>
+                                <!--            <th scope="row">1</th>-->
+                                <td>2023-05-17</td>
+                                <td>O-001</td>
+                                <td>975632124v</td>
+                                <td>I-001</td>
+                                <td>150.00</td>
+                                <td>3</td>
+                                <td>450.00</td>
+                                <td>25.00</td>
+                                <td>425.00</td>
+
+
+                                <td>
+                                    <Buton class="btn btn-danger">Delete</Buton>
+                                </td>
+
+
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <!--                    <div class="mt-4 ">-->
+                <!--                        <button type="submit" class="btn btn-warning" style="width: 200px; margin-left:70vw">Purchase-->
+                <!--                        </button>-->
+                <!--                    </div>-->
+
             </div>
         </div>
     </div>
+</div>
 </div>
 
 
@@ -618,14 +619,16 @@
         crossorigin="anonymous"></script>
 <script src="assest/js/jquery-3.7.0.min.js"></script>
 <script src="controller/DashBoardController.js"></script>
-<script src="controller/validations/CustomerValidation.js"></script>
 <script src="db/db.js"></script>
 <script src="models/Customer.js"></script>
+<script src="models/Item.js"></script>
 <script src="controller/CustomerController.js"></script>
-
+<script src="controller/validations/CustomerValidation.js"></script>
+<script src="controller/ItemController.js"></script>
+<script src="controller/validations/ItemValidation.js"></script>
 
 <script>
-//SPA//
+    //SPA//
 
     //
     // //customers
@@ -865,62 +868,62 @@
     // }
 
     //Items........................................................
-    let itemDB = [];
-    $("#btnAddToItemTable").click(function () {
-        // addCustomer();
-        let code = $("#txtItemCode").val();
-        let description = $("#txtItemDescription").val();
-        let unitPrice = $("#txtItemPrice").val();
-        let quantity = $("#txtQTYOnHand").val();
-        let ItemObj = {
-            item_code: code,
-            item_description: description,
-            item_unitPrice: unitPrice,
-            item_quantity: quantity
-        }
-        itemDB.push(ItemObj);
-
-        let row = `<tr>
-        <td>${ItemObj.item_code}</td>
-        <td>${ItemObj.item_description}</td>
-        <td>${ItemObj.item_unitPrice}</td>
-        <td>${ItemObj.item_quantity}</td>
-            </tr>`;
-        $("#tblItem").append(row);
-        loadDataItem();
-
-    });
-    $("#btngetItem").click(function () {
-        $("#tblItem").empty();
-        for (var i = 0; i < itemDB.length; i++) {
-            let i_code = itemDB[i].item_code;
-            let description = itemDB[i].item_description;
-            let unit_price = itemDB[i].item_unitPrice;
-            let qty = itemDB[i].item_quantity;
-
-            let row = `<tr>
-            <td>${i_code}</td>
-            <td>${description}</td>
-            <td>${unit_price}</td>
-            <td>${qty}</td>
-                </tr>`;
-            $("#tblItem").append(row);
-        }
-    });
-
-    function loadDataItem() {
-        $("#tblItem>tr").click(function () {
-            let code = $(this).children(":eq(0)").text();
-            let description = $(this).children(":eq(1)").text();
-            let unit_price = $(this).children(":eq(2)").text();
-            let quantity = $(this).children(":eq(3)").text();
-            $("#txtItemCode").val(code);
-            $("#txtItemDescription").val(description);
-            $("#txtItemPrice").val(unit_price);
-            $("#txtQTYOnHand").val(quantity);
-
-        });
-    }
+    // let itemDB = [];
+    // $("#btnAddToItemTable").click(function () {
+    //     // addCustomer();
+    //     let code = $("#txtItemCode").val();
+    //     let description = $("#txtItemDescription").val();
+    //     let unitPrice = $("#txtItemPrice").val();
+    //     let quantity = $("#txtQTYOnHand").val();
+    //     let ItemObj = {
+    //         item_code: code,
+    //         item_description: description,
+    //         item_unitPrice: unitPrice,
+    //         item_quantity: quantity
+    //     }
+    //     itemDB.push(ItemObj);
+    //
+    //     let row = `<tr>
+    //     <td>${ItemObj.item_code}</td>
+    //     <td>${ItemObj.item_description}</td>
+    //     <td>${ItemObj.item_unitPrice}</td>
+    //     <td>${ItemObj.item_quantity}</td>
+    //         </tr>`;
+    //     $("#tblItem").append(row);
+    //     loadDataItem();
+    //
+    // });
+    // $("#btngetItem").click(function () {
+    //     $("#tblItem").empty();
+    //     for (var i = 0; i < itemDB.length; i++) {
+    //         let i_code = itemDB[i].item_code;
+    //         let description = itemDB[i].item_description;
+    //         let unit_price = itemDB[i].item_unitPrice;
+    //         let qty = itemDB[i].item_quantity;
+    //
+    //         let row = `<tr>
+    //         <td>${i_code}</td>
+    //         <td>${description}</td>
+    //         <td>${unit_price}</td>
+    //         <td>${qty}</td>
+    //             </tr>`;
+    //         $("#tblItem").append(row);
+    //     }
+    // });
+    //
+    // function loadDataItem() {
+    //     $("#tblItem>tr").click(function () {
+    //         let code = $(this).children(":eq(0)").text();
+    //         let description = $(this).children(":eq(1)").text();
+    //         let unit_price = $(this).children(":eq(2)").text();
+    //         let quantity = $(this).children(":eq(3)").text();
+    //         $("#txtItemCode").val(code);
+    //         $("#txtItemDescription").val(description);
+    //         $("#txtItemPrice").val(unit_price);
+    //         $("#txtQTYOnHand").val(quantity);
+    //
+    //     });
+    // }
 </script>
 </body>
 

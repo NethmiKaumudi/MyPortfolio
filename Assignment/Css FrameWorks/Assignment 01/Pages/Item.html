@@ -109,19 +109,41 @@
                     </form>
                 </div>
             </div>
-            <div class="form-group text-right mt-3" >
-                <button class="btn btn-success col-12 col-sm-auto" id="btnAddToTable" type="button" style="width: 100px">
+            <div class=" row form-group text-right mt-3" style="margin-left: 20px" >
+                <button class="btn btn-success col-12 col-sm-auto" id="btnAddItem" type="button" style="width: 100px;margin-right: 10px">
                     Add
+                </button>
+                <button class="btn btn-warning col-12 col-sm-auto" id="btnUpdateItem" type="button" style="width: 100px;margin-right: 10px">
+                    Update
+                </button>
+                <button class="btn btn-primary col-12 col-sm-auto" id="btnGettAllItem" type="button" style="width: 100px;margin-right: 10px">
+                    GetAll
+                </button>
+                <button class="btn btn-danger col-12 col-sm-auto" id="btnDeleteItem" type="button" style="width: 100px;margin-right: 10px">
+                    Delete
+                </button>
+                <button class="btn btn-dark col-12 col-sm-auto" id="btnClearAllItem" type="button" style="width: 100px;margin-right: 10px">
+                    ClearAll
                 </button>
             </div>
         </div>
 
-            <div  class="col-lg-6 mt-lg-0 mt-5  " style="border: 2px solid black; border-radius: 10px;height: 150px;">
+
+            <div class="col-lg-6 mt-lg-0 mt-5  " id="div_02"
+                 style="border: 2px solid black; border-radius: 10px;height: 150px;">
                 <div style="margin-bottom: 130px">
-                    <h3 style="margin: 20px;">Search Items Here</h3>
+                    <h3 style="margin: 20px;">Search Item Here</h3>
                     <form class="d-flex" role="search" style="margin: 20px">
-                        <input class="form-control me-2" type="search" placeholder="Input Item-code,Description" aria-label="Search" style="width:500px; background-color:#63C228">
-                        <button class="btn btn-outline-success" type="submit" style="width:200px;">Search</button>
+                        <input class="form-control me-2" type="search" id="searchItemField"
+                               placeholder="Input ItemCode"
+                               aria-label="Search" style="width:500px; background-color:#63C228">
+                        <button class="btn btn-outline-success" id="itemSearchbtn" type="submit"
+                                style="width:100px; margin-right: 10px">Search
+                        </button>
+                        <button class="btn btn-outline-danger" id="itemSearchClearBtn" type="submit"
+                                style="width:100px;">clear
+                        </button>
+
                     </form>
                 </div>
 
@@ -138,7 +160,7 @@
                         <tbody class="table-light">
                         <tr >
                             <!--            <th scope="row">1</th>-->
-                            <td>I-001</td>
+                            <td>I001</td>
                             <td>Buscuit</td>
                             <td>100 pack</td>
                             <td>150.00</td>
@@ -146,7 +168,7 @@
                         </tr>
                         <tr style="background-color: white">
                             <!--            <th scope="row">1</th>-->
-                            <td>I-002</td>
+                            <td>I002</td>
                             <td>Rice 50Kg Bags</td>
                             <td>100 Bags</td>
                             <td>10000.00</td>

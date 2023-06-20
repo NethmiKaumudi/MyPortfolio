@@ -3,9 +3,9 @@ getAllCustomers();
 
 //add customer
 $("#btnAddToCustomerTable").click(function () {
-    if (checkAll()){
+    if (checkAll()) {
         saveCustomer();
-    }else{
+    } else {
         alert("Error");
     }
 
@@ -35,7 +35,7 @@ function bindTrEvents() {
 
 //delete
 $("#btnDeleteCustomer").click(function () {
-    let id= $("#Cus_Id").val();
+    let id = $("#Cus_Id").val();
 
     let consent = confirm("Do you want to delete.?");
     if (consent) {
@@ -65,8 +65,6 @@ $("#btnClearCustomer").click(function () {
 });
 
 
-
-
 // CRUD operation Functions
 function saveCustomer() {
     let customerId = $("#Cus_Id").val();
@@ -81,7 +79,7 @@ function saveCustomer() {
         //by using this one we can create a new object using
         //the customer model with same properties
         let newCustomer = Object.assign({}, customer);
-        newCustomer.id= customerId;
+        newCustomer.id = customerId;
         newCustomer.name = customerName;
         newCustomer.address = customerAddress;
         newCustomer.salary = customerSalary;
@@ -163,6 +161,26 @@ function updateCustomer(id) {
             getAllCustomers();
         }
     }
+    //Search customer from input field
+    $('#customerSearchbtn').click(function (){
+            var searchValue = $('#searchCustomerField').val();
+
+            $('#div_03 tbody tr').each(function() {
+                var id = $(this).find('td:first').text();
+
+                if (id.includes(searchValue)) {
+                    $(this).show();
+                } else {
+                    $(this).hide();
+                }
+            });
+        });
+
+
+    $("#customerSearchClearBtn").click(function () {
+        $("#searchCustomerField").val("");
+        getAllCustomers();
+    });
 
 }
 

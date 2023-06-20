@@ -112,6 +112,7 @@
 
     <!--........................................................................-->
     <!--Customer-->
+
     <div class="screen_Customer" id="customerContent">
         <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
             <img src="/Assignment/Css/Assets/POS%20Images/cus.jpg" alt="" height="70px"
@@ -130,14 +131,18 @@
 
                                     <div class="col-6">
                                         <div class="form-group">
-                                            <label>Customer Nic:</label>
-                                            <input class="form-control" id="Nic" type="text">
+                                            <label>Customer Id:</label>
+                                            <input class="form-control" id="Cus_Id" type="text">
+                                            <label class="text-bg-danger" id="idError"></label>
+                                            <!--                                            <p><small class="text-bg-danger p1"id="nicError"></small></p>-->
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-6">
                                         <div class="form-group">
                                             <label>Customer Name:</label>
                                             <input class="form-control" id="Cus_Name" type="text">
+                                            <label class="text-bg-danger" id="nameError"></label>
+
                                         </div>
                                     </div>
                                     <div class="col-6">
@@ -146,7 +151,7 @@
                                             <input class="form-control" id="Address" type="text">
                                         </div>
                                     </div>
-                                    <div class="col-5">
+                                    <div class="col-6">
                                         <div class="form-group">
                                             <label class="">Salary :</label>
                                             <input class="form-control" id="Salary" type="text">
@@ -157,12 +162,34 @@
                             </form>
                         </div>
                     </div>
-                    <div class="form-group text-right mt-3">
-                        <button class="btn btn-success col-12 col-sm-auto" id="btnAddToTable" type="button"
-                                style="width: 100px">
+                    <div class="row mt-3" style=" margin-left: 20px">
+                        <button class="btn btn-success col-12 col-sm-auto" id="btnAddToCustomerTable" type="button"
+                                style="width: 100px;margin-right: 20px">
                             Add
                         </button>
+
+
+                        <button class="btn btn-warning col-12 col-sm-auto" id="btnUpdateCustomer" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            Update
+                        </button>
+
+                        <button class="btn btn-primary col-12 col-sm-auto" id="btnGetCustomer" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            GetAll
+                        </button>
+                        <button class="btn btn-danger col-12 col-sm-auto mt-1" id="btnDeleteCustomer" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            Delete
+                        </button>
+                        <button class="btn btn-dark col-12 col-sm-auto mt-1" id="btnClearCustomer" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            Clear
+                        </button>
+
                     </div>
+
+
                 </div>
 
                 <div class="col-lg-6 mt-lg-0 mt-5  " id="div_02"
@@ -170,9 +197,16 @@
                     <div style="margin-bottom: 130px">
                         <h3 style="margin: 20px;">Search Customer Here</h3>
                         <form class="d-flex" role="search" style="margin: 20px">
-                            <input class="form-control me-2" type="search" placeholder="Input Nic,Name,Address"
+                            <input class="form-control me-2" type="search" id="searchCustomerField"
+                                   placeholder="Input CustomerId"
                                    aria-label="Search" style="width:500px; background-color:#63C228">
-                            <button class="btn btn-outline-success" type="submit" style="width:200px;">Search</button>
+                            <button class="btn btn-outline-success" id="customerSearchbtn" type="submit"
+                                    style="width:100px; margin-right: 10px">Search
+                            </button>
+                            <button class="btn btn-outline-danger" id="customerSearchClearBtn" type="submit"
+                                    style="width:100px;">clear
+                            </button>
+
                         </form>
                     </div>
 
@@ -181,16 +215,16 @@
                                style="width: 650px;height: auto;background-color: #0f5132;" id="div_03">
                             <thead>
                             <tr>
-                                <th>Customer Nic</th>
-                                <th>Customer Name</th>
-                                <th> Address</th>
-                                <th> Salary</th>
+                                <th id="cusId">Customer Id</th>
+                                <th id="cusName">Customer Name</th>
+                                <th id="cusAddress"> Address</th>
+                                <th id="cusSalary"> Salary</th>
                             </tr>
                             </thead>
-                            <tbody class="table-light">
+                            <tbody class="table-light" id="tblCustomer">
                             <tr>
                                 <!--            <th scope="row">1</th>-->
-                                <td>975632124v</td>
+                                <td>C001</td>
                                 <td>Kamal Perera</td>
                                 <td>Matara</td>
                                 <td>55000.00</td>
@@ -198,7 +232,7 @@
                             </tr>
                             <tr style="background-color: white">
                                 <!--            <th scope="row">1</th>-->
-                                <td>755632124v</td>
+                                <td>C002</td>
                                 <td>Nimali Perera</td>
                                 <td>Colombo</td>
                                 <td>100000.00</td>
@@ -213,7 +247,6 @@
 
         </div>
     </div>
-
     <!--............................................................................-->
     <!--Item-->
     <div class="screen_item mt-5" id="itemContent">
@@ -262,30 +295,48 @@
                             </form>
                         </div>
                     </div>
-                    <div class="form-group text-right mt-3">
-                        <button class="btn btn-success col-12 col-sm-auto" id="btnAdd" type="button"
-                                style="width: 100px">
+                    <div class=" row form-group text-right mt-3" style="margin-left: 20px" >
+                        <button class="btn btn-success col-12 col-sm-auto" id="btnAddItem" type="button" style="width: 100px;margin-right: 10px">
                             Add
+                        </button>
+                        <button class="btn btn-warning col-12 col-sm-auto" id="btnUpdateItem" type="button" style="width: 100px;margin-right: 10px">
+                            Update
+                        </button>
+                        <button class="btn btn-primary col-12 col-sm-auto" id="btnGetAllItem" type="button" style="width: 100px;margin-right: 10px">
+                            GetAll
+                        </button>
+                        <button class="btn btn-danger col-12 col-sm-auto" id="btnDeleteItem" type="button" style="width: 100px;margin-right: 10px">
+                            Delete
+                        </button>
+                        <button class="btn btn-dark col-12 col-sm-auto" id="btnClearAllItem" type="button" style="width: 100px;margin-right: 10px">
+                            ClearAll
                         </button>
                     </div>
                 </div>
 
-                <div class="col-lg-6 mt-lg-0 mt-5  "
+
+                <div class="col-lg-6 mt-lg-0 mt-5  " id="div_022"
                      style="border: 2px solid black; border-radius: 10px;height: 150px;">
                     <div style="margin-bottom: 130px">
-                        <h3 style="margin: 20px;">Search Items Here</h3>
+                        <h3 style="margin: 20px;">Search Item Here</h3>
                         <form class="d-flex" role="search" style="margin: 20px">
-                            <input class="form-control me-2" type="search" placeholder="Input Item-code,Description"
+                            <input class="form-control me-2" type="search" id="searchItemField"
+                                   placeholder="Input ItemCode"
                                    aria-label="Search" style="width:500px; background-color:#63C228">
-                            <button class="btn btn-outline-success" type="submit" style="width:200px;">Search</button>
+                            <button class="btn btn-outline-success" id="itemSearchbtn" type="submit"
+                                    style="width:100px; margin-right: 10px">Search
+                            </button>
+                            <button class="btn btn-outline-danger" id="itemSearchClearBtn" type="submit"
+                                    style="width:100px;">clear
+                            </button>
+
                         </form>
                     </div>
 
                     <div class="mt-4 ">
-                        <table class="table table-hover table-bordered table-striped"
-                               style="width: 650px;height: auto;background-color: #0f5132">
+                        <table class="table table-hover table-bordered table-striped" style="width: 650px;height: auto;background-color: #0f5132">
                             <thead>
-                            <tr>
+                            <tr >
                                 <th>Item-Code</th>
                                 <th>Description</th>
                                 <th> Quantity</th>
@@ -293,9 +344,9 @@
                             </tr>
                             </thead>
                             <tbody class="table-light">
-                            <tr>
+                            <tr >
                                 <!--            <th scope="row">1</th>-->
-                                <td>I-001</td>
+                                <td>I001</td>
                                 <td>Buscuit</td>
                                 <td>100 pack</td>
                                 <td>150.00</td>
@@ -303,7 +354,7 @@
                             </tr>
                             <tr style="background-color: white">
                                 <!--            <th scope="row">1</th>-->
-                                <td>I-002</td>
+                                <td>I002</td>
                                 <td>Rice 50Kg Bags</td>
                                 <td>100 Bags</td>
                                 <td>10000.00</td>
@@ -316,6 +367,8 @@
                 </div>
             </div>
         </div>
+
+    </div>
 
     </div>
 
@@ -372,8 +425,8 @@
 
                                         <div class="col-6">
                                             <div class="form-group">
-                                                <label for="Nic">Nic</label>
-                                                <input class="form-control" id="Nic2">
+                                                <label >Id</label>
+                                                <input class="form-control" id="Cus_Id2">
                                             </div>
                                         </div>
                                         <div class="col-6">
@@ -484,16 +537,16 @@
                                             <input class="form-control" id="Total" type="text">
                                         </div>
                                     </div>
-
+                                    <div class="col-2 mt-4 ">
+                                        <button type="submit" class="btn btn-warning" >Purchase
+                                        </button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                     </div>
-                    <div class="mt-4 ">
-                        <button type="submit" class="btn btn-warning" style="width: 200px; margin-left:70vw">Purchase
-                        </button>
-                    </div>
+
                     <div class="row">
                         <div class=" col-12 mt-5">
                             <table class="table table-hover table-bordered table-striped"

@@ -70,105 +70,140 @@
 </header>
 
 <main>
-    <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
-        <img src="../../../Css/Assets/POS%20Images/cus.jpg" alt="" height="70px"
-             style="border: 2px solid black; border-radius: 100%; margin-top: 15px">
-        Customer Form</h2>
-    <div class="container text-center">
-        <div class="row mt-4">
-            <div class="col-lg-6 mt-lg-0 mt-2">
-                <div class="card" style="margin-top: 35px;background-color: #0f5132;height: 250px">
-                    <div class="card-header font-weight-bolder" style="background-color: #0f5132">
-                        Customer
-                    </div>
-                    <div class="card-body" style="background-color: #63C228">
-                        <form>
-                            <div class="row">
 
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label>Customer Nic:</label>
-                                        <input class="form-control" id="Nic" type="text">
+    <div class="screen_Customer" id="customerContent">
+        <h2 style="margin-top: 70px;margin-left: 20px;margin-bottom:0px">
+            <img src="/Assignment/Css/Assets/POS%20Images/cus.jpg" alt="" height="70px"
+                 style="border: 2px solid black; border-radius: 100%; margin-top: 15px">
+            Customer Form</h2>
+        <div class="container text-center">
+            <div class="row mt-4">
+                <div class="col-lg-6 mt-lg-0 mt-2">
+                    <div class="card" style="margin-top: 35px;background-color: #0f5132;height: 250px">
+                        <div class="card-header font-weight-bolder" style="background-color: #0f5132">
+                            Customer
+                        </div>
+                        <div class="card-body" style="background-color: #63C228">
+                            <form>
+                                <div class="row">
+
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Customer Id:</label>
+                                            <input class="form-control" id="Cus_Id" type="text">
+                                            <label class="text-bg-danger" id="idError"></label>
+                                            <!--                                            <p><small class="text-bg-danger p1"id="nicError"></small></p>-->
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label>Customer Name:</label>
+                                            <input class="form-control" id="Cus_Name" type="text">
+                                            <label class="text-bg-danger" id="nameError"></label>
+
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label class="">Address:</label>
+                                            <input class="form-control" id="Address" type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-6">
+                                        <div class="form-group">
+                                            <label class="">Salary :</label>
+                                            <input class="form-control" id="Salary" type="text">
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="col-5">
-                                    <div class="form-group">
-                                        <label>Customer Name:</label>
-                                        <input class="form-control" id="Cus_Name" type="text">
-                                    </div>
-                                </div>
-                                <div class="col-6">
-                                    <div class="form-group">
-                                        <label class="">Address:</label>
-                                        <input class="form-control" id="Address" type="text">
-                                    </div>
-                                </div>
-                                <div class="col-5">
-                                    <div class="form-group">
-                                        <label class="">Salary :</label>
-                                        <input class="form-control" id="Salary" type="text">
-                                    </div>
-                                </div>
-                            </div>
+
+                            </form>
+                        </div>
+                    </div>
+                    <div class="row mt-3" style=" margin-left: 20px">
+                        <button class="btn btn-success col-12 col-sm-auto" id="btnAddToCustomerTable" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            Add
+                        </button>
+
+
+                        <button class="btn btn-warning col-12 col-sm-auto" id="btnUpdateCustomer" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            Update
+                        </button>
+
+                        <button class="btn btn-primary col-12 col-sm-auto" id="btnGetCustomer" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            GetAll
+                        </button>
+                        <button class="btn btn-danger col-12 col-sm-auto mt-1" id="btnDeleteCustomer" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            Delete
+                        </button>
+                        <button class="btn btn-dark col-12 col-sm-auto mt-1" id="btnClearCustomer" type="button"
+                                style="width: 100px;margin-right: 20px">
+                            Clear
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <div class="col-lg-6 mt-lg-0 mt-5  " id="div_02"
+                     style="border: 2px solid black; border-radius: 10px;height: 150px;">
+                    <div style="margin-bottom: 130px">
+                        <h3 style="margin: 20px;">Search Customer Here</h3>
+                        <form class="d-flex" role="search" style="margin: 20px">
+                            <input class="form-control me-2" type="search" id="searchCustomerField"
+                                   placeholder="Input CustomerId"
+                                   aria-label="Search" style="width:500px; background-color:#63C228">
+                            <button class="btn btn-outline-success" id="customerSearchbtn" type="submit"
+                                    style="width:100px; margin-right: 10px">Search
+                            </button>
+                            <button class="btn btn-outline-danger" id="customerSearchClearBtn" type="submit"
+                                    style="width:100px;">clear
+                            </button>
 
                         </form>
                     </div>
-                </div>
-                <div class="form-group text-right mt-3" >
-                    <button class="btn btn-success col-12 col-sm-auto" id="btnAddToTable" type="button" style="width: 100px">
-                        Add
-                    </button>
-                </div>
-            </div>
 
-            <div class="col-lg-6 mt-lg-0 mt-5  " id="div_02"
-                 style="border: 2px solid black; border-radius: 10px;height: 150px;">
-                <div style="margin-bottom: 130px">
-                    <h3 style="margin: 20px;">Search Customer Here</h3>
-                    <form class="d-flex" role="search" style="margin: 20px">
-                        <input class="form-control me-2" type="search" placeholder="Input Nic,Name,Address"
-                               aria-label="Search" style="width:500px; background-color:#63C228">
-                        <button class="btn btn-outline-success" type="submit" style="width:200px;">Search</button>
-                    </form>
-                </div>
+                    <div class="col-lg-6 mt-lg-0 mt-3 ">
+                        <table class="table table-hover table-bordered table-striped"
+                               style="width: 650px;height: auto;background-color: #0f5132;" id="div_03">
+                            <thead>
+                            <tr>
+                                <th id="cusId">Customer Id</th>
+                                <th id="cusName">Customer Name</th>
+                                <th id="cusAddress"> Address</th>
+                                <th id="cusSalary"> Salary</th>
+                            </tr>
+                            </thead>
+                            <tbody class="table-light" id="tblCustomer">
+                            <tr>
+                                <!--            <th scope="row">1</th>-->
+                                <td>C001</td>
+                                <td>Kamal Perera</td>
+                                <td>Matara</td>
+                                <td>55000.00</td>
 
-                <div class="col-lg-6 mt-lg-0 mt-3 " >
-                    <table class="table table-hover table-bordered table-striped"
-                           style="width: 650px;height: auto;background-color: #0f5132;" id="div_03">
-                        <thead>
-                        <tr>
-                            <th>Customer Nic</th>
-                            <th>Customer Name</th>
-                            <th> Address</th>
-                            <th> Salary</th>
-                        </tr>
-                        </thead>
-                        <tbody class="table-light">
-                        <tr>
-                            <!--            <th scope="row">1</th>-->
-                            <td>975632124v</td>
-                            <td>Kamal Perera</td>
-                            <td>Matara</td>
-                            <td>55000.00</td>
+                            </tr>
+                            <tr style="background-color: white">
+                                <!--            <th scope="row">1</th>-->
+                                <td>C002</td>
+                                <td>Nimali Perera</td>
+                                <td>Colombo</td>
+                                <td>100000.00</td>
 
-                        </tr>
-                        <tr style="background-color: white">
-                            <!--            <th scope="row">1</th>-->
-                            <td>755632124v</td>
-                            <td>Nimali Perera</td>
-                            <td>Colombo</td>
-                            <td>100000.00</td>
+                            </tr>
 
-                        </tr>
-
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                    </div>
                 </div>
             </div>
+
         </div>
-
     </div>
-
 
 </main>
 <script src="../../../../Assests/lib/js/bootstrap.js"></script>

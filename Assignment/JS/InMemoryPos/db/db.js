@@ -4,8 +4,8 @@ var customerDB = [
 
 ];
 
-// var itemDB = [
-//     {itemCode:"I00-001",description:"Lux",unitPrice: 145.00,qty: 100},
-//     {itemCode:"I00-002",description:"Daal",unitPrice: 200.00,qty: 200}
-// ];
+var itemDB = [
+    {code:"I001",description:"Lux",unitPrice: 145.00,qty: 100},
+    {code:"I002",description:"Daal",unitPrice: 200.00,qty: 200}
+];
 // var orderDB = [];
