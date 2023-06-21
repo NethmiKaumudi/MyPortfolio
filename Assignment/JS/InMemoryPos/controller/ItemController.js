@@ -70,13 +70,13 @@ function saveItem() {
     //check customer is exists or not?
     if (searchItem(code.trim()) == undefined) {
 
-        //if the customer is not available then add him to the array
+        //if the item is not available then add him to the array
         let description = $("#txtItemDescription").val();
         let unitPrice = $("#txtItemPrice").val();
         let qty = $("#txtQTYOnHand").val();
 
         //by using this one we can create a new object using
-        //the customer model with same properties
+        //the item model with same properties
         let newItem = Object.assign({}, item);
         newItem.code = code;
         newItem.description = description;

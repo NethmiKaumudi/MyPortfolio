@@ -5,6 +5,16 @@
     /*overflow: hidden;*/
 }
 
+#loader {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black url("/Assests/gif/loading-3692_512.gif") no-repeat center;
+    z-index: 99999;
+
+
+}
+
 /*header*/
 header {
     width: 100%;
