@@ -262,28 +262,27 @@ main > .section_07 {
 
 }
 
-.multiText {
-
-    position: absolute;
-    top: 10%;
-    left: 100%;
-    width: 65%;
-    font-size: 28px;
+.section_01 > aside > h3:nth-child(3) .multiText {
+    /*position: absolute;*/
+    /*top: 10%;*/
+    /*left: 100%;*/
+    /*width: 65%;*/
+    /*font-size: 28px;*/
     color: gold;
 }
 
 
 .section_01 > aside > p:nth-child(4) {
     position: absolute;
-    top: 51%;
+    top: 45%;
     left: 10.5%;
     font-size: 27px;
 }
 
 .section_01 > aside > button:nth-child(5) {
     position: absolute;
-    top: 65%;
-    left: 10.5%;
+    top: 60%;
+    left: 10.8%;
     border: 2px solid white;
     /*background: linear-gradient(to right, gold, white);*/
     background-color: black;
@@ -1136,36 +1135,34 @@ footer > .ad_03 > div > a > img:hover {
     .section_01 > aside > h3:nth-child(3) {
         position: absolute;
         top: 35%;
-        left: 6.5%;
-    }
-
-    .section_01 > aside > h1:nth-child(4) {
-        position: absolute;
-        top: 35%;
-        left: 21.5%;
-        color: gold;
-    }
-
-    .section_01 > aside > h1:nth-child(5) {
-        position: absolute;
-        top: 42%;
-        left: 9%;
-        color: gold;
+        left: 5.5%;
         font-size: 28px;
 
     }
 
-    .section_01 > aside > p:nth-child(6) {
-        position: absolute;
-        top: 53%;
-        left: 9%;
-        font-size: 23px;
+    .section_01 > aside > h3:nth-child(3) .multiText {
+        /*position: absolute;*/
+        /*top: 10%;*/
+        /*left: 100%;*/
+        /*width: 65%;*/
+        /*font-size: 28px;*/
+        color: gold;
     }
 
-    .section_01 > aside > button:nth-child(7) {
+
+
+
+    .section_01 > aside > p:nth-child(4) {
         position: absolute;
-        top: 63%;
-        left: 9%;
+        top: 45%;
+        left: 9.5%;
+        font-size: 16px;
+    }
+
+    .section_01 > aside > button:nth-child(5) {
+        position: absolute;
+        top: 60%;
+        left: 9.5%;
         border: 2px solid white;
         /*background: linear-gradient(to right, gold, white);*/
         background-color: black;
@@ -1706,7 +1703,7 @@ footer > .ad_03 > div > a > img:hover {
         position: absolute;
         top: 21%;
         bottom: 0;
-        left: -28%;
+        left: -33%;
         /*right: 0;*/
         text-align: center;
         margin: auto;
@@ -2164,14 +2161,14 @@ footer > .ad_03 > div > a > img:hover {
     /*sec01*/
     .section_01 > aside > h3:nth-child(1) {
         position: absolute;
-        top: 4%;
+        top: 5%;
         left: 2%;
         font-size: 24px;
     }
 
     .section_01 > aside > h1:nth-child(2) {
         position: absolute;
-        top: 10%;
+        top: 11%;
         left: 8%;
         font-size: 30px;
         transition: background-color 0.3s ease;
@@ -2186,40 +2183,31 @@ footer > .ad_03 > div > a > img:hover {
 
     .section_01 > aside > h3:nth-child(3) {
         position: absolute;
-        top: 16.5%;
+        top: 17.5%;
         left: 2%;
         font-size: 20px;
 
     }
 
-    .section_01 > aside > h1:nth-child(4) {
-        position: absolute;
-        top: 17.2%;
-        left: 30%;
+    .section_01 > aside > h3:nth-child(3) .multiText {
+        /*position: absolute;*/
+        /*top: 10%;*/
+        /*left: 100%;*/
+        /*width: 65%;*/
+        /*font-size: 28px;*/
         color: gold;
-        font-size: 25px;
-
     }
 
-    .section_01 > aside > h1:nth-child(5) {
+    .section_01 > aside > p:nth-child(4) {
         position: absolute;
-        top: 23%;
-        left: 8%;
-        color: gold;
-        font-size: 25px;
-
-    }
-
-    .section_01 > aside > p:nth-child(6) {
-        position: absolute;
-        top: 32%;
+        top: 28%;
         left: 8%;
         font-size: 18px;
     }
 
-    .section_01 > aside > button:nth-child(7) {
+    .section_01 > aside > button:nth-child(5) {
         position: absolute;
-        top: 40%;
+        top: 38%;
         left: 27%;
         border: 2px solid white;
         /*background: linear-gradient(to right, gold, white);*/
