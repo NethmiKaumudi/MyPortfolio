@@ -9,3 +9,4 @@ var itemDB = [
     {code:"I002",description:"Daal",unitPrice: 200.00,qty: 200}
 ];
 var orderDB = [];
+var purchaseOrderDetailsDB=[];

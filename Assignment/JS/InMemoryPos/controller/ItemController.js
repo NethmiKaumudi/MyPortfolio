@@ -133,10 +133,10 @@ function deleteItem(code) {
 }
 
 function searchItem(code) {
-    return itemDB.find(function (item) {
+    return itemDB.find(function (itemDB) {
         //if the search code match with item record
         //then return that object
-        return item.code == code;
+        return itemDB.code == code;
     });
 }
 
@@ -161,20 +161,51 @@ function updateItem(code) {
         }
     }
     //Search item from input field
-    $('#itemSearchbtn').click(function () {
-        var searchValue = $('#searchItemField').val();
-
-        $('#itemTable tbody tr').each(function () {
-            var code = $(this).find('td:first').text();
-
-            if (code.includes(searchValue)) {
-                $(this).show();
-            } else {
-                $(this).hide();
-            }
+    // $("#itemSearchbtn").click(function () {
+    //     let x = $("#searchItemField").val();
+    //     item.filter(function (e) {
+    //         if (e.code === x) {
+    //             $("#tblItem").empty();
+    //             let tableBody = $("#tblItem");
+    //             let tr = `<tr>
+    //                 <td>${e.code}</td>
+    //                 <td>${e.description}</td>
+    //                 <td>${e.unitPrice}</td>
+    //                 <td>${e.qty}</td>
+    //               </tr>`;
+    //             tableBody.append(tr);
+    //             updateItem(code);
+    //             deleteItem(code);
+    //         } else {
+    //             alert("This item code does not match");
+    //         }
+    //     });
+    // });
+    $("#itemSearchbtn").click(function () {
+        let x = $("#searchItemField").val();
+        let matchingItems = itemDB.filter(function (e) {
+            return e.code === x;
         });
-    });
 
+        if (matchingItems.length > 0) {
+            $("#tblItem").empty();
+            let tableBody = $("#tblItem");
+
+            matchingItems.forEach(function (e) {
+                let tr = `<tr>
+        <td>${e.code}</td>
+        <td>${e.description}</td>
+        <td>${e.unitPrice}</td>
+        <td>${e.qty}</td>
+      </tr>`;
+                tableBody.append(tr);
+                updateItem(e.code);
+                deleteItem(e.code);
+            });
+        } else {
+            alert("No matching items found for the provided code");
+        }
+    });
 
     $("#itemSearchClearBtn").click(function () {
         $("#searchItemField").val("");

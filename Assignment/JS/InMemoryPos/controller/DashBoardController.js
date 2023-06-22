@@ -64,6 +64,9 @@ document.getElementById("home").addEventListener("click", function () {
     document.getElementById("customerContent").style.display = 'none';
     document.getElementById("itemContent").style.display = 'none';
     document.getElementById("orderContent").style.display = 'none';
+    setCustomerCount();
+    setItemCount();
+    setOrderCount();
 })
 document.getElementById("customer").addEventListener("click", function () {
     document.getElementById("homeContent").style.display = 'none';

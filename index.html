@@ -20,12 +20,11 @@
     <!--    <meta http-equiv="refresh" content="3">-->
     <link rel="icon" href="nk.png">
     <link rel="stylesheet" href="Assests/CSS%20Files/Index.css">
-
     <!-- this is for skipping link from the bot -->
     <!-- <link rel="canonical" href="https://ijse.lk"> -->
     <link href="Assests/fontawesome-free-6.4.0-web/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="Assests/CSS Files/normalize.css">
-
+    <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
 </head>
 
 
@@ -62,9 +61,7 @@
         <aside>
             <h3>Hello, It's me</h3>
             <h1>Nethmi Kaumudi</h1>
-            <h3>And I'm a</h3>
-            <h1>Software Developer</h1>
-            <h1>Project Manager</h1>
+            <h3>And I'm a <span class="multiText">    </span></h3>
             <p><strong>I am a software developer with experience of 1+.</strong></p>
             <button class="btn"><a href="others/TakeHomeAssignment01.pdf" download="cv.pdf">Download CV</a></button>
         </aside>
@@ -355,7 +352,18 @@
     function loading() {
         preLoader.style.display = 'none';
     }
+
+    var typed = new Typed(".multiText", {
+        strings: ["FullStack Developer", "Project Manager", "Web Developer"],
+        typeSpeed: 100,
+        backSpeed: 100,
+        backDelay: 1000,
+        loop: true
+    });
+
+
 </script>
+
 </body>
 
 </html>
