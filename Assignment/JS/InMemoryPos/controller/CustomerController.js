@@ -161,27 +161,33 @@ function updateCustomer(id) {
             getAllCustomers();
         }
     }
-    //Search customer from input field
-    $('#customerSearchbtn').click(function (){
-            var searchValue = $('#searchCustomerField').val();
-
-            $('#div_03 tbody tr').each(function() {
-                var id = $(this).find('td:first').text();
-
-                if (id.includes(searchValue)) {
-                    $(this).show();
-                } else {
-                    $(this).hide();
-                }
-            });
-        });
-
-
-    $("#customerSearchClearBtn").click(function () {
-        $("#searchCustomerField").val("");
-        getAllCustomers();
-    });
-
 }
+
+//Search customer from input field
+$('#customerSearchbtn').click(function () {
+    console.log("working")
+    var searchValue = $('#searchCustomerField').val();
+
+    $('#div_03 tbody tr').each(function () {
+        var id = $(this).find('td:first').text();
+
+        console.log(searchValue)
+        console.log(id)
+        console.log(id.includes(searchValue))
+        if (id.includes(searchValue)) {
+            $(this).show();
+        } else {
+            $(this).hide();
+        }
+    });
+});
+
+
+$("#customerSearchClearBtn").click(function () {
+    $("#searchCustomerField").val("");
+    getAllCustomers();
+});
+
+
 
 

@@ -71,9 +71,22 @@ function clearItemSection() {
     $("#txtQty").val("");
 }
 
+$("#txtQty").keyup(function () {
+    let qty = $("#txtQty").val();
+    if (Number($("#txtQty").val()) !== 0 && $("#txtQty").val() !== "") {
+        if (Number(qty) <= Number($("#QTY").val())) {
+            $("#txtQty").css("border", 'solid green 2px');
+        } else {
+            $("#txtQty").css("border", 'solid red 2px');
+        }
+    } else {
+        $("#txtQty").css("border", 'solid red 2px');
+    }
+});
+
 function checkOrderAndItem(itemQty) {
     for (let j = 0; j < orderDB.length; j++) {
-        if (orderDB[j].orderId === $("#txtOrderID").val() && orderDB[j].code === $("#ItemCode").val()) {
+        if (orderDB[j].orderId === $("#txtOrderID").val() && orderDB[j].code === $("#selectItemCode").val()) {
             orderDB[j].itemQty = Number(orderDB[j].itemQty) + Number(itemQty);
             console.log(orderDB[j].itemQty)
             return true;
@@ -169,11 +182,15 @@ function addToCart() {
 function updateItemQTY(code, itemQty) {
     for (let i = 0; i < itemDB.length; i++) {
         if (itemDB[i].code === code) {
-            itemDB[i].qty = Number(itemDB[i].qty) - Number(itemQty);
-            searchItem(code).qty = itemDB[i].qty;
+            console.log("Number(itemDB[i].qty)", Number(itemDB[i].qty))
+            console.log("Number(itemQty)", Number(itemQty));
+            itemDB[i].qty = Number(itemDB[i].qty) - Number(itemQty); // 100 - 10
+            console.log("itemDB[i].qty", itemDB[i].qty) // 90
+            // searchItem(code).qty = itemDB[i].qty;
+
         }
     }
-    searchItem(code);
+    // searchItem(code);
     clearItemSection();
 }
 
@@ -212,9 +229,9 @@ $("#Discount,#Cash").keydown(function (event) {
 
 
 function setBalance(cash, discount) {
-    let total = ($("#Total").text() - ($("#Total").text() * (discount / 100)));
+    let total = ($("#Total").val() - ($("#Total").val() * (discount / 100)));
     let balance = cash - total;
-    console.log(total);
+    console.log("total", total);
     if (balance >= 0) {
         $("#Balance").val(balance);
         $("#Balance").css("border", "solid 2px green");

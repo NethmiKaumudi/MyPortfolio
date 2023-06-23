@@ -1,11 +1,11 @@
 function setCustomerCount() {
-    $("#customerCount").val(customerDB.length);
+    $("#customerCount")[0].innerHTML = customerDB.length;
 }
 
 function setItemCount() {
-    $("#itemCount").val(itemDB.length);
+    $("#itemCount")[0].innerHTML = itemDB.length;
 }
 
 function setOrderCount() {
-    $("#orderCount").val(orderDB.length);
+    $("#orderCount")[0].innerHTML = orderDB.length;
 }

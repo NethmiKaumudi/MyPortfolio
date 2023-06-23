@@ -59,6 +59,10 @@ document.getElementById("customerContent").style.display = 'none';
 document.getElementById("itemContent").style.display = 'none';
 document.getElementById("orderContent").style.display = 'none';
 
+setCustomerCount();
+setItemCount();
+setOrderCount();
+
 document.getElementById("home").addEventListener("click", function () {
     document.getElementById("homeContent").style.display = 'block';
     document.getElementById("customerContent").style.display = 'none';

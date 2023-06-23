@@ -160,58 +160,53 @@ function updateItem(code) {
             getAllItems()
         }
     }
-    //Search item from input field
-    // $("#itemSearchbtn").click(function () {
-    //     let x = $("#searchItemField").val();
-    //     item.filter(function (e) {
-    //         if (e.code === x) {
-    //             $("#tblItem").empty();
-    //             let tableBody = $("#tblItem");
-    //             let tr = `<tr>
-    //                 <td>${e.code}</td>
-    //                 <td>${e.description}</td>
-    //                 <td>${e.unitPrice}</td>
-    //                 <td>${e.qty}</td>
-    //               </tr>`;
-    //             tableBody.append(tr);
-    //             updateItem(code);
-    //             deleteItem(code);
-    //         } else {
-    //             alert("This item code does not match");
-    //         }
-    //     });
-    // });
-    $("#itemSearchbtn").click(function () {
-        let x = $("#searchItemField").val();
-        let matchingItems = itemDB.filter(function (e) {
-            return e.code === x;
-        });
+}
 
-        if (matchingItems.length > 0) {
-            $("#tblItem").empty();
-            let tableBody = $("#tblItem");
+//Search item from input field
+// $("#itemSearchbtn").click(function () {
+//     let x = $("#searchItemField").val();
+//     item.filter(function (e) {
+//         if (e.code === x) {
+//             $("#tblItem").empty();
+//             let tableBody = $("#tblItem");
+//             let tr = `<tr>
+//                 <td>${e.code}</td>
+//                 <td>${e.description}</td>
+//                 <td>${e.unitPrice}</td>
+//                 <td>${e.qty}</td>
+//               </tr>`;
+//             tableBody.append(tr);
+//             updateItem(code);
+//             deleteItem(code);
+//         } else {
+//             alert("This item code does not match");
+//         }
+//     });
+// });
+$('#itemSearchbtn').click(function () {
+    console.log("working")
+    var searchValue = $('#searchItemField').val();
 
-            matchingItems.forEach(function (e) {
-                let tr = `<tr>
-        <td>${e.code}</td>
-        <td>${e.description}</td>
-        <td>${e.unitPrice}</td>
-        <td>${e.qty}</td>
-      </tr>`;
-                tableBody.append(tr);
-                updateItem(e.code);
-                deleteItem(e.code);
-            });
+    $('#tableItem tbody tr').each(function () {
+        var code = $(this).find('td:first').text();
+
+        console.log(searchValue)
+        console.log(code)
+        console.log(code.includes(searchValue))
+        if (code.includes(searchValue)) {
+            $(this).show();
         } else {
-            alert("No matching items found for the provided code");
+            $(this).hide();
         }
     });
+});
 
-    $("#itemSearchClearBtn").click(function () {
-        $("#searchItemField").val("");
-        getAllItems();
-    });
 
-}
+$("#itemSearchClearBtn").click(function () {
+    $("#searchItemField").val("");
+    getAllItems();
+});
+
+
 
 
