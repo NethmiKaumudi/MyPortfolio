@@ -241,9 +241,9 @@ main > .section_07 {
 
 .section_01 > aside > h1:nth-child(2) {
     position: absolute;
-    top: 25%;
+    top: 26%;
     left: 10.5%;
-    font-size: 45px;
+    font-size: 43px;
     transition: background-color 0.3s ease;
 
 
@@ -256,8 +256,8 @@ main > .section_07 {
 
 .section_01 > aside > h3:nth-child(3) {
     position: absolute;
-    top: 34%;
-    left: 8.8%;
+    top: 34.5%;
+    left: 8.7%;
     font-size: 31px;
 
 }
@@ -267,7 +267,7 @@ main > .section_07 {
     /*top: 10%;*/
     /*left: 100%;*/
     /*width: 65%;*/
-    /*font-size: 28px;*/
+    font-size: 36px;
     color: gold;
 }
 
@@ -806,59 +806,59 @@ main > .section_07 {
 
 /*.......................................*/
 /*Section 07*/
-.box {
-    position: relative;
-    top: -10%;
-    height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-}
+/*.box {*/
+/*    position: relative;*/
+/*    top: -10%;*/
+/*    height: 80vh;*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    overflow: hidden;*/
+/*}*/
 
-.content {
-    position: relative;
-    width: 230px;
-    height: 230px;
-    transform-style: preserve-3d;
-    animation: animate 30s linear infinite;
-}
+/*.content {*/
+/*    position: relative;*/
+/*    width: 230px;*/
+/*    height: 230px;*/
+/*    transform-style: preserve-3d;*/
+/*    animation: animate 30s linear infinite;*/
+/*}*/
 
-@keyframes animate {
-    0% {
-        transform: perspective(1000px) rotateY(0deg);
-    }
-    100% {
-        transform: perspective(1000px) rotateY(-370deg);
-    }
-}
+/*@keyframes animate {*/
+/*    0% {*/
+/*        transform: perspective(1000px) rotateY(0deg);*/
+/*    }*/
+/*    100% {*/
+/*        transform: perspective(1000px) rotateY(-370deg);*/
+/*    }*/
+/*}*/
 
-.content span {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    transform-style: preserve-3d;
-    transform-origin: center;
-    transform: rotateY(calc(var(---i) * 45deg)) translateZ(370px);
-}
+/*.content span {*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    transform-style: preserve-3d;*/
+/*    transform-origin: center;*/
+/*    transform: rotateY(calc(var(---i) * 45deg)) translateZ(370px);*/
+/*}*/
 
-.content span img {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
-    object-fit: cover;
-    border-radius: 20px;
-    transition: 1.5s;
-}
+/*.content span img {*/
+/*    position: absolute;*/
+/*    width: 100%;*/
+/*    height: 100%;*/
+/*    left: 0;*/
+/*    top: 0;*/
+/*    object-fit: cover;*/
+/*    border-radius: 20px;*/
+/*    transition: 1.5s;*/
+/*}*/
 
-.content span img:hover {
-    transform: translateY(20px) scale(1.1);
-    cursor: pointer;
-}
+/*.content span img:hover {*/
+/*    transform: translateY(20px) scale(1.1);*/
+/*    cursor: pointer;*/
+/*}*/
 
 /*.......................................*/
 /*footer*/
@@ -1005,6 +1005,61 @@ footer > .ad_03 > div > a > img:hover {
         }
 
     }
+    /*sec07*/
+    .box {
+        position: relative;
+        top: -10%;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .content {
+        position: relative;
+        width: 230px;
+        height: 230px;
+        transform-style: preserve-3d;
+        animation: animate 30s linear infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        100% {
+            transform: perspective(1000px) rotateY(-370deg);
+        }
+    }
+
+    .content span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform-style: preserve-3d;
+        transform-origin: center;
+        transform: rotateY(calc(var(---i) * 45deg)) translateZ(370px);
+    }
+
+    .content span img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        border-radius: 20px;
+        transition: 1.5s;
+    }
+
+    .content span img:hover {
+        transform: translateY(20px) scale(1.1);
+        cursor: pointer;
+    }
+
 }
 
 /*Responsive*/
@@ -1097,6 +1152,60 @@ footer > .ad_03 > div > a > img:hover {
         }
 
     }
+    /*sec07*/
+    .box {
+        position: relative;
+        top: -10%;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .content {
+        position: relative;
+        width: 230px;
+        height: 230px;
+        transform-style: preserve-3d;
+        animation: animate 30s linear infinite;
+    }
+
+    @keyframes animate {
+        0% {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        100% {
+            transform: perspective(1000px) rotateY(-370deg);
+        }
+    }
+
+    .content span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform-style: preserve-3d;
+        transform-origin: center;
+        transform: rotateY(calc(var(---i) * 45deg)) translateZ(370px);
+    }
+
+    .content span img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        border-radius: 20px;
+        transition: 1.5s;
+    }
+
+    .content span img:hover {
+        transform: translateY(20px) scale(1.1);
+        cursor: pointer;
+    }
 }
 
 /*Normal Laptop*/
@@ -1135,8 +1244,8 @@ footer > .ad_03 > div > a > img:hover {
     .section_01 > aside > h3:nth-child(3) {
         position: absolute;
         top: 35%;
-        left: 5.5%;
-        font-size: 28px;
+        left: 6.5%;
+        font-size: 27px;
 
     }
 
@@ -1145,18 +1254,16 @@ footer > .ad_03 > div > a > img:hover {
         /*top: 10%;*/
         /*left: 100%;*/
         /*width: 65%;*/
-        /*font-size: 28px;*/
+        font-size: 30px;
         color: gold;
     }
 
 
-
-
     .section_01 > aside > p:nth-child(4) {
         position: absolute;
-        top: 45%;
-        left: 9.5%;
-        font-size: 16px;
+        top: 46%;
+        left: 9.2%;
+        font-size: 23px;
     }
 
     .section_01 > aside > button:nth-child(5) {
@@ -1465,6 +1572,42 @@ footer > .ad_03 > div > a > img:hover {
         transform-style: preserve-3d;
         animation: animate 30s linear infinite;
     }
+
+    @keyframes animate {
+        0% {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        100% {
+            transform: perspective(1000px) rotateY(-370deg);
+        }
+    }
+
+    .content span {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        transform-style: preserve-3d;
+        transform-origin: center;
+        transform: rotateY(calc(var(---i) * 45deg)) translateZ(370px);
+    }
+
+    .content span img {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        border-radius: 20px;
+        transition: 1.5s;
+    }
+
+    .content span img:hover {
+        transform: translateY(20px) scale(1.1);
+        cursor: pointer;
+    }
 }
 
 /*Tablet 425-768*/
@@ -1480,14 +1623,14 @@ footer > .ad_03 > div > a > img:hover {
     .section_01 > aside > h3:nth-child(1) {
         position: absolute;
         top: 20%;
-        left: 6%;
+        left: 0.8%;
         font-size: 23px;
     }
 
     .section_01 > aside > h1:nth-child(2) {
         position: absolute;
-        top: 26%;
-        left: 9.2%;
+        top: 27%;
+        left: 4.1%;
         font-size: 31px;
         transition: background-color 0.3s ease;
 
@@ -1499,39 +1642,32 @@ footer > .ad_03 > div > a > img:hover {
         /*color: rgba(0%, 0%, 0%, 0.1%);*/
     }
 
+
     .section_01 > aside > h3:nth-child(3) {
         position: absolute;
-        top: 32%;
-        left: 6%;
+        top: 34%;
+        left: 0.8%;
         font-size: 23px;
 
     }
 
-    .section_01 > aside > h1:nth-child(4) {
-        position: absolute;
-        top: 33%;
-        left: 23%;
+    .section_01 > aside > h3:nth-child(3) .multiText {
+        /*position: absolute;*/
+        /*top: 10%;*/
+        /*left: 100%;*/
+        /*width: 65%;*/
+        font-size: 30px;
         color: gold;
-        font-size: 27px;
     }
 
-    .section_01 > aside > h1:nth-child(5) {
+    .section_01 > aside > p:nth-child(4) {
         position: absolute;
-        top: 40%;
-        left: 9.2%;
-        color: gold;
-        font-size: 27px;
-
+        top: 46%;
+        left: 4.1%;
+        font-size: 18px;
     }
 
-    .section_01 > aside > p:nth-child(6) {
-        position: absolute;
-        top: 51%;
-        left: 9.5%;
-        font-size: 15.5px;
-    }
-
-    .section_01 > aside > button:nth-child(7) {
+    .section_01 > aside > button:nth-child(5) {
         position: absolute;
         top: 60%;
         left: 9.3%;
@@ -1539,7 +1675,7 @@ footer > .ad_03 > div > a > img:hover {
         /*background: linear-gradient(to right, gold, white);*/
         background-color: black;
         color: black;
-        padding: 8px 20px;
+        padding: 10px 20px;
         text-align: center;
         text-decoration: none;
         display: inline-block;
@@ -2084,8 +2220,8 @@ footer > .ad_03 > div > a > img:hover {
 
     .content {
         position: relative;
-        width: 165px;
-        height: 165px;
+        width: 185px;
+        height: 185px;
         transform-style: preserve-3d;
         animation: animate 30s linear infinite;
     }
@@ -2097,7 +2233,6 @@ footer > .ad_03 > div > a > img:hover {
         left: 0;
         top: 0;
         margin-right: 5px;
-
         transform-style: preserve-3d;
         transform-origin: center;
         transform: rotateY(calc(var(---i) * 45deg)) translateZ(370px);
@@ -2114,6 +2249,22 @@ footer > .ad_03 > div > a > img:hover {
         transition: 1.5s;
         margin-right: 5px;
 
+    }
+
+
+    @keyframes animate {
+        0% {
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        100% {
+            transform: perspective(1000px) rotateY(-370deg);
+        }
+    }
+
+
+    .content span img:hover {
+        transform: translateY(20px) scale(1.1);
+        cursor: pointer;
     }
 }
 
@@ -2170,7 +2321,7 @@ footer > .ad_03 > div > a > img:hover {
         position: absolute;
         top: 11%;
         left: 8%;
-        font-size: 30px;
+        font-size: 28px;
         transition: background-color 0.3s ease;
 
 
@@ -2183,7 +2334,7 @@ footer > .ad_03 > div > a > img:hover {
 
     .section_01 > aside > h3:nth-child(3) {
         position: absolute;
-        top: 17.5%;
+        top: 15%;
         left: 2%;
         font-size: 20px;
 
@@ -2194,20 +2345,20 @@ footer > .ad_03 > div > a > img:hover {
         /*top: 10%;*/
         /*left: 100%;*/
         /*width: 65%;*/
-        /*font-size: 28px;*/
+        font-size: 30px;
         color: gold;
     }
 
     .section_01 > aside > p:nth-child(4) {
         position: absolute;
-        top: 28%;
+        top: 26%;
         left: 8%;
         font-size: 18px;
     }
 
     .section_01 > aside > button:nth-child(5) {
         position: absolute;
-        top: 38%;
+        top: 35%;
         left: 27%;
         border: 2px solid white;
         /*background: linear-gradient(to right, gold, white);*/
@@ -2230,7 +2381,7 @@ footer > .ad_03 > div > a > img:hover {
     .section_01 > .sub_section {
         position: absolute;
         top: 55%;
-        left: 10%;
+        left: 15%;
         height: 250px;
         width: 360px;
         background-image: url("../images/hacker girl.jpg");
@@ -2528,7 +2679,7 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     .service .div_01 {
-        height: 84%;
+        height: 80%;
         width: 80%;
         margin-top: 30px;
         border: 3px solid #eeeeee;
@@ -2700,13 +2851,14 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     .section_06 .h211 {
-        font-size: 20px;
+        font-size: 22px;
         margin-left: -180px;
+        margin-top: 35px;
 
     }
 
     .section_06 h2 {
-        margin-top: 25px;
+        margin-top: 35px;
         margin-left: -160px;
 
     }
@@ -2736,12 +2888,122 @@ footer > .ad_03 > div > a > img:hover {
         background-size: cover; /* Adjusts the background image to cover the entire container */
         filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
         transition: all 0.3s ease-in-out;
+        margin-top: 25px;
+
     }
 
     .section_06 section img:hover {
         transform: scale(1.2);
         cursor: pointer;
     }
+
+    /*sec07*/
+    .section_07 .box .content{
+        display: grid;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+        /*display: flex;*/
+    }
+
+    .section_07 .box .content span img {
+        width: 96%;
+        height:75%;
+        margin-top: 10px;
+        object-fit: cover;
+        border-radius: 10px;
+
+    }
+    .section_07 .box .content span:nth-child(1) img{
+        margin-left: 5px;
+    }
+    .section_07 .box .content span:nth-child(4) img{
+        width: 100%;
+        height:55%;
+        margin-top: 10px;
+        margin-left: 60px;
+    }
+    .section_07 .box .content span:nth-child(5) img{
+        width: 100%;
+        height:55%;
+        margin-top: 10px;
+
+        margin-left: 70px;
+    }
+    .section_07 .box .content span img:hover{
+        transform: scale(1.3);
+        z-index: 2;
+    }
+    /*footer*/
+    body > footer {
+        width: 100%;
+        height: 8vh;
+        background-color: white;
+        bottom: 0;
+        font-family: Cambria;
+    }
+
+    footer > .ad_01 {
+        color: black;
+        font-size: 20px;
+        position: relative;
+        margin-left: 40px;
+        margin-top: 20px;
+    }
+
+    footer > .ad_01 > a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+
+    footer > .ad_02 > a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+
+    footer > .ad_02 {
+        color: white;
+        font-size: 20px;
+        /*position: absolute;*/
+        /*left: 0;*/
+        /*bottom: 0;*/
+        position: relative;
+        margin-left: 40px;
+        margin-top: 10px;
+
+    }
+
+    footer > .ad_03 > div {
+        position: relative;
+        margin-left: 30px;
+        /*margin-top: 10px;*/
+        /*margin-left: 20px;*/
+        margin-top: 16px;
+
+
+    }
+
+    footer > .ad_03 > div > a {
+        display: inline-block;
+        /*margin-top: -px;*/
+        margin-right: 20px;
+
+
+    }
+
+    footer > .ad_03 > div > a > img {
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+        transition: all 0.3s ease-in-out;
+        border-radius: 100%;
+    }
+
+    footer > .ad_03 > div > a > img:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
+
 }
 
 /*medium mobile phone*/
@@ -2789,7 +3051,7 @@ footer > .ad_03 > div > a > img:hover {
     .section_01 > aside > h3:nth-child(1) {
         position: absolute;
         top: 4%;
-        left: 2%;
+        left: 1%;
         font-size: 24px;
     }
 
@@ -2808,42 +3070,34 @@ footer > .ad_03 > div > a > img:hover {
         /*color: rgba(0%, 0%, 0%, 0.1%);*/
     }
 
+
     .section_01 > aside > h3:nth-child(3) {
         position: absolute;
-        top: 16.5%;
-        left: 2%;
+        top: 15%;
+        left: 1%;
         font-size: 20px;
 
     }
 
-    .section_01 > aside > h1:nth-child(4) {
-        position: absolute;
-        top: 17.2%;
-        left: 30%;
+    .section_01 > aside > h3:nth-child(3) .multiText {
+        /*position: absolute;*/
+        /*top: 10%;*/
+        /*left: 100%;*/
+        /*width: 65%;*/
+        font-size: 26px;
         color: gold;
-        font-size: 25px;
-
     }
 
-    .section_01 > aside > h1:nth-child(5) {
+    .section_01 > aside > p:nth-child(4) {
         position: absolute;
-        top: 23%;
+        top: 25.5%;
         left: 8%;
-        color: gold;
-        font-size: 25px;
-
+        font-size: 16px;
     }
 
-    .section_01 > aside > p:nth-child(6) {
+    .section_01 > aside > button:nth-child(5) {
         position: absolute;
-        top: 32%;
-        left: 8%;
-        font-size: 18px;
-    }
-
-    .section_01 > aside > button:nth-child(7) {
-        position: absolute;
-        top: 40%;
+        top: 35%;
         left: 27%;
         border: 2px solid white;
         /*background: linear-gradient(to right, gold, white);*/
@@ -3167,14 +3421,14 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     .service .div_01 {
-        height: 84%;
-        width: 80%;
+        height: 80%;
+        width: 83%;
         margin-top: 30px;
         border: 3px solid #eeeeee;
         text-align: center;
         align-items: center;
         /*padding: 50px 25px;*/
-        margin-left: 40px;
+        margin-left: 38px;
         border-radius: 50px;
         margin-bottom: 20px;
         position: relative;
@@ -3183,14 +3437,14 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     .service .div_02 {
-        height: 96%;
-        width: 80%;
+        height: 98%;
+        width: 83%;
         margin-top: 30px;
         border: 4px solid #eeeeee;
         text-align: center;
         align-items: center;
         /*padding: 30px 25px;*/
-        margin-left: 40px;
+        margin-left: 38px;
         border-radius: 50px;
         position: relative;
         top: 6%;
@@ -3256,6 +3510,112 @@ footer > .ad_03 > div > a > img:hover {
         margin-left: 20%;
     }
 
+    /*sec07*/
+    .section_07 .box .content{
+        display: grid;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+        /*display: flex;*/
+    }
+
+    .section_07 .box .content span img {
+        width: 96%;
+        height:75%;
+        margin-top: 10px;
+        object-fit: cover;
+        border-radius: 10px;
+
+    }
+    .section_07 .box .content span:nth-child(1) img{
+        margin-left: 5px;
+    }
+    .section_07 .box .content span:nth-child(4) img{
+        width: 100%;
+        height:55%;
+        margin-top: 10px;
+        margin-left: 60px;
+    }
+    .section_07 .box .content span:nth-child(5) img{
+        width: 100%;
+        height:55%;
+        margin-top: 10px;
+
+        margin-left: 70px;
+    }
+    .section_07 .box .content span img:hover{
+        transform: scale(1.3);
+        z-index: 2;
+    }
+    /*footer*/
+    body > footer {
+        width: 100%;
+        height: 8vh;
+        background-color: white;
+        bottom: 0;
+        font-family: Cambria;
+    }
+
+    footer > .ad_01 {
+        color: black;
+        font-size: 20px;
+        position: relative;
+        margin-left: 15px;
+        margin-top: 20px;
+    }
+
+    footer > .ad_01 > a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+
+    footer > .ad_02 > a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+
+    footer > .ad_02 {
+        color: white;
+        font-size: 20px;
+        /*position: absolute;*/
+        /*left: 0;*/
+        /*bottom: 0;*/
+        position: relative;
+        margin-left: 15px;
+        margin-top: 15px;
+
+    }
+
+    footer > .ad_03 > div {
+        position: relative;
+        margin-left: 5px;
+        /*margin-top: 10px;*/
+        /*margin-left: 20px;*/
+        margin-top: 22px;
+
+
+    }
+
+    footer > .ad_03 > div > a {
+        display: inline-block;
+        /*margin-top: -px;*/
+        margin-right: 20px;
+
+
+    }
+
+    footer > .ad_03 > div > a > img {
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+        transition: all 0.3s ease-in-out;
+        border-radius: 100%;
+    }
+
+    footer > .ad_03 > div > a > img:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
 
 }
 
@@ -3647,5 +4007,113 @@ footer > .ad_03 > div > a > img:hover {
         margin-left: 20%;
     }
 
+    /*sec07*/
+    .section_07 .box .content{
+        display: grid;
+        grid-template-rows: 1fr 1fr ;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3px;
+        /*display: flex;*/
+    }
+
+    .section_07 .box .content span img {
+        width: 96%;
+        height:75%;
+        margin-top: 10px;
+        object-fit: cover;
+        border-radius: 10px;
+
+    }
+    .section_07 .box .content span:nth-child(1) img{
+        margin-left: 5px;
+    }
+    .section_07 .box .content span:nth-child(4) img{
+        width: 100%;
+        height:55%;
+        margin-top: 10px;
+        margin-left: 60px;
+    }
+    .section_07 .box .content span:nth-child(5) img{
+        width: 100%;
+        height:55%;
+        margin-top: 10px;
+
+        margin-left: 70px;
+    }
+    .section_07 .box .content span img:hover{
+        transform: scale(1.3);
+        z-index: 2;
+    }
+    /*footer*/
+    body > footer {
+        width: 100%;
+        height: 8vh;
+        background-color: white;
+        bottom: 0;
+        font-family: Cambria;
+    }
+
+    footer > .ad_01 {
+        color: black;
+        font-size: 20px;
+        position: relative;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    footer > .ad_01 > a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+
+    footer > .ad_02 > a {
+        text-decoration: none;
+        color: black;
+        font-size: 20px;
+    }
+
+    footer > .ad_02 {
+        color: white;
+        font-size: 20px;
+        /*position: absolute;*/
+        /*left: 0;*/
+        /*bottom: 0;*/
+        position: relative;
+        margin-left: 10px;
+        margin-top: 15px;
+
+    }
+
+    footer > .ad_03 > div {
+        position: relative;
+        margin-left: 5px;
+        /*margin-top: 10px;*/
+        /*margin-left: 20px;*/
+        margin-top: 22px;
+
+
+    }
+
+    footer > .ad_03 > div > a {
+        display: inline-block;
+        /*margin-top: -px;*/
+        margin-right: 20px;
+
+
+    }
+
+    footer > .ad_03 > div > a > img {
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+        transition: all 0.3s ease-in-out;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+    }
+
+    footer > .ad_03 > div > a > img:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
 
 }

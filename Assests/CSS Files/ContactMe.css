@@ -17,13 +17,15 @@
     position: relative;
 
 }
-.container h2:nth-child(1){
+
+.container h2:nth-child(1) {
     position: absolute;
     left: 11%;
     top: 30%;
     font-size: 40px;
 }
-.container h2:nth-child(2){
+
+.container h2:nth-child(2) {
     position: absolute;
     left: 15%;
     top: 40%;
@@ -31,12 +33,14 @@
     color: gold;
 
 }
-.container img{
+
+.container img {
     position: absolute;
     left: 20%;
     top: 50%;
     border-radius: 100%;
 }
+
 .container form {
     width: 680px;
     height: 400px;
@@ -70,11 +74,14 @@
     margin-bottom: 11px;
     background: none;
     border-bottom: 2px solid white;
+    color: white;
 }
-.container form input:hover{
+
+.container form input:hover {
     border-bottom: 2px solid gold;
 
 }
+
 .container form input::placeholder {
     color: white;
 }
@@ -110,10 +117,12 @@
 
 
 }
-.container form textarea:hover{
+
+.container form textarea:hover {
     border-bottom: 2px solid gold;
 
 }
+
 .container form #button {
     border: none;
     background: white;
@@ -124,19 +133,23 @@
     color: black;
     width: 100px;
 }
-.container form #button:hover{
+
+.container form #button:hover {
     opacity: 0.7;
     background: gold;
 }
+
+/*Normal Laptop*/
 @media all and (min-width: 768px) and (max-width: 1024px) {
 
-    .container h2:nth-child(1){
+    .container h2:nth-child(1) {
         position: absolute;
         left: 6%;
         top: 30%;
         font-size: 30px;
     }
-    .container h2:nth-child(2){
+
+    .container h2:nth-child(2) {
         position: absolute;
         left: 8%;
         top: 40%;
@@ -144,12 +157,14 @@
         color: gold;
 
     }
-    .container img{
+
+    .container img {
         position: absolute;
         left: 12%;
         top: 50%;
         border-radius: 100%;
     }
+
     .container form {
         width: 650px;
         height: 400px;
@@ -165,17 +180,19 @@
         top: 20%;
     }
 }
+
 /*Tablet 425-768*/
 @media all and (min-width: 425px) and (max-width: 768px) {
 
 
-    .container h2:nth-child(1){
+    .container h2:nth-child(1) {
         position: absolute;
         left: 4%;
         top: 35%;
         font-size: 30px;
     }
-    .container h2:nth-child(2){
+
+    .container h2:nth-child(2) {
         position: absolute;
         left: 5%;
         top: 45%;
@@ -183,14 +200,16 @@
         color: gold;
 
     }
-    .container img{
+
+    .container img {
         position: absolute;
         left: 17%;
         top: 55%;
         border-radius: 100%;
-        height: 60px;
-        width: 60px;
+        height: 90px;
+        width: 90px;
     }
+
     .container form {
         width: 500px;
         height: 350px;
@@ -226,10 +245,12 @@
         background: none;
         border-bottom: 2px solid white;
     }
-    .container form input:hover{
+
+    .container form input:hover {
         border-bottom: 2px solid gold;
 
     }
+
     .container form input::placeholder {
         color: white;
     }
@@ -265,10 +286,12 @@
 
 
     }
-    .container form textarea:hover{
+
+    .container form textarea:hover {
         border-bottom: 2px solid gold;
 
     }
+
     .container form #button {
         border: none;
         background: white;
@@ -279,8 +302,365 @@
         color: black;
         width: 90px;
     }
-    .container form #button:hover{
+
+    .container form #button:hover {
         opacity: 0.7;
         background: gold;
+    }
+}
+
+/*mobile large*/
+@media all and (min-width: 425px) and (max-width: 491px) {
+    .container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%), url("/Assests/images/hacker girl.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        position: relative;
+
+    }
+
+    .container h2:nth-child(1) {
+        position: absolute;
+        left: 11%;
+        top: 10%;
+        font-size: 40px;
+    }
+
+    .container h2:nth-child(2) {
+        position: absolute;
+        left: 15%;
+        top: 20%;
+        font-size: 40px;
+        color: gold;
+
+    }
+
+    .container img {
+        position: absolute;
+        left: 40%;
+        top: 30%;
+        border-radius: 100%;
+        height: 90px;
+        width: 90px;
+    }
+
+    .container form {
+        width: 400px;
+        height: 350px;
+        display: flex;
+        justify-content: center;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(9px);
+        flex-wrap: wrap;
+        position: absolute;
+        left: 3.5%;
+        top: 45%;
+    }
+
+    .container form h1 {
+        color: white;
+        font-weight: 500;
+        margin-top: 20px;
+        width: 400px;
+        text-align: center;
+    }
+
+    .container form input {
+        width: 185px;
+        height: 40px;
+        padding-left: 10px;
+        outline: none;
+        border: none;
+        font-size: 15px;
+        margin-bottom: 11px;
+        background: none;
+        border-bottom: 2px solid white;
+        color: white;
+    }
+
+    .container form input:hover {
+        border-bottom: 2px solid gold;
+
+    }
+
+    .container form input::placeholder {
+        color: white;
+    }
+
+    .container #Name,
+    .container #Email {
+        margin-left: 10px;
+    }
+
+    .container form h4 {
+        color: white;
+        font-weight: 400;
+        width: 400px;
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 15px;
+    }
+
+    .container form textarea {
+        background: none;
+        border: none;
+        border-bottom: 2px solid white;
+        color: white;
+        font-weight: 200;
+        font-size: 15px;
+        padding: 10px;
+        outline: none;
+        min-width: 380px;
+        max-width: 395px;
+        min-height: 70px;
+        max-height: 70px;
+        margin-left: 10px;
+        /*margin-top: 20px;*/
+
+
+    }
+}
+
+/*mobile medium*/
+@media all and (min-width: 375px) and (max-width: 425px){
+    .container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%), url("/Assests/images/hacker girl.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        position: relative;
+
+    }
+
+    .container h2:nth-child(1) {
+        position: absolute;
+        left: 11%;
+        top: 10%;
+        font-size: 30px;
+    }
+
+    .container h2:nth-child(2) {
+        position: absolute;
+        left: 15%;
+        top: 20%;
+        font-size: 30px;
+        color: gold;
+
+    }
+
+    .container img {
+        position: absolute;
+        left: 40%;
+        top: 28%;
+        border-radius: 100%;
+        height: 80px;
+        width: 80px;
+    }
+
+    .container form {
+        width: 350px;
+        height: 310px;
+        display: flex;
+        justify-content: center;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(9px);
+        flex-wrap: wrap;
+        position: absolute;
+        left: 3.5%;
+        top: 45%;
+    }
+
+    .container form h1 {
+        color: white;
+        font-weight: 400;
+        margin-top: 20px;
+        width: 400px;
+        text-align: center;
+    }
+
+    .container form input {
+        width: 163px;
+        height: 40px;
+        padding-left: 10px;
+        outline: none;
+        border: none;
+        font-size: 15px;
+        margin-bottom: 11px;
+        background: none;
+        border-bottom: 2px solid white;
+        color: white;
+    }
+
+    .container form input:hover {
+        border-bottom: 2px solid gold;
+
+    }
+
+    .container form input::placeholder {
+        color: white;
+    }
+
+    .container #Name,
+    .container #Email {
+        margin-left: 8px;
+    }
+
+    .container form h4 {
+        color: white;
+        font-weight: 400;
+        width: 370px;
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 15px;
+    }
+
+    .container form textarea {
+        background: none;
+        border: none;
+        border-bottom: 2px solid white;
+        color: white;
+        font-weight: 200;
+        font-size: 15px;
+        padding: 10px;
+        outline: none;
+        min-width: 335px;
+        max-width: 350px;
+        min-height: 60px;
+        max-height: 60px;
+        margin-left: 10px;
+        /*margin-top: 20px;*/
+
+
+    }
+}
+/*mobile small*/
+@media all and (min-width: 320px) and (max-width: 375px) {
+    .container {
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%), url("/Assests/images/hacker girl.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        position: relative;
+
+    }
+
+    .container h2:nth-child(1) {
+        position: absolute;
+        left: 11%;
+        top: 10%;
+        font-size: 30px;
+    }
+
+    .container h2:nth-child(2) {
+        position: absolute;
+        left: 15%;
+        top: 20%;
+        font-size: 30px;
+        color: gold;
+
+    }
+
+    .container img {
+        position: absolute;
+        left: 40%;
+        top: 28%;
+        border-radius: 100%;
+        height: 75px;
+        width: 75px;
+    }
+
+    .container form {
+        width: 300px;
+        height: 275px;
+        display: flex;
+        justify-content: center;
+        box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(9px);
+        flex-wrap: wrap;
+        position: absolute;
+        left: 3.5%;
+        top: 45%;
+    }
+
+    .container form h1 {
+        color: white;
+        font-weight: 380;
+        margin-top: 20px;
+        width: 400px;
+        text-align: center;
+    }
+
+    .container form input {
+        width: 135px;
+        height: 35px;
+        padding-left: 10px;
+        outline: none;
+        border: none;
+        font-size: 15px;
+        margin-bottom: 11px;
+        background: none;
+        border-bottom: 2px solid white;
+        color: white;
+    }
+
+    .container form input:hover {
+        border-bottom: 2px solid gold;
+
+    }
+
+    .container form input::placeholder {
+        color: white;
+    }
+
+    .container #Name,
+    .container #Email {
+        margin-left: 8px;
+    }
+
+    .container form h4 {
+        color: white;
+        font-weight: 380;
+        width: 370px;
+        margin-top: 20px;
+        margin-left: 20px;
+        font-size: 15px;
+    }
+
+    .container form textarea {
+        background: none;
+        border: none;
+        border-bottom: 2px solid white;
+        color: white;
+        font-weight: 200;
+        font-size: 15px;
+        padding: 10px;
+        outline: none;
+        min-width: 283px;
+        max-width: 300px;
+        min-height: 50px;
+        max-height: 50px;
+        margin-left: 10px;
+        /*margin-top: 20px;*/
+
+
     }
 }

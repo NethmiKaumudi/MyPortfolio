@@ -226,7 +226,7 @@ h2 {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 3px;
-        margin-left: 25px;
+        margin-left: 15px;
 
     }
 
@@ -237,7 +237,7 @@ h2 {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 3px;
-        margin-left: 25px;
+        margin-left: 15px;
 
 
     }
@@ -250,7 +250,7 @@ h2 {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 3px;
-        margin-left: 25px;
+        margin-left: 15px;
 
 
     }
@@ -263,6 +263,9 @@ h2 {
         margin-top: 20px;
 
         /*margin-left: 25px;*/
+    }
+    .sec_03 >div:nth-child(1)>.descrption >button{
+        margin-top: 38px;
     }
 }
 /*mobile medium*/
@@ -282,7 +285,7 @@ h2 {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 3px;
-        margin-left: 25px;
+        margin-left: 15px;
 
     }
 
@@ -293,7 +296,7 @@ h2 {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 3px;
-        margin-left: 25px;
+        margin-left: 15px;
 
 
     }
@@ -307,7 +310,7 @@ h2 {
         grid-template-columns: repeat(2, 1fr);
         /*gap: 3px;*/
         gap: 3px;
-        margin-left: 25px;
+        margin-left: 15px;
 
     }
     .sec_03.card:nth-child(1){
@@ -324,14 +327,24 @@ h2 {
 
         /*margin-left: 25px;*/
     }
+    .sec_03 >div:nth-child(1)>.descrption >button{
+        margin-top: 38px;
+    }
+    .sec_03 >div:nth-child(5)>.descrption >button{
+        margin-top: 38px;
+    }
 }
 /*mobile small*/
 @media all and (min-width: 320px) and (max-width: 375px) {
+    h1{
+        font-size: 25px;
+    }
     h2 {
         margin-top: 35px;
         margin-bottom: 15px;
         font-family: "Book Antiqua";
         margin-left: 15px;
+
 
     }
 
@@ -342,7 +355,7 @@ h2 {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 3px;
-        margin-left: 25px;
+        margin-left: 15px;
 
     }
 
@@ -353,7 +366,7 @@ h2 {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 3px;
-        margin-left: 25px;
+        margin-left: 15px;
 
 
     }
@@ -366,7 +379,7 @@ h2 {
         grid-template-rows: 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 3px;
-        margin-left: 25px;
+        margin-left: 15px;
 
     }
 
@@ -379,5 +392,11 @@ h2 {
         margin-top: 20px;
 
         /*margin-left: 25px;*/
+    }
+    .sec_03 >div:nth-child(1)>.descrption >button{
+        margin-top: 38px;
+    }
+    .sec_03 >div:nth-child(5)>.descrption >button{
+        margin-top: 38px;
     }
 }
