@@ -12,7 +12,6 @@
     background: black url("/Assests/gif/loading-3692_512.gif") no-repeat center;
     z-index: 99999;
 
-
 }
 
 /*header*/
@@ -158,7 +157,7 @@ main > .section_02 {
     background-position: center;
     background-color: #1B191A;
     height: 100vh;
-    margin-top: 10px;
+    margin-top: 5px;
     position: relative;
 
 }
@@ -170,7 +169,7 @@ main > .section_03 {
     background-position: center;
     background-color: #1B191A;
     height: 100vh;
-    margin-top: 10px;
+    margin-top: 5px;
     position: relative;
 
 
@@ -185,7 +184,7 @@ main > .section_04 {
     background-color: #1B191A;
     position: relative;
     height: 100vh;
-    margin-top: 10px;
+    margin-top: 5px;
 }
 
 main > .section_05 {
@@ -196,7 +195,7 @@ main > .section_05 {
     background-position: center;
     background-color: #1B191A;
     height: 100vh;
-    margin-top: 10px;
+    margin-top: 5px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -210,7 +209,7 @@ main > .section_06 {
     background-position: center;
     background-color: #1B191A;
     height: 100vh;
-    margin-top: 10px;
+    margin-top: 5px;
     position: relative;
 
 }
@@ -223,8 +222,8 @@ main > .section_07 {
     background-position: center;
     background-color: #1B191A;
     height: 90vh;
-    margin-top: 10px;
-    margin-bottom: 50px;
+    margin-top: 5px;
+    margin-bottom: 10px;
     position: relative;
     border: 3px solid black;
 
@@ -865,7 +864,7 @@ main > .section_07 {
 
 body > footer {
     width: 100%;
-    height: 6vh;
+    height: 8vh;
     background-color: white;
     bottom: 0;
     font-family: Cambria;
@@ -3279,7 +3278,7 @@ footer > .ad_03 > div > a > img:hover {
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
         font-weight: 600;
         margin-top: 50px;
-        top: -5%;
+        top: 8%;
         left: 1%;
         right: 0;
 
@@ -3292,13 +3291,13 @@ footer > .ad_03 > div > a > img:hover {
     /*}*/
     .section_02 > article > pre {
         position: absolute;
-        top: 20%;
+        top: 35%;
         bottom: 0;
-        left: -52%;
+        left: -50%;
         right: 0;
         text-align: center;
         margin: auto;
-        font-size: 15px;
+        font-size: 14px;
         line-height: 1.5;
         font-weight: bold;
         font-style: italic;
@@ -3509,6 +3508,128 @@ footer > .ad_03 > div > a > img:hover {
         width: 60%;
         margin-left: 20%;
     }
+    /*sec 05*/
+
+    .h212 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        /*border-bottom-width: 40px;*/
+        margin-top: -100px;
+        margin-bottom: 10px;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .slider_wrapper {
+        top: 10%;
+        padding: 10px;
+        /*background-color: white;*/
+        position: relative;
+        max-width: 35rem;
+        margin: 0 auto;
+        left: -2%;
+        height: 90vh;
+        overflow: hidden;
+        margin-top: 50px;
+
+    }
+
+    .slider {
+        /*padding: 10px;*/
+        display: flex;
+        aspect-ratio: 16/11;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+        border-radius: 15px;
+        border: 3px solid black;
+        background-size: 100% 100%;
+        margin-left: 5px;
+        width: 95%;
+        height: 52%;
+
+    }
+
+    .slider > #slide_01 {
+        padding: 18px;
+
+    }
+
+    .slider > #slide_02 {
+        padding: 12px;
+
+    }
+
+    .slider > #slide_03 {
+        padding: 15px;
+
+
+    }
+
+    .slider > #slide_04 {
+        padding: 15px;
+
+
+    }
+
+    .slider img {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+        background-size: 100% 100%;
+    }
+    /*sec 06*/
+    .section_06 {
+        padding: 150px 180px;
+    }
+
+    .section_06 .h211 {
+        font-size: 22px;
+        margin-left: -182px;
+        margin-top: 33px;
+
+    }
+
+    .section_06 h2 {
+        margin-top: 35px;
+        margin-left: -160px;
+
+    }
+
+    .section_06 section .p1,
+    .section_06 section .p2 {
+        display: flex;
+        padding-top: 40px;
+        padding-right: 10px;
+        margin-left: -160px;
+
+    }
+
+    .section_06 .git_img {
+        background-color: white;
+        border-radius: 100%;
+        width: 47.5px;
+        height: 47.5px;
+    }
+
+    .section_06 section img {
+        width: 47.5px;
+        height: 47.5px;
+        border-radius: 100px;
+        margin-right: 28px;
+        /*object-fit: cover;*/
+        background-size: cover; /* Adjusts the background image to cover the entire container */
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+        transition: all 0.3s ease-in-out;
+        margin-top: 25px;
+
+    }
+
+    .section_06 section img:hover {
+        transform: scale(1.2);
+        cursor: pointer;
+    }
 
     /*sec07*/
     .section_07 .box .content{
@@ -3664,15 +3785,15 @@ footer > .ad_03 > div > a > img:hover {
     .section_01 > aside > h3:nth-child(1) {
         position: absolute;
         top: 4%;
-        left: 2%;
+        left: -2%;
         font-size: 24px;
     }
 
     .section_01 > aside > h1:nth-child(2) {
         position: absolute;
         top: 10%;
-        left: 8%;
-        font-size: 30px;
+        left: 5.5%;
+        font-size: 27px;
         transition: background-color 0.3s ease;
 
 
@@ -3682,44 +3803,35 @@ footer > .ad_03 > div > a > img:hover {
         color: gold;
         /*color: rgba(0%, 0%, 0%, 0.1%);*/
     }
-
     .section_01 > aside > h3:nth-child(3) {
         position: absolute;
-        top: 16.5%;
-        left: 2%;
+        top: 15%;
+        left: -2.5%;
         font-size: 20px;
 
     }
 
-    .section_01 > aside > h1:nth-child(4) {
-        position: absolute;
-        top: 17.2%;
-        left: 30%;
+    .section_01 > aside > h3:nth-child(3) .multiText {
+        /*position: absolute;*/
+        /*top: 10%;*/
+        /*left: 100%;*/
+        /*width: 65%;*/
+        font-size: 22px;
         color: gold;
-        font-size: 25px;
-
     }
 
-    .section_01 > aside > h1:nth-child(5) {
+    .section_01 > aside > p:nth-child(4) {
         position: absolute;
-        top: 23%;
-        left: 8%;
-        color: gold;
-        font-size: 25px;
-
+        top: 25%;
+        left: 5.8%;
+        font-size: 16px;
     }
 
-    .section_01 > aside > p:nth-child(6) {
-        position: absolute;
-        top: 32%;
-        left: 8%;
-        font-size: 18px;
-    }
 
-    .section_01 > aside > button:nth-child(7) {
+    .section_01 > aside > button:nth-child(5) {
         position: absolute;
-        top: 40%;
-        left: 27%;
+        top: 38%;
+        left: 25%;
         border: 2px solid white;
         /*background: linear-gradient(to right, gold, white);*/
         background-color: black;
@@ -3767,8 +3879,8 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     .section_01 > div:nth-child(4) {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         border: 3px solid gold;
         border-radius: 100%;
         position: absolute;
@@ -3780,21 +3892,21 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     .section_01 > div:nth-child(5) {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         border: 3px solid gold;
         border-radius: 100%;
         position: absolute;
         top: 36%;
-        left: 5%;
+        left: 3%;
         animation: circle 0.5s infinite;
         /*display: none;*/
 
     }
 
     .section_01 > div:nth-child(7) {
-        width: 20px;
-        height: 20px;
+        width: 15px;
+        height: 15px;
         border: 3px solid gold;
         border-radius: 100%;
         position: absolute;
@@ -3816,7 +3928,7 @@ footer > .ad_03 > div > a > img:hover {
         border-radius: 100%;
         position: absolute;
         top: 30%;
-        left: 40%;
+        left: 10%;
         /*animation-name: circle;*/
         /*animation-duration: 0.2s;*/
         /*animation-iteration-count: infinite;*/
@@ -3889,6 +4001,139 @@ footer > .ad_03 > div > a > img:hover {
         text-decoration: none;
         color: white;
 
+    }
+    /*sec 02*/
+    .section_02 .h21 {
+        position: absolute;
+
+        /*padding-top: 10px;*/
+        font-size: 35px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        margin-top: 50px;
+        top: 8%;
+        left: 1%;
+        right: 0;
+
+        /*margin-bottom: 40px;*/
+
+    }
+
+    /*.h21 {*/
+    /*    margin: 0;*/
+    /*}*/
+    .section_02 > article > pre {
+        position: absolute;
+        top: 35%;
+        bottom: 0;
+        left: -51%;
+        right: 0;
+        text-align: center;
+        margin: auto;
+        font-size: 12px;
+        line-height: 1.5;
+        font-weight: bold;
+        font-style: italic;
+    }
+
+    /*sec 03*/
+    .section_03 h2 {
+        margin: 27px;
+    }
+
+    .h21 {
+        padding: 5px;
+        font-size: 30px;
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        font-weight: 600;
+        /*margin-top: 50px;*/
+        margin-bottom: 50px;
+    }
+
+    .time_line {
+        width: 100%;
+        height: 10px;
+        max-width: 700px;
+        margin: 10px;
+        position: relative;
+    }
+
+    .time_line ul {
+        list-style: none;
+    }
+
+    .time_line ul li:nth-child(1),
+    .time_line ul li:nth-child(2),
+    .time_line ul li:nth-child(3) {
+        width: 90%;
+        padding: 10px;
+        background-color: #1B191A;
+        color: white;
+        border-radius: 10px;
+        margin-bottom: 50px;
+        margin-left: 15px;
+        position: relative;
+        height: 80px;
+
+    }
+
+    .time_line ul li:last-child {
+        width: 90%;
+        height: 85px;
+        margin-left: 15px;
+
+        margin-bottom: 10px;
+    }
+
+    .time_line_content p {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 300;
+        margin-bottom: 10px;
+        margin-left: 20px;
+        margin-top: -15px;
+
+    }
+    .time_line_content:nth-child(1) p {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-top: -10px;
+
+    }
+    .time_line_content4 p {
+        font-size: 15px;
+        line-height: 20px;
+        font-weight: 300;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        margin-top: -25px;
+
+    }
+
+    .time_line_content .date {
+        font-size: 13px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        letter-spacing: 2px;
+        position: absolute;
+        top: -30px;
+        left: 10px;
+        color: gold;
+        margin-top: 15px;
+    }
+
+    .time_line_content4 .date {
+        font-size: 13px;
+        font-weight: 300;
+        margin-bottom: 5px;
+        letter-spacing: 2px;
+        position: absolute;
+        top: -30px;
+        left: 10px;
+        color: gold;
     }
 
     /*sec 04*/
@@ -4005,6 +4250,128 @@ footer > .ad_03 > div > a > img:hover {
     .hr {
         width: 60%;
         margin-left: 20%;
+    }
+    /*sec 05*/
+
+    .h212 {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        /*border-bottom-width: 40px;*/
+        margin-top: -100px;
+        margin-bottom: 10px;
+        font-size: 50px;
+        text-align: center;
+    }
+
+    .slider_wrapper {
+        top: 10%;
+        padding: 10px;
+        /*background-color: white;*/
+        position: relative;
+        max-width: 35rem;
+        margin: 0 auto;
+        left: -2%;
+        height: 90vh;
+        overflow: hidden;
+        margin-top: 50px;
+
+    }
+
+    .slider {
+        /*padding: 10px;*/
+        display: flex;
+        aspect-ratio: 16/11;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+        border-radius: 15px;
+        border: 3px solid black;
+        background-size: 100% 100%;
+        margin-left: 5px;
+        width: 95%;
+        height: 52%;
+
+    }
+
+    .slider > #slide_01 {
+        padding: 18px;
+
+    }
+
+    .slider > #slide_02 {
+        padding: 12px;
+
+    }
+
+    .slider > #slide_03 {
+        padding: 15px;
+
+
+    }
+
+    .slider > #slide_04 {
+        padding: 15px;
+
+
+    }
+
+    .slider img {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+        background-size: 100% 100%;
+    }
+    /*sec 06*/
+    .section_06 {
+        padding: 150px 180px;
+    }
+
+    .section_06 .h211 {
+        font-size: 20px;
+        margin-left: -182px;
+        margin-top: 33px;
+
+    }
+
+    .section_06 h2 {
+        margin-top: 35px;
+        margin-left: -160px;
+
+    }
+
+    .section_06 section .p1,
+    .section_06 section .p2 {
+        display: flex;
+        padding-top: 40px;
+        padding-right: 10px;
+        margin-left: -160px;
+
+    }
+
+    .section_06 .git_img {
+        background-color: white;
+        border-radius: 100%;
+        width: 40px;
+        height: 40px;
+    }
+
+    .section_06 section img {
+        width: 40px;
+        height: 40px;
+        border-radius: 100px;
+        margin-right: 25px;
+        /*object-fit: cover;*/
+        background-size: cover; /* Adjusts the background image to cover the entire container */
+        filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.2));
+        transition: all 0.3s ease-in-out;
+        margin-top: 25px;
+
+    }
+
+    .section_06 section img:hover {
+        transform: scale(1.2);
+        cursor: pointer;
     }
 
     /*sec07*/
