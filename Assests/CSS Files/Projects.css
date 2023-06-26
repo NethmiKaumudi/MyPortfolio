@@ -10,7 +10,7 @@ body {
     position: relative;
     color: white;
     /*margin-top: 10px;*/
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("/Assests/images/projects.jpg");
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0.5) 50%), url("../images/projects.jpg");
     background-size: cover;
     background-position: center;
     height: 80vh;
