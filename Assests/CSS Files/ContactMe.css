@@ -435,7 +435,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%), url("/Assests/images/hacker girl.jpg");
+        background: linear-gradient(to top, rgba(0, 0, 0, 0.1) 50%, rgba(0, 0, 0, 0.1) 50%), url("../images/hacker girl.jpg");
         background-size: cover;
         background-repeat: no-repeat;
         color: white;

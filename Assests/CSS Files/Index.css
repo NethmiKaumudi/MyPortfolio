@@ -164,7 +164,7 @@ main > .section_02 {
 
 main > .section_03 {
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("/Assests/images/backgroundImages/sec 03.jpg");
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("../images/backgroundImages/sec 03.jpg");
     background-size: cover;
     background-position: center;
     background-color: #1B191A;
@@ -177,7 +177,7 @@ main > .section_03 {
 
 main > .section_04 {
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("/Assests/images/backgroundImages/sec 04.jpg");
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("../images/backgroundImages/sec 04.jpg");
     /*background-image: url("/Assests/images/gold-glitter-abstract-sparkle-burst-background-illustration.jpg");*/
     background-size: cover;
     background-position: center;
@@ -189,7 +189,7 @@ main > .section_04 {
 
 main > .section_05 {
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("/Assests/images/backgroundImages/sec 05.jpg");
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("../images/backgroundImages/sec 05.jpg");
     /*background-image: url("/Assests/images/gold-glitter-abstract-sparkle-burst-background-illustration.jpg");*/
     background-size: cover;
     background-position: center;
@@ -205,7 +205,7 @@ main > .section_05 {
 
 main > .section_06 {
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("/Assests/images/backgroundImages/sec 04.jpg");
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("../images/backgroundImages/sec 04.jpg");
     /*background-image: url("/Assests/images/gold-glitter-abstract-sparkle-burst-background-illustration.jpg");*/
     background-size: cover;
     background-position: center;
@@ -218,7 +218,7 @@ main > .section_06 {
 
 main > .section_07 {
     width: 100%;
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("/Assests/images/backgroundImages/sec 07.jpg");
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.2) 50%, rgba(0, 0, 0, 0.2) 50%), url("../images/backgroundImages/sec 07.jpg");
     /*background-image: url("/Assests/images/gold-glitter-abstract-sparkle-burst-background-illustration.jpg");*/
     background-size: cover;
     background-position: center;
@@ -770,7 +770,10 @@ main > .section_07 {
 .section_06 {
     padding: 200px 300px;
 }
-
+.section_06 .h211{
+    position: absolute;
+    left: 30%;
+}
 .section_06 h2 {
     margin-top: 25px;
 }
