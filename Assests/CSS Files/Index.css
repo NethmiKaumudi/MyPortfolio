@@ -243,7 +243,7 @@ main > .section_07 {
 .section_01 > aside > h1:nth-child(2) {
     position: absolute;
     top: 26%;
-    left: 10.5%;
+    left: 10.6%;
     font-size: 43px;
     transition: background-color 0.3s ease;
 
@@ -258,7 +258,7 @@ main > .section_07 {
 .section_01 > aside > h3:nth-child(3) {
     position: absolute;
     top: 34.5%;
-    left: 8.7%;
+    left: 8.8%;
     font-size: 31px;
 
 }
@@ -275,8 +275,8 @@ main > .section_07 {
 
 .section_01 > aside > p:nth-child(4) {
     position: absolute;
-    top: 45%;
-    left: 10.5%;
+    top: 46%;
+    left: 10.6%;
     font-size: 27px;
 }
 
@@ -1009,13 +1009,13 @@ footer > .ad_03 > div > a > img:hover {
     /*sec05*/
 
     .slider_wrapper {
-        top: 15%;
+        top:20%;
         /*padding: 10px;*/
         /*background-color: white;*/
         position: relative;
         max-width: 65rem;
         margin: 0 auto;
-        left: 1%;
+        left: 9%;
         height: 90vh;
         overflow: hidden;
         margin-top: 50px;
