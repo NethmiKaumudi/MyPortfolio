@@ -18,7 +18,13 @@ Mockup :https://www.figma.com/file/kI09NQLxpBXGebq3p0hGfA/Mock-Up?type=design&no
 [comment]: <> (InfinityFree : http://ferdfolio.epizy.com <br>)
 GitHub Pages : https://nethmikaumudi.github.io/MyPortfolio/ <br>
 
+
+<h3>Portfolio View</h3>
+
+![Desktop - 1](Assests/images/LaptopView/Mock%20Up.png)
+
 <h3> Web POS Using CSS FrameWorks</h3>
+
 Site Map-https://drive.google.com/file/d/1Xf_NojKlKvgw6Vv81yE7YHCszIH5dnlh/view?usp=sharing <br>
 Wire Frame-https://drive.google.com/file/d/1doOXqI44cBkvQrerdM6_8h6ER093ics0/view?usp=sharing <br>
 Mock Up-https://www.figma.com/file/iZOUQVdq8XY5WonOIX8RFK/Pos-System?type=design&node-id=0%3A1&t=wJsCOO4WyKq2qEbp-1 <br>
@@ -29,9 +35,6 @@ Mock Up-https://www.figma.com/file/iZOUQVdq8XY5WonOIX8RFK/Pos-System?type=design
 ![Desktop - 3](Assests/images/LaptopView/Desktop%20-%202.png)
 ![Desktop - 4](Assests/images/LaptopView/Desktop%20-%203.png)
 
-<h3>Portfolio View</h3>
-
-![Desktop - 1](Assests/images/LaptopView/Mock%20Up.png)
 
 <h3>Developed By Nethmi Kaumudi</h3>
 
