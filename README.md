@@ -22,6 +22,12 @@ GitHub Pages : https://nethmikaumudi.github.io/MyPortfolio/ <br>
 Site Map-https://drive.google.com/file/d/1Xf_NojKlKvgw6Vv81yE7YHCszIH5dnlh/view?usp=sharing <br>
 Wire Frame-https://drive.google.com/file/d/1doOXqI44cBkvQrerdM6_8h6ER093ics0/view?usp=sharing <br>
 Mock Up-https://www.figma.com/file/iZOUQVdq8XY5WonOIX8RFK/Pos-System?type=design&node-id=0%3A1&t=wJsCOO4WyKq2qEbp-1 <br>
+<h3>Web Pos System View</h3>
+
+![Desktop - 1](Assests/images/LaptopView/Desktop%20-%205.png)
+![Desktop - 2](Assests/images/LaptopView/Desktop%20-%201.png)
+![Desktop - 3](Assests/images/LaptopView/Desktop%20-%202.png)
+![Desktop - 4](Assests/images/LaptopView/Desktop%20-%203.png)
 
 <h3>Portfolio View</h3>
 
