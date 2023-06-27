@@ -1653,7 +1653,12 @@ footer > .ad_03 > div > a > img:hover {
     .section_06 {
         padding: 150px 250px;
     }
-
+    .section_06 .h211 {
+        position: absolute;
+        top: 22%;
+        left: 25%;
+        font-size: 50px;
+    }
     .section_06 h2 {
         margin-top: 30px;
         margin-left: -25%;
@@ -2298,7 +2303,7 @@ footer > .ad_03 > div > a > img:hover {
     .section_06 .h211 {
         position: absolute;
         top: 30%;
-        left: 25%;
+        left: 22%;
     }
 
     .section_06 h2 {
@@ -2962,10 +2967,10 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     .section_06 .h211 {
-        font-size: 22px;
-        margin-left: -180px;
-        margin-top: 35px;
-
+        position: absolute;
+        top: 30%;
+        left: 11%;
+        font-size: 30px;
     }
 
     .section_06 h2 {
@@ -3724,10 +3729,10 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     .section_06 .h211 {
-        font-size: 22px;
-        margin-left: -182px;
-        margin-top: 33px;
-
+        position: absolute;
+        top: 30%;
+        left: 10%;
+        font-size: 28px;
     }
 
     .section_06 h2 {
@@ -4435,10 +4440,10 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     .section_06 .h211 {
-        font-size: 20px;
-        margin-left: -182px;
-        margin-top: 33px;
-
+        position: absolute;
+        top: 30%;
+        left: 5%;
+        font-size: 27px;
     }
 
     .section_06 h2 {
