@@ -42,6 +42,11 @@ body {
 
 }
 
+button a {
+    text-decoration: none;
+    color: black;
+}
+
 .card {
     width: 225px;
     height: 200px;

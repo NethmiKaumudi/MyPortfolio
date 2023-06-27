@@ -13,7 +13,7 @@ Wirefram : https://app.diagrams.net/#G1wOeb872r8_wMR8we7-8nn82F8-zdlmyC<br>
 Mockup :https://www.figma.com/file/kI09NQLxpBXGebq3p0hGfA/Mock-Up?type=design&node-id=0-1&mode=design&t=xhMdNPeOb
 
 <h3>Deployment</h3>
-InfinityFree : http://ferdfolio.epizy.com <br>
+InfinityFree :  http://nkaumudi.epizy.com/?i=1 <br>
 GitHub Pages : https://nethmikaumudi.github.io/MyPortfolio/ <br>
 
 <h3> Web POS Using CSS FrameWorks</h3>
