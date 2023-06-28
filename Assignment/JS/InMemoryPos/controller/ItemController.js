@@ -1,6 +1,6 @@
-//load all existing customers
+//load all existing items
 getAllItems();
-//add customer
+//add item
 $("#btnAddItem").click(function () {
     if (checkAll()) {
         saveItem();
@@ -10,7 +10,7 @@ $("#btnAddItem").click(function () {
 
 });
 
-//get all customer
+//get all items
 $("#btnGetAllItem").click(function () {
     getAllItems();
 });
@@ -59,7 +59,7 @@ $("#btnUpdateItem").click(function () {
 });
 
 //clear btn event
-$("#btnClearCustomer").click(function () {
+$("#btnClearAllItem").click(function () {
     clearItemInputFields();
 });
 
@@ -67,7 +67,7 @@ $("#btnClearCustomer").click(function () {
 // CRUD operation Functions
 function saveItem() {
     let code = $("#txtItemCode").val();
-    //check customer is exists or not?
+    //check item is exists or not?
     if (searchItem(code.trim()) == undefined) {
 
         //if the item is not available then add him to the array
@@ -83,7 +83,7 @@ function saveItem() {
         newItem.unitPrice = unitPrice;
         newItem.qty = qty;
 
-        //add customer record to the customer array (DB)
+        //add item record to the item array (DB)
         itemDB.push(newItem);
         clearItemInputFields();
         getAllItems();
@@ -98,7 +98,7 @@ function getAllItems() {
     //clear all tbody data before add
     $("#tblItem").empty();
 
-    //get all customers
+    //get all item
     for (let i = 0; i < itemDB.length; i++) {
         let code = itemDB[i].code;
         let description = itemDB[i].description;
@@ -147,7 +147,7 @@ function updateItem(code) {
         let consent = confirm("Do you really want to update this item.?");
         if (consent) {
             let item = searchItem(code);
-            //if the customer available can we update.?
+            //if the item available can we update.?
 
             let itemDescription = $("#txtItemDescription").val();
             let itemUnitPrice = $("#txtItemPrice").val();
@@ -161,28 +161,7 @@ function updateItem(code) {
         }
     }
 }
-
-//Search item from input field
-// $("#itemSearchbtn").click(function () {
-//     let x = $("#searchItemField").val();
-//     item.filter(function (e) {
-//         if (e.code === x) {
-//             $("#tblItem").empty();
-//             let tableBody = $("#tblItem");
-//             let tr = `<tr>
-//                 <td>${e.code}</td>
-//                 <td>${e.description}</td>
-//                 <td>${e.unitPrice}</td>
-//                 <td>${e.qty}</td>
-//               </tr>`;
-//             tableBody.append(tr);
-//             updateItem(code);
-//             deleteItem(code);
-//         } else {
-//             alert("This item code does not match");
-//         }
-//     });
-// });
+//Search
 $('#itemSearchbtn').click(function () {
     console.log("working")
     var searchValue = $('#searchItemField').val();
