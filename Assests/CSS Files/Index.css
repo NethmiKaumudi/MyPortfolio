@@ -770,10 +770,12 @@ main > .section_07 {
 .section_06 {
     padding: 200px 300px;
 }
-.section_06 .h211{
+
+.section_06 .h211 {
     position: absolute;
     left: 30%;
 }
+
 .section_06 h2 {
     margin-top: 25px;
 }
@@ -1010,15 +1012,45 @@ footer > .ad_03 > div > a > img:hover {
 
     }
     /*sec05*/
-
+    /*.slider_wrapper {*/
+    /*    top:20%;*/
+    /*    !*padding: 10px;*!*/
+    /*    !*background-color: white;*!*/
+    /*    position: relative;*/
+    /*    max-width: 65rem;*/
+    /*    margin: 0 auto;*/
+    /*    left: 9%;*/
+    /*    height: 90vh;*/
+    /*    overflow: hidden;*/
+    /*    margin-top: 50px;*/
+    /*}*/
+    /*.slider {*/
+    /*    !*padding: 5px;*!*/
+    /*    display: flex;*/
+    /*    aspect-ratio: 16/10;*/
+    /*    overflow-x: auto;*/
+    /*    scroll-snap-type: x mandatory;*/
+    /*    scroll-behavior: smooth;*/
+    /*    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);*/
+    /*    border-radius: 15px;*/
+    /*    border: 3px solid black;*/
+    /*    background-size: 100% 100%;*/
+    /*    height: 80%;*/
+    /*}*/
+    /*.slider img {*/
+    /*    flex: 1 0 100%;*/
+    /*    scroll-snap-align: start;*/
+    /*    object-fit: cover;*/
+    /*    background-size: 100% 100%;*/
+    /*}*/
     .slider_wrapper {
-        top:20%;
+        top: 15%;
         /*padding: 10px;*/
         /*background-color: white;*/
         position: relative;
         max-width: 65rem;
         margin: 0 auto;
-        left: 9%;
+        left: 1%;
         height: 90vh;
         overflow: hidden;
         margin-top: 50px;
@@ -1046,7 +1078,6 @@ footer > .ad_03 > div > a > img:hover {
         background-size: 100% 100%;
 
     }
-
 
     /*sec07*/
     .box {
@@ -1196,7 +1227,6 @@ footer > .ad_03 > div > a > img:hover {
 
     }
     /*sec 05*/
-
     h212 {
         padding-top: 10px;
         padding-bottom: 10px;
@@ -1209,24 +1239,26 @@ footer > .ad_03 > div > a > img:hover {
 
     .h211 {
         position: absolute;
-        left: 26%;
-
+        left: 31%;
+        font-size: 60px;
     }
+
+
     .slider_wrapper {
-        top: 15%;
+        top: 20%;
         /*padding: 10px;*/
         /*background-color: white;*/
         position: relative;
         max-width: 65rem;
         margin: 0 auto;
-        left: 1%;
+        left: 6%;
         height: 90vh;
         overflow: hidden;
         margin-top: 50px;
     }
 
     .slider {
-        padding: 5px;
+        /*padding: 5px;*/
         display: flex;
         aspect-ratio: 16/10;
         overflow-x: auto;
@@ -1237,8 +1269,6 @@ footer > .ad_03 > div > a > img:hover {
         border: 3px solid black;
         background-size: 100% 100%;
         height: 80%;
-        width: 100%;
-        /*margin-left: 3px;*/
 
     }
 
@@ -1249,6 +1279,7 @@ footer > .ad_03 > div > a > img:hover {
         background-size: 100% 100%;
 
     }
+
     /*sec07*/
     .box {
         position: relative;
@@ -1606,14 +1637,15 @@ footer > .ad_03 > div > a > img:hover {
         left: 26%;
 
     }
+
     .slider_wrapper {
-        top: 15%;
+        top: 20%;
         /*padding: 10px;*/
         /*background-color: white;*/
         position: relative;
         max-width: 65rem;
         margin: 0 auto;
-        left: 1%;
+        left: 14%;
         height: 90vh;
         overflow: hidden;
         margin-top: 50px;
@@ -1631,8 +1663,6 @@ footer > .ad_03 > div > a > img:hover {
         border: 3px solid black;
         background-size: 100% 100%;
         height: 80%;
-        width: 98%;
-        /*margin-left: 3px;*/
 
     }
 
@@ -1643,6 +1673,7 @@ footer > .ad_03 > div > a > img:hover {
         background-size: 100% 100%;
 
     }
+
     .service div {
         margin-top: 170px;
         height: 400px;
@@ -1653,12 +1684,14 @@ footer > .ad_03 > div > a > img:hover {
     .section_06 {
         padding: 150px 250px;
     }
+
     .section_06 .h211 {
         position: absolute;
         top: 22%;
         left: 25%;
         font-size: 50px;
     }
+
     .section_06 h2 {
         margin-top: 30px;
         margin-left: -25%;
@@ -2259,7 +2292,7 @@ footer > .ad_03 > div > a > img:hover {
         position: relative;
         max-width: 65rem;
         margin: 0 auto;
-        /*left: 1%;*/
+        left: 2.5%;
         height: 90vh;
         overflow: hidden;
         margin-top: 50px;
@@ -2919,9 +2952,9 @@ footer > .ad_03 > div > a > img:hover {
     }
 
 
-    .section_05 .slider_wrapper .slider{
+    .section_05 .slider_wrapper .slider {
         display: grid;
-        grid-template-rows: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 3px;
         margin-top: 100px;
@@ -2929,23 +2962,26 @@ footer > .ad_03 > div > a > img:hover {
         margin-right: 5px;
 
     }
+
     .section_05 .slider_wrapper .slider img {
         /*flex: 1 0 100%;*/
         /*scroll-snap-align: start;*/
         /*object-fit: cover;*/
         /*background-size: 100% 100%;*/
         width: 100%;
-        height:100%;
+        height: 100%;
         margin-top: 10px;
         object-fit: cover;
         border-radius: 10px;
         filter: brightness(30%);
         transition: filter 0.3s ease;
     }
-    .section_05 .slider_wrapper .slider img:hover{
+
+    .section_05 .slider_wrapper .slider img:hover {
         filter: brightness(100%);
 
     }
+
     /*.section_05 .slider_wrapper .slider img:nth-child(1){*/
     /*    position: absolute;*/
     /*    top: 5%;*/
@@ -3014,9 +3050,9 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     /*sec07*/
-    .section_07 .box .content{
+    .section_07 .box .content {
         display: grid;
-        grid-template-rows: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: repeat(3, 1fr);
         gap: 3px;
         /*display: flex;*/
@@ -3024,32 +3060,37 @@ footer > .ad_03 > div > a > img:hover {
 
     .section_07 .box .content span img {
         width: 96%;
-        height:75%;
+        height: 75%;
         margin-top: 10px;
         object-fit: cover;
         border-radius: 10px;
 
     }
-    .section_07 .box .content span:nth-child(1) img{
+
+    .section_07 .box .content span:nth-child(1) img {
         margin-left: 5px;
     }
-    .section_07 .box .content span:nth-child(4) img{
+
+    .section_07 .box .content span:nth-child(4) img {
         width: 100%;
-        height:55%;
+        height: 55%;
         margin-top: 10px;
         margin-left: 60px;
     }
-    .section_07 .box .content span:nth-child(5) img{
+
+    .section_07 .box .content span:nth-child(5) img {
         width: 100%;
-        height:55%;
+        height: 55%;
         margin-top: 10px;
 
         margin-left: 70px;
     }
-    .section_07 .box .content span img:hover{
+
+    .section_07 .box .content span img:hover {
         transform: scale(1.3);
         z-index: 2;
     }
+
     /*footer*/
     body > footer {
         width: 100%;
@@ -3625,8 +3666,8 @@ footer > .ad_03 > div > a > img:hover {
         width: 60%;
         margin-left: 20%;
     }
-    /*sec 05*/
 
+    /*sec 05*/
     .h212 {
         padding-top: 10px;
         padding-bottom: 10px;
@@ -3648,9 +3689,7 @@ footer > .ad_03 > div > a > img:hover {
     /*    height: 90vh;*/
     /*    overflow: hidden;*/
     /*    margin-top: 50px;*/
-
     /*}*/
-
     /*.slider {*/
     /*    !*padding: 10px;*!*/
     /*    display: flex;*/
@@ -3665,34 +3704,22 @@ footer > .ad_03 > div > a > img:hover {
     /*    margin-left: 5px;*/
     /*    width: 95%;*/
     /*    height: 52%;*/
-
     /*}*/
-
     /*.slider > #slide_01 {*/
     /*    padding: 18px;*/
-
     /*}*/
-
     /*.slider > #slide_02 {*/
     /*    padding: 12px;*/
-
     /*}*/
-
     /*.slider > #slide_03 {*/
     /*    padding: 15px;*/
-
-
     /*}*/
-
     /*.slider > #slide_04 {*/
     /*    padding: 15px;*/
-
-
     /*}*/
-
-    .section_05 .slider_wrapper .slider{
+    .section_05 .slider_wrapper .slider {
         display: grid;
-        grid-template-rows: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
         margin-top: 100px;
@@ -3700,23 +3727,26 @@ footer > .ad_03 > div > a > img:hover {
         margin-right: 5px;
 
     }
+
     .section_05 .slider_wrapper .slider img {
         /*flex: 1 0 100%;*/
         /*scroll-snap-align: start;*/
         /*object-fit: cover;*/
         /*background-size: 100% 100%;*/
         width: 100%;
-        height:100%;
+        height: 100%;
         margin-top: 10px;
         object-fit: cover;
         border-radius: 10px;
         filter: brightness(30%);
         transition: filter 0.3s ease;
     }
-    .section_05 .slider_wrapper .slider img:hover{
+
+    .section_05 .slider_wrapper .slider img:hover {
         filter: brightness(100%);
 
     }
+
     /*.slider img {*/
     /*    flex: 1 0 100%;*/
     /*    scroll-snap-align: start;*/
@@ -3776,9 +3806,9 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     /*sec07*/
-    .section_07 .box .content{
+    .section_07 .box .content {
         display: grid;
-        grid-template-rows: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: repeat(3, 1fr);
         gap: 3px;
         /*display: flex;*/
@@ -3786,32 +3816,37 @@ footer > .ad_03 > div > a > img:hover {
 
     .section_07 .box .content span img {
         width: 96%;
-        height:75%;
+        height: 75%;
         margin-top: 10px;
         object-fit: cover;
         border-radius: 10px;
 
     }
-    .section_07 .box .content span:nth-child(1) img{
+
+    .section_07 .box .content span:nth-child(1) img {
         margin-left: 5px;
     }
-    .section_07 .box .content span:nth-child(4) img{
+
+    .section_07 .box .content span:nth-child(4) img {
         width: 100%;
-        height:55%;
+        height: 55%;
         margin-top: 10px;
         margin-left: 60px;
     }
-    .section_07 .box .content span:nth-child(5) img{
+
+    .section_07 .box .content span:nth-child(5) img {
         width: 100%;
-        height:55%;
+        height: 55%;
         margin-top: 10px;
 
         margin-left: 70px;
     }
-    .section_07 .box .content span img:hover{
+
+    .section_07 .box .content span img:hover {
         transform: scale(1.3);
         z-index: 2;
     }
+
     /*footer*/
     body > footer {
         width: 100%;
@@ -3947,6 +3982,7 @@ footer > .ad_03 > div > a > img:hover {
         color: gold;
         /*color: rgba(0%, 0%, 0%, 0.1%);*/
     }
+
     .section_01 > aside > h3:nth-child(3) {
         position: absolute;
         top: 15%;
@@ -4146,6 +4182,7 @@ footer > .ad_03 > div > a > img:hover {
         color: white;
 
     }
+
     /*sec 02*/
     .section_02 .h21 {
         position: absolute;
@@ -4238,6 +4275,7 @@ footer > .ad_03 > div > a > img:hover {
         margin-top: -15px;
 
     }
+
     .time_line_content:nth-child(1) p {
         font-size: 15px;
         line-height: 20px;
@@ -4247,6 +4285,7 @@ footer > .ad_03 > div > a > img:hover {
         margin-top: -10px;
 
     }
+
     .time_line_content4 p {
         font-size: 15px;
         line-height: 20px;
@@ -4395,8 +4434,8 @@ footer > .ad_03 > div > a > img:hover {
         width: 60%;
         margin-left: 20%;
     }
-    /*sec 05*/
 
+    /*sec 05*/
     .h212 {
         padding-top: 10px;
         padding-bottom: 10px;
@@ -4407,9 +4446,9 @@ footer > .ad_03 > div > a > img:hover {
         text-align: center;
     }
 
-    .section_05 .slider_wrapper .slider{
+    .section_05 .slider_wrapper .slider {
         display: grid;
-        grid-template-rows: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: repeat(2, 1fr);
         gap: 5px;
         margin-top: 100px;
@@ -4417,23 +4456,26 @@ footer > .ad_03 > div > a > img:hover {
         margin-right: 5px;
 
     }
+
     .section_05 .slider_wrapper .slider img {
         /*flex: 1 0 100%;*/
         /*scroll-snap-align: start;*/
         /*object-fit: cover;*/
         /*background-size: 100% 100%;*/
         width: 100%;
-        height:100%;
+        height: 100%;
         margin-top: 10px;
         object-fit: cover;
         border-radius: 10px;
         filter: brightness(30%);
         transition: filter 0.3s ease;
     }
-    .section_05 .slider_wrapper .slider img:hover{
+
+    .section_05 .slider_wrapper .slider img:hover {
         filter: brightness(100%);
 
     }
+
     /*sec 06*/
     .section_06 {
         padding: 150px 180px;
@@ -4487,9 +4529,9 @@ footer > .ad_03 > div > a > img:hover {
     }
 
     /*sec07*/
-    .section_07 .box .content{
+    .section_07 .box .content {
         display: grid;
-        grid-template-rows: 1fr 1fr ;
+        grid-template-rows: 1fr 1fr;
         grid-template-columns: repeat(3, 1fr);
         gap: 3px;
         /*display: flex;*/
@@ -4497,32 +4539,37 @@ footer > .ad_03 > div > a > img:hover {
 
     .section_07 .box .content span img {
         width: 96%;
-        height:75%;
+        height: 75%;
         margin-top: 10px;
         object-fit: cover;
         border-radius: 10px;
 
     }
-    .section_07 .box .content span:nth-child(1) img{
+
+    .section_07 .box .content span:nth-child(1) img {
         margin-left: 5px;
     }
-    .section_07 .box .content span:nth-child(4) img{
+
+    .section_07 .box .content span:nth-child(4) img {
         width: 100%;
-        height:55%;
+        height: 55%;
         margin-top: 10px;
         margin-left: 60px;
     }
-    .section_07 .box .content span:nth-child(5) img{
+
+    .section_07 .box .content span:nth-child(5) img {
         width: 100%;
-        height:55%;
+        height: 55%;
         margin-top: 10px;
 
         margin-left: 70px;
     }
-    .section_07 .box .content span img:hover{
+
+    .section_07 .box .content span img:hover {
         transform: scale(1.3);
         z-index: 2;
     }
+
     /*footer*/
     body > footer {
         width: 100%;
