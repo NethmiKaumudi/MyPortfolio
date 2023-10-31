@@ -171,9 +171,9 @@ $('#customerSearchbtn').click(function () {
     $('#div_03 tbody tr').each(function () {
         var id = $(this).find('td:first').text();
 
-        console.log(searchValue)
-        console.log(id)
-        console.log(id.includes(searchValue))
+        // console.log(searchValue)
+        // console.log(id)
+        // console.log(id.includes(searchValue))
         if (id.includes(searchValue)) {
             $(this).show();
         } else {
